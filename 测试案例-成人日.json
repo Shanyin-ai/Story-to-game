@@ -2,8 +2,8 @@
   "meta": {
     "title": "成人日",
     "author": "山音",
-    "version": "1.0.0",
-    "description": "在计划爱情制度下，吴新在成人日前夜面对婚配、旧友的火与周小芳的名字。",
+    "version": "1.1.0",
+    "description": "在计划爱情制度下，吴新在成人日前夜面对婚配、旧友的火与周小芳的名字；每个同向选项都加入独立回响。",
     "theme": "night",
     "ambient": "static",
     "cover": {
@@ -84,7 +84,7 @@
       "choices": [
         {
           "text": "站在门口看一会儿",
-          "next": "c1_01b",
+          "next": "c1_01_choice_1_callback",
           "changes": {
             "val": 1,
             "unlockAchievement": "ach_opening_day"
@@ -92,7 +92,7 @@
         },
         {
           "text": "跟着人流往里走",
-          "next": "c1_01b",
+          "next": "c1_01_choice_2_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -124,14 +124,14 @@
       "choices": [
         {
           "text": "盯着那些手",
-          "next": "c1_02",
+          "next": "c1_01b_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "避开那些表格",
-          "next": "c1_02",
+          "next": "c1_01b_choice_2_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -203,14 +203,14 @@
       "choices": [
         {
           "text": "把这个词记牢",
-          "next": "c1_03",
+          "next": "c1_02_rebel_choice_1_callback",
           "changes": {
             "val": -1
           }
         },
         {
           "text": "想起周小姐念它时的语气",
-          "next": "c1_03",
+          "next": "c1_02_rebel_choice_2_callback",
           "changes": {
             "val": 1,
             "set": {
@@ -241,7 +241,7 @@
       "choices": [
         {
           "text": "记住出生年月的格子",
-          "next": "c1_03",
+          "next": "c1_02_record_choice_1_callback",
           "changes": {
             "val": 1,
             "set": {
@@ -251,7 +251,7 @@
         },
         {
           "text": "记住抽屉的位置",
-          "next": "c1_03",
+          "next": "c1_02_record_choice_2_callback",
           "changes": {
             "val": -1,
             "addFlag": "knows_archive_order"
@@ -319,14 +319,14 @@
       "choices": [
         {
           "text": "把它按回口袋深处",
-          "next": "c1_04",
+          "next": "c1_03a_choice_1_callback",
           "changes": {
             "val": -1
           }
         },
         {
           "text": "确认门外没人",
-          "next": "c1_04",
+          "next": "c1_03a_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -354,14 +354,14 @@
       "choices": [
         {
           "text": "坐回床边",
-          "next": "c1_04",
+          "next": "c1_03b_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "起身倒水",
-          "next": "c1_04",
+          "next": "c1_03b_choice_2_callback",
           "changes": {
             "val": 2,
             "set": {
@@ -433,7 +433,7 @@
       "choices": [
         {
           "text": "继续笑一下",
-          "next": "c1_05",
+          "next": "c1_04_laugh_choice_1_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -443,7 +443,7 @@
         },
         {
           "text": "听楼上的锅碗声",
-          "next": "c1_05",
+          "next": "c1_04_laugh_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -471,14 +471,14 @@
       "choices": [
         {
           "text": "看一眼空房间的方向",
-          "next": "c1_05",
+          "next": "c1_04_swallow_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "把窗帘拉上",
-          "next": "c1_05",
+          "next": "c1_04_swallow_choice_2_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -509,7 +509,7 @@
       "choices": [
         {
           "text": "下楼时留意楼上的门",
-          "next": "c1_06",
+          "next": "c1_05_choice_1_callback",
           "changes": {
             "val": 1,
             "set": {
@@ -519,7 +519,7 @@
         },
         {
           "text": "直接往楼下走",
-          "next": "c1_06",
+          "next": "c1_05_choice_2_callback",
           "changes": {
             "val": 1,
             "set": {
@@ -551,14 +551,14 @@
       "choices": [
         {
           "text": "\"今天工厂批了我假。\"",
-          "next": "c1_07",
+          "next": "c1_06_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "\"你倒像要去拯救世界。\"",
-          "next": "c1_07",
+          "next": "c1_06_choice_2_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -590,7 +590,7 @@
       "choices": [
         {
           "text": "照他脑袋敲一下",
-          "next": "c1_08",
+          "next": "c1_07_choice_1_callback",
           "changes": {
             "val": 1,
             "set": {
@@ -600,7 +600,7 @@
         },
         {
           "text": "\"少拿她开玩笑。\"",
-          "next": "c1_08",
+          "next": "c1_07_choice_2_callback",
           "changes": {
             "val": 3,
             "set": {
@@ -631,7 +631,7 @@
       "choices": [
         {
           "text": "\"你夹着什么？\"",
-          "next": "c1_09",
+          "next": "c1_08_choice_1_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -642,7 +642,7 @@
         },
         {
           "text": "目送他离开",
-          "next": "c1_09",
+          "next": "c1_08_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -709,14 +709,14 @@
       "choices": [
         {
           "text": "继续把它当成决心",
-          "next": "c1_10",
+          "next": "c1_09a_choice_1_callback",
           "changes": {
             "val": -1
           }
         },
         {
           "text": "承认自己没那么勇敢",
-          "next": "c1_10",
+          "next": "c1_09a_choice_2_callback",
           "changes": {
             "val": 2
           }
@@ -744,14 +744,14 @@
       "choices": [
         {
           "text": "听楼道里的动静",
-          "next": "c1_10",
+          "next": "c1_09b_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "整理茶几上的杯子",
-          "next": "c1_10",
+          "next": "c1_09b_choice_2_callback",
           "changes": {
             "val": 2,
             "set": {
@@ -782,7 +782,7 @@
       "choices": [
         {
           "text": "把门闩扣紧",
-          "next": "c2_01",
+          "next": "c1_10_choice_1_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -792,7 +792,7 @@
         },
         {
           "text": "让门虚掩着",
-          "next": "c2_01",
+          "next": "c1_10_choice_2_callback",
           "changes": {
             "val": 2,
             "addFlag": "opened_with_softness"
@@ -830,7 +830,7 @@
       "choices": [
         {
           "text": "立刻开门",
-          "next": "c2_02",
+          "next": "c2_01_choice_1_callback",
           "changes": {
             "val": 2,
             "addFlags": [
@@ -840,7 +840,7 @@
         },
         {
           "text": "故意等三下",
-          "next": "c2_02",
+          "next": "c2_01_choice_2_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -872,7 +872,7 @@
       "choices": [
         {
           "text": "\"早安。\"",
-          "next": "c2_03",
+          "next": "c2_02_choice_1_callback",
           "changes": {
             "val": 3,
             "set": {
@@ -883,7 +883,7 @@
         },
         {
           "text": "\"我不会接受计划来的爱情。\"",
-          "next": "c2_03",
+          "next": "c2_02_choice_2_callback",
           "changes": {
             "val": -2,
             "set": {
@@ -915,7 +915,7 @@
       "choices": [
         {
           "text": "\"至少逃到别处，同月同日出生的就不是你。\"",
-          "next": "c2_04",
+          "next": "c2_03_choice_1_callback",
           "changes": {
             "val": -3,
             "set": {
@@ -925,7 +925,7 @@
         },
         {
           "text": "\"你今天真要在这里看住我？\"",
-          "next": "c2_04",
+          "next": "c2_03_choice_2_callback",
           "changes": {
             "val": 2,
             "set": {
@@ -995,14 +995,14 @@
       "choices": [
         {
           "text": "\"国家不是媒人。\"",
-          "next": "c2_05",
+          "next": "c2_04a_choice_1_callback",
           "changes": {
             "val": -1
           }
         },
         {
           "text": "把冷茶推远一点",
-          "next": "c2_05",
+          "next": "c2_04a_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -1030,14 +1030,14 @@
       "choices": [
         {
           "text": "\"涂歪了。\"",
-          "next": "c2_05",
+          "next": "c2_04b_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "什么也不说",
-          "next": "c2_05",
+          "next": "c2_04b_choice_2_callback",
           "changes": {
             "val": 2,
             "set": {
@@ -1107,14 +1107,14 @@
       "choices": [
         {
           "text": "\"那你别记得这么清楚。\"",
-          "next": "c2_06",
+          "next": "c2_05_work_choice_1_callback",
           "changes": {
             "val": -1
           }
         },
         {
           "text": "把围裙递给她",
-          "next": "c2_06",
+          "next": "c2_05_work_choice_2_callback",
           "changes": {
             "val": 2,
             "set": {
@@ -1145,7 +1145,7 @@
       "choices": [
         {
           "text": "替她打开抽油烟机",
-          "next": "c2_06",
+          "next": "c2_05_kitchen_choice_1_callback",
           "changes": {
             "val": 2,
             "set": {
@@ -1155,7 +1155,7 @@
         },
         {
           "text": "站在门外看她找锅",
-          "next": "c2_06",
+          "next": "c2_05_kitchen_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -1218,7 +1218,7 @@
       "choices": [
         {
           "text": "\"还行。\"",
-          "next": "c2_07",
+          "next": "c2_06a_choice_1_callback",
           "changes": {
             "val": 2,
             "set": {
@@ -1228,7 +1228,7 @@
         },
         {
           "text": "继续吃",
-          "next": "c2_07",
+          "next": "c2_06a_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -1256,14 +1256,14 @@
       "choices": [
         {
           "text": "\"不过比食堂热。\"",
-          "next": "c2_07",
+          "next": "c2_06b_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "低头扒饭",
-          "next": "c2_07",
+          "next": "c2_06b_choice_2_callback",
           "changes": {
             "val": -1
           }
@@ -1326,14 +1326,14 @@
       "choices": [
         {
           "text": "按住门把",
-          "next": "c2_08",
+          "next": "c2_07_door_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "回头看周小姐藏到哪里",
-          "next": "c2_08",
+          "next": "c2_07_door_choice_2_callback",
           "changes": {
             "val": 2,
             "set": {
@@ -1364,14 +1364,14 @@
       "choices": [
         {
           "text": "把碗放下",
-          "next": "c2_08",
+          "next": "c2_07_rice_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "\"再不吃就凉了。\"",
-          "next": "c2_08",
+          "next": "c2_07_rice_choice_2_callback",
           "changes": {
             "val": -1
           }
@@ -1439,14 +1439,14 @@
       "choices": [
         {
           "text": "继续挡在门口",
-          "next": "c2_09",
+          "next": "c2_08_plain_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "低声骂陈一单一句",
-          "next": "c2_09",
+          "next": "c2_08_plain_choice_2_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -1477,14 +1477,14 @@
       "choices": [
         {
           "text": "\"我没看清。\"",
-          "next": "c2_09",
+          "next": "c2_08_bundle_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "\"也许是文件。\"",
-          "next": "c2_09",
+          "next": "c2_08_bundle_choice_2_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -1517,14 +1517,14 @@
       "choices": [
         {
           "text": "赔礼道歉，把她挡走",
-          "next": "c2_10",
+          "next": "c2_09_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "\"他往哪边去了？\"",
-          "next": "c2_10",
+          "next": "c2_09_choice_2_callback",
           "changes": {
             "val": -2,
             "set": {
@@ -1557,14 +1557,14 @@
       "choices": [
         {
           "text": "\"不把对方当死人看，就是温情了。\"",
-          "next": "c2_11",
+          "next": "c2_10_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "\"至少她还在找他。\"",
-          "next": "c2_11",
+          "next": "c2_10_choice_2_callback",
           "changes": {
             "val": 3,
             "set": {
@@ -1631,7 +1631,7 @@
       "choices": [
         {
           "text": "\"我想起他小时候。\"",
-          "next": "c3_01",
+          "next": "c2_12_choice_1_callback",
           "changes": {
             "val": 1,
             "addFlag": "told_fire_story"
@@ -1639,7 +1639,7 @@
         },
         {
           "text": "\"没什么，吃饭吧。\"",
-          "next": "c3_01",
+          "next": "c2_12_choice_2_callback",
           "changes": {
             "val": -2,
             "set": {
@@ -1709,14 +1709,14 @@
       "choices": [
         {
           "text": "把那一吻讲出来",
-          "next": "c3_03",
+          "next": "c3_02_choice_1_callback",
           "changes": {
             "val": -1
           }
         },
         {
           "text": "略过那一吻",
-          "next": "c3_03",
+          "next": "c3_02_choice_2_callback",
           "changes": {
             "val": 1,
             "set": {
@@ -1785,7 +1785,7 @@
       "choices": [
         {
           "text": "继续说那场火",
-          "next": "c3_04",
+          "next": "c3_03_factory_choice_1_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -1795,7 +1795,7 @@
         },
         {
           "text": "停一停，等她看完烟囱",
-          "next": "c3_04",
+          "next": "c3_03_factory_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -1823,7 +1823,7 @@
       "choices": [
         {
           "text": "看她的表情",
-          "next": "c3_04",
+          "next": "c3_03_arranged_choice_1_callback",
           "changes": {
             "val": 2,
             "set": {
@@ -1833,7 +1833,7 @@
         },
         {
           "text": "把故事接回火灾",
-          "next": "c3_04",
+          "next": "c3_03_arranged_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -1862,7 +1862,7 @@
       "choices": [
         {
           "text": "\"他没有害怕。\"",
-          "next": "c3_05",
+          "next": "c3_04_choice_1_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -1873,7 +1873,7 @@
         },
         {
           "text": "\"我到现在还记得那口牙。\"",
-          "next": "c3_05",
+          "next": "c3_04_choice_2_callback",
           "changes": {
             "val": 1,
             "unlockAchievement": "ach_old_fire"
@@ -1902,14 +1902,14 @@
       "choices": [
         {
           "text": "\"我没有拒绝他。\"",
-          "next": "c3_06",
+          "next": "c3_05_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "\"也许那时就该拒绝。\"",
-          "next": "c3_06",
+          "next": "c3_05_choice_2_callback",
           "changes": {
             "val": -2,
             "set": {
@@ -1979,14 +1979,14 @@
       "choices": [
         {
           "text": "\"你今天涂得太红了。\"",
-          "next": "c3_07",
+          "next": "c3_06a_choice_1_callback",
           "changes": {
             "val": 2
           }
         },
         {
           "text": "把视线移开",
-          "next": "c3_07",
+          "next": "c3_06a_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -2014,14 +2014,14 @@
       "choices": [
         {
           "text": "继续讲下去",
-          "next": "c3_07",
+          "next": "c3_06b_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "停一停",
-          "next": "c3_07",
+          "next": "c3_06b_choice_2_callback",
           "changes": {
             "val": -1
           }
@@ -2050,14 +2050,14 @@
       "choices": [
         {
           "text": "\"这样的爱情太像机器。\"",
-          "next": "c3_08",
+          "next": "c3_07_choice_1_callback",
           "changes": {
             "val": -1
           }
         },
         {
           "text": "\"你真的只是来劝我？\"",
-          "next": "c3_08",
+          "next": "c3_07_choice_2_callback",
           "changes": {
             "val": 3,
             "set": {
@@ -2089,7 +2089,7 @@
       "choices": [
         {
           "text": "\"旧厂唯一烧掉那次，不也和计划爱情有关？\"",
-          "next": "c3_09",
+          "next": "c3_08_choice_1_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -2099,7 +2099,7 @@
         },
         {
           "text": "\"稳定不等于有人愿意。\"",
-          "next": "c3_09",
+          "next": "c3_08_choice_2_callback",
           "changes": {
             "val": 2
           }
@@ -2166,14 +2166,14 @@
       "choices": [
         {
           "text": "让答案停住",
-          "next": "c3_10",
+          "next": "c3_09a_choice_1_callback",
           "changes": {
             "val": 2
           }
         },
         {
           "text": "补一句你不愿猜",
-          "next": "c3_10",
+          "next": "c3_09a_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -2201,14 +2201,14 @@
       "choices": [
         {
           "text": "继续看她的手",
-          "next": "c3_10",
+          "next": "c3_09b_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "把陈一单的名字说完整",
-          "next": "c3_10",
+          "next": "c3_09b_choice_2_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -2277,14 +2277,14 @@
       "choices": [
         {
           "text": "让沉默结束",
-          "next": "c3_11",
+          "next": "c3_10_silence_choice_1_callback",
           "changes": {
             "val": 2
           }
         },
         {
           "text": "看她收起口红",
-          "next": "c3_11",
+          "next": "c3_10_silence_choice_2_callback",
           "changes": {
             "val": 2,
             "set": {
@@ -2315,7 +2315,7 @@
       "choices": [
         {
           "text": "\"反正不是坏人。\"",
-          "next": "c3_11",
+          "next": "c3_10_defend_choice_1_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -2325,7 +2325,7 @@
         },
         {
           "text": "承认自己答不上来",
-          "next": "c3_11",
+          "next": "c3_10_defend_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -2353,14 +2353,14 @@
       "choices": [
         {
           "text": "拿上外套出门",
-          "next": "d1_01",
+          "next": "c3_11_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "先看一眼东边的窗",
-          "next": "d1_01",
+          "next": "c3_11_choice_2_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -2430,14 +2430,14 @@
       "choices": [
         {
           "text": "\"进去吧。\"",
-          "next": "d1_02",
+          "next": "d1_01b_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "替她掀开门帘",
-          "next": "d1_02",
+          "next": "d1_01b_choice_2_callback",
           "changes": {
             "val": 2,
             "set": {
@@ -2506,14 +2506,14 @@
       "choices": [
         {
           "text": "假装没看见通知",
-          "next": "d1_03",
+          "next": "d1_02_hurry_choice_1_callback",
           "changes": {
             "val": -1
           }
         },
         {
           "text": "多看一眼窗口编号",
-          "next": "d1_03",
+          "next": "d1_02_hurry_choice_2_callback",
           "changes": {
             "val": 1,
             "set": {
@@ -2544,14 +2544,14 @@
       "choices": [
         {
           "text": "低头扒饭",
-          "next": "d1_03",
+          "next": "d1_02_chopsticks_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "\"小心烫。\"",
-          "next": "d1_03",
+          "next": "d1_02_chopsticks_choice_2_callback",
           "changes": {
             "val": 2,
             "set": {
@@ -2582,14 +2582,14 @@
       "choices": [
         {
           "text": "沿大路走",
-          "next": "d1_04",
+          "next": "d1_03_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "看一眼烟囱",
-          "next": "d1_04",
+          "next": "d1_03_choice_2_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -2621,14 +2621,14 @@
       "choices": [
         {
           "text": "\"你一样要遇到一个男人。\"",
-          "next": "d1_05",
+          "next": "d1_04_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "\"你在意这个？\"",
-          "next": "d1_05",
+          "next": "d1_04_choice_2_callback",
           "changes": {
             "val": 3,
             "set": {
@@ -2660,14 +2660,14 @@
       "choices": [
         {
           "text": "\"不知道。你这样的反正不行。\"",
-          "next": "d1_06",
+          "next": "d1_05_choice_1_callback",
           "changes": {
             "val": -3
           }
         },
         {
           "text": "\"会自己说早安的。\"",
-          "next": "d1_06",
+          "next": "d1_05_choice_2_callback",
           "changes": {
             "val": 4,
             "set": {
@@ -2698,14 +2698,14 @@
       "choices": [
         {
           "text": "接住她的包",
-          "next": "d1_07",
+          "next": "d1_06_choice_1_callback",
           "changes": {
             "val": 2
           }
         },
         {
           "text": "假装躲得很狼狈",
-          "next": "d1_07",
+          "next": "d1_06_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -2775,7 +2775,7 @@
       "choices": [
         {
           "text": "等她回答",
-          "next": "d1_08",
+          "next": "d1_07a_choice_1_callback",
           "changes": {
             "val": 2,
             "set": {
@@ -2785,7 +2785,7 @@
         },
         {
           "text": "看那张胸牌",
-          "next": "d1_08",
+          "next": "d1_07a_choice_2_callback",
           "changes": {
             "val": 1,
             "set": {
@@ -2816,14 +2816,14 @@
       "choices": [
         {
           "text": "\"我不是那个意思。\"",
-          "next": "d1_08",
+          "next": "d1_07b_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "让它就这么过去",
-          "next": "d1_08",
+          "next": "d1_07b_choice_2_callback",
           "changes": {
             "val": -1
           }
@@ -2852,14 +2852,14 @@
       "choices": [
         {
           "text": "低头数地上的石子",
-          "next": "d1_09",
+          "next": "d1_08_choice_1_callback",
           "changes": {
             "val": -1
           }
         },
         {
           "text": "看着她等下去",
-          "next": "d1_09",
+          "next": "d1_08_choice_2_callback",
           "changes": {
             "val": 3,
             "addFlag": "walked_further"
@@ -2889,14 +2889,14 @@
       "choices": [
         {
           "text": "送她到宿舍门口就停",
-          "next": "d1_10",
+          "next": "d1_09_choice_1_callback",
           "changes": {
             "val": -2
           }
         },
         {
           "text": "再陪她走一段",
-          "next": "d1_10",
+          "next": "d1_09_choice_2_callback",
           "changes": {
             "val": 3,
             "addFlag": "walked_further"
@@ -2925,7 +2925,7 @@
       "choices": [
         {
           "text": "承认只是想再走一段",
-          "next": "d1_11",
+          "next": "d1_10_choice_1_callback",
           "changes": {
             "val": 4,
             "set": {
@@ -2935,7 +2935,7 @@
         },
         {
           "text": "说是怕她走夜路",
-          "next": "d1_11",
+          "next": "d1_10_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -3004,7 +3004,7 @@
       "choices": [
         {
           "text": "往烟囱方向多看一眼",
-          "next": "d1_12",
+          "next": "d1_11_chen_choice_1_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -3014,7 +3014,7 @@
         },
         {
           "text": "把她的注意力拉回来",
-          "next": "d1_12",
+          "next": "d1_11_chen_choice_2_callback",
           "changes": {
             "val": 2,
             "set": {
@@ -3045,14 +3045,14 @@
       "choices": [
         {
           "text": "加快脚步",
-          "next": "d1_12",
+          "next": "d1_11_ignore_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "放慢脚步等她",
-          "next": "d1_12",
+          "next": "d1_11_ignore_choice_2_callback",
           "changes": {
             "val": 2,
             "set": {
@@ -3084,14 +3084,14 @@
       "choices": [
         {
           "text": "\"去我家洗个澡。\"",
-          "next": "d1_13",
+          "next": "d1_12_choice_1_callback",
           "changes": {
             "val": 3
           }
         },
         {
           "text": "\"你真要给以后的人留好印象？\"",
-          "next": "d1_13",
+          "next": "d1_12_choice_2_callback",
           "changes": {
             "val": 1,
             "set": {
@@ -3122,14 +3122,14 @@
       "choices": [
         {
           "text": "一路不说话",
-          "next": "d1_13a",
+          "next": "d1_13_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "在楼下停一会儿",
-          "next": "d1_13a",
+          "next": "d1_13_choice_2_callback",
           "changes": {
             "val": 2,
             "set": {
@@ -3160,14 +3160,14 @@
       "choices": [
         {
           "text": "带她上楼",
-          "next": "e1_01",
+          "next": "d1_13a_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "\"冷不冷？\"",
-          "next": "e1_01",
+          "next": "d1_13a_choice_2_callback",
           "changes": {
             "val": 2,
             "set": {
@@ -3199,14 +3199,14 @@
       "choices": [
         {
           "text": "看窗外",
-          "next": "e1_02",
+          "next": "e1_01_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "偷瞥花玻璃",
-          "next": "e1_02",
+          "next": "e1_01_choice_2_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -3237,7 +3237,7 @@
       "choices": [
         {
           "text": "\"陈一单那厮，真的把工厂给炸了。\"",
-          "next": "e1_03",
+          "next": "e1_02_choice_1_callback",
           "changes": {
             "val": -2,
             "set": {
@@ -3247,7 +3247,7 @@
         },
         {
           "text": "把窗帘彻底扯开",
-          "next": "e1_03",
+          "next": "e1_02_choice_2_callback",
           "changes": {
             "val": 1
           },
@@ -3317,7 +3317,7 @@
       "choices": [
         {
           "text": "把外套塞给她",
-          "next": "e1_04",
+          "next": "e1_03_pull_choice_1_callback",
           "changes": {
             "val": 3,
             "set": {
@@ -3327,7 +3327,7 @@
         },
         {
           "text": "直接冲向楼梯",
-          "next": "e1_04",
+          "next": "e1_03_pull_choice_2_callback",
           "changes": {
             "val": 1,
             "set": {
@@ -3359,7 +3359,7 @@
       "choices": [
         {
           "text": "把身份证揣进口袋",
-          "next": "e1_04",
+          "next": "e1_03_id_choice_1_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -3369,7 +3369,7 @@
         },
         {
           "text": "把身份证留在桌上",
-          "next": "e1_04",
+          "next": "e1_03_id_choice_2_callback",
           "changes": {
             "val": 2,
             "set": {
@@ -3437,7 +3437,7 @@
       "choices": [
         {
           "text": "放慢半步等她",
-          "next": "e1_05",
+          "next": "e1_04a_choice_1_callback",
           "changes": {
             "val": 3,
             "set": {
@@ -3447,7 +3447,7 @@
         },
         {
           "text": "继续往前冲",
-          "next": "e1_05",
+          "next": "e1_04a_choice_2_callback",
           "changes": {
             "val": 1,
             "set": {
@@ -3478,7 +3478,7 @@
       "choices": [
         {
           "text": "伸手去拉她",
-          "next": "e1_05",
+          "next": "e1_04b_choice_1_callback",
           "changes": {
             "val": 2,
             "addFlag": "held_zhou"
@@ -3486,7 +3486,7 @@
         },
         {
           "text": "等她自己跟上",
-          "next": "e1_05",
+          "next": "e1_04b_choice_2_callback",
           "changes": {
             "val": -1
           }
@@ -3514,7 +3514,7 @@
       "choices": [
         {
           "text": "握紧",
-          "next": "e1_06",
+          "next": "e1_05_choice_1_callback",
           "changes": {
             "val": 4,
             "set": {
@@ -3524,7 +3524,7 @@
         },
         {
           "text": "松一点，怕她不自在",
-          "next": "e1_06",
+          "next": "e1_05_choice_2_callback",
           "changes": {
             "val": 1,
             "set": {
@@ -3596,7 +3596,7 @@
       "choices": [
         {
           "text": "还是喊一声",
-          "next": "e1_07",
+          "next": "e1_06_fire_choice_1_callback",
           "changes": {
             "val": -2,
             "set": {
@@ -3606,7 +3606,7 @@
         },
         {
           "text": "把那声咽回去",
-          "next": "e1_07",
+          "next": "e1_06_fire_choice_2_callback",
           "changes": {
             "val": 2
           }
@@ -3635,7 +3635,7 @@
       "choices": [
         {
           "text": "配合她的步子",
-          "next": "e1_07",
+          "next": "e1_06_steps_choice_1_callback",
           "changes": {
             "val": 3,
             "set": {
@@ -3645,7 +3645,7 @@
         },
         {
           "text": "替她拨开前面的人",
-          "next": "e1_07",
+          "next": "e1_06_steps_choice_2_callback",
           "changes": {
             "val": 2
           }
@@ -3673,14 +3673,14 @@
       "choices": [
         {
           "text": "继续跑，直到陌生",
-          "next": "e1_08",
+          "next": "e1_07_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "停下辨认道路",
-          "next": "e1_08",
+          "next": "e1_07_choice_2_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -3753,14 +3753,14 @@
       "choices": [
         {
           "text": "把她的脑袋扶正",
-          "next": "e1_09",
+          "next": "e1_08a_choice_1_callback",
           "changes": {
             "val": 2
           }
         },
         {
           "text": "让她靠久一点",
-          "next": "e1_09",
+          "next": "e1_08a_choice_2_callback",
           "changes": {
             "val": 3,
             "set": {
@@ -3791,14 +3791,14 @@
       "choices": [
         {
           "text": "转回来看她",
-          "next": "e1_09",
+          "next": "e1_08b_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "再看一眼火",
-          "next": "e1_09",
+          "next": "e1_08b_choice_2_callback",
           "changes": {
             "val": -2,
             "set": {
@@ -3867,7 +3867,7 @@
       "choices": [
         {
           "text": "\"周小芳。\"",
-          "next": "e1_11",
+          "next": "e1_10_choice_1_callback",
           "changes": {
             "val": 4,
             "set": {
@@ -3877,7 +3877,7 @@
         },
         {
           "text": "\"这就是计划爱情的坏处。\"",
-          "next": "e1_11",
+          "next": "e1_10_choice_2_callback",
           "changes": {
             "val": -1,
             "set": {
@@ -3947,14 +3947,14 @@
       "choices": [
         {
           "text": "继续看着她",
-          "next": "e1_12",
+          "next": "e1_11a_choice_1_callback",
           "changes": {
             "val": 2
           }
         },
         {
           "text": "抬头看零点后的天",
-          "next": "e1_12",
+          "next": "e1_11a_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -3982,14 +3982,14 @@
       "choices": [
         {
           "text": "把滑稽留在嘴边",
-          "next": "e1_12",
+          "next": "e1_11b_choice_1_callback",
           "changes": {
             "val": 2
           }
         },
         {
           "text": "低声咳一下",
-          "next": "e1_12",
+          "next": "e1_11b_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -4017,14 +4017,14 @@
       "choices": [
         {
           "text": "和她一起唱生日歌",
-          "next": "e1_13",
+          "next": "e1_12_choice_1_callback",
           "changes": {
             "val": 4
           }
         },
         {
           "text": "只是看着黑水",
-          "next": "e1_13",
+          "next": "e1_12_choice_2_callback",
           "changes": {
             "val": -1
           }
@@ -4054,7 +4054,7 @@
       "choices": [
         {
           "text": "吻上去",
-          "next": "e1_14",
+          "next": "e1_13_choice_1_callback",
           "changes": {
             "val": 6,
             "addFlag": "chose_the_kiss",
@@ -4066,7 +4066,7 @@
         },
         {
           "text": "先确认她没有发烧",
-          "next": "e1_14",
+          "next": "e1_13_choice_2_callback",
           "changes": {
             "val": 2,
             "set": {
@@ -4076,7 +4076,7 @@
         },
         {
           "text": "偏头去看火光",
-          "next": "e1_14",
+          "next": "e1_13_choice_3_callback",
           "changes": {
             "val": -4,
             "set": {
@@ -4178,14 +4178,14 @@
       "choices": [
         {
           "text": "停在她唇前",
-          "next": "true_02",
+          "next": "true_01_choice_1_callback",
           "changes": {
             "val": 2
           }
         },
         {
           "text": "吻下去",
-          "next": "true_02",
+          "next": "true_01_choice_2_callback",
           "changes": {
             "val": 3
           }
@@ -4213,14 +4213,14 @@
       "choices": [
         {
           "text": "听她的呼吸",
-          "next": "true_03",
+          "next": "true_02_choice_1_callback",
           "changes": {
             "val": 2
           }
         },
         {
           "text": "握住她发凉的手",
-          "next": "true_03",
+          "next": "true_02_choice_2_callback",
           "changes": {
             "val": 3
           }
@@ -4248,14 +4248,14 @@
       "choices": [
         {
           "text": "\"先活到明天。\"",
-          "next": "true_04",
+          "next": "true_03_choice_1_callback",
           "changes": {
             "val": 2
           }
         },
         {
           "text": "把外套披到她肩上",
-          "next": "true_04",
+          "next": "true_03_choice_2_callback",
           "changes": {
             "val": 3
           }
@@ -4283,14 +4283,14 @@
       "choices": [
         {
           "text": "一起走过去",
-          "next": "true_05",
+          "next": "true_04_choice_1_callback",
           "changes": {
             "val": 2
           }
         },
         {
           "text": "先把她的名字再念一遍",
-          "next": "true_05",
+          "next": "true_04_choice_2_callback",
           "changes": {
             "val": 3
           }
@@ -4339,14 +4339,14 @@
       "choices": [
         {
           "text": "\"周小芳。\"",
-          "next": "hidden_02",
+          "next": "hidden_01_choice_1_callback",
           "changes": {
             "val": 2
           }
         },
         {
           "text": "\"我记住了。\"",
-          "next": "hidden_02",
+          "next": "hidden_01_choice_2_callback",
           "changes": {
             "val": 3
           }
@@ -4374,14 +4374,14 @@
       "choices": [
         {
           "text": "把沉默留给她",
-          "next": "hidden_03",
+          "next": "hidden_02_choice_1_callback",
           "changes": {
             "val": 2
           }
         },
         {
           "text": "说可以慢慢决定",
-          "next": "hidden_03",
+          "next": "hidden_02_choice_2_callback",
           "changes": {
             "val": 3
           }
@@ -4409,14 +4409,14 @@
       "choices": [
         {
           "text": "收起那张胸牌",
-          "next": "hidden_04",
+          "next": "hidden_03_choice_1_callback",
           "changes": {
             "val": 2
           }
         },
         {
           "text": "让胸牌留在石头上",
-          "next": "hidden_04",
+          "next": "hidden_03_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -4444,14 +4444,14 @@
       "choices": [
         {
           "text": "走完这一圈",
-          "next": "hidden_05",
+          "next": "hidden_04_choice_1_callback",
           "changes": {
             "val": 2
           }
         },
         {
           "text": "在第一缕光里停下",
-          "next": "hidden_05",
+          "next": "hidden_04_choice_2_callback",
           "changes": {
             "val": 3
           }
@@ -4500,14 +4500,14 @@
       "choices": [
         {
           "text": "陪她等天亮",
-          "next": "normal_02",
+          "next": "normal_01_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "问她冷不冷",
-          "next": "normal_02",
+          "next": "normal_01_choice_2_callback",
           "changes": {
             "val": 2
           }
@@ -4535,14 +4535,14 @@
       "choices": [
         {
           "text": "沿路找回熟悉的路灯",
-          "next": "normal_03",
+          "next": "normal_02_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "绕开人群",
-          "next": "normal_03",
+          "next": "normal_02_choice_2_callback",
           "changes": {
             "val": 2
           }
@@ -4570,14 +4570,14 @@
       "choices": [
         {
           "text": "把名字报给她",
-          "next": "normal_04",
+          "next": "normal_03_choice_1_callback",
           "changes": {
             "val": 2
           }
         },
         {
           "text": "等她先念你的名字",
-          "next": "normal_04",
+          "next": "normal_03_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -4605,14 +4605,14 @@
       "choices": [
         {
           "text": "看她写完",
-          "next": "normal_05",
+          "next": "normal_04_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "把周小芳三个字留在心里",
-          "next": "normal_05",
+          "next": "normal_04_choice_2_callback",
           "changes": {
             "val": 2
           }
@@ -4660,14 +4660,14 @@
       "choices": [
         {
           "text": "把身份证擦干",
-          "next": "legal_02",
+          "next": "legal_01_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "解释只是怕丢",
-          "next": "legal_02",
+          "next": "legal_01_choice_2_callback",
           "changes": {
             "val": -1
           }
@@ -4696,14 +4696,14 @@
       "choices": [
         {
           "text": "站到队伍里",
-          "next": "legal_03",
+          "next": "legal_02_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "让周小芳先过去",
-          "next": "legal_03",
+          "next": "legal_02_choice_2_callback",
           "changes": {
             "val": -1
           }
@@ -4731,14 +4731,14 @@
       "choices": [
         {
           "text": "承认纸面年龄",
-          "next": "legal_04",
+          "next": "legal_03_choice_1_callback",
           "changes": {
             "val": -1
           }
         },
         {
           "text": "低声说自己累了",
-          "next": "legal_04",
+          "next": "legal_03_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -4766,14 +4766,14 @@
       "choices": [
         {
           "text": "交回表格",
-          "next": "legal_05",
+          "next": "legal_04_choice_1_callback",
           "changes": {
             "val": -1
           }
         },
         {
           "text": "最后看她一眼",
-          "next": "legal_05",
+          "next": "legal_04_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -4822,14 +4822,14 @@
       "choices": [
         {
           "text": "朝烟囱跑",
-          "next": "fire_02",
+          "next": "fire_01_choice_1_callback",
           "changes": {
             "val": -2
           }
         },
         {
           "text": "喊陈一单的名字",
-          "next": "fire_02",
+          "next": "fire_01_choice_2_callback",
           "changes": {
             "val": -1
           }
@@ -4858,14 +4858,14 @@
       "choices": [
         {
           "text": "爬上断墙",
-          "next": "fire_03",
+          "next": "fire_02_choice_1_callback",
           "changes": {
             "val": -1
           }
         },
         {
           "text": "穿过逃亡的人群",
-          "next": "fire_03",
+          "next": "fire_02_choice_2_callback",
           "changes": {
             "val": -2
           }
@@ -4893,14 +4893,14 @@
       "choices": [
         {
           "text": "继续追",
-          "next": "fire_04",
+          "next": "fire_03_choice_1_callback",
           "changes": {
             "val": -2
           }
         },
         {
           "text": "停下来听爆炸后的空响",
-          "next": "fire_04",
+          "next": "fire_03_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -4928,14 +4928,14 @@
       "choices": [
         {
           "text": "走向火更深处",
-          "next": "fire_05",
+          "next": "fire_04_choice_1_callback",
           "changes": {
             "val": -2
           }
         },
         {
           "text": "在灰烬边缘坐下",
-          "next": "fire_05",
+          "next": "fire_04_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -4985,14 +4985,14 @@
       "choices": [
         {
           "text": "继续解释计划爱情的坏处",
-          "next": "white_02",
+          "next": "white_01_choice_1_callback",
           "changes": {
             "val": -2
           }
         },
         {
           "text": "停下来叫她名字",
-          "next": "white_02",
+          "next": "white_01_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -5020,14 +5020,14 @@
       "choices": [
         {
           "text": "\"我送你。\"",
-          "next": "white_03",
+          "next": "white_02_choice_1_callback",
           "changes": {
             "val": 1
           }
         },
         {
           "text": "\"随你。\"",
-          "next": "white_03",
+          "next": "white_02_choice_2_callback",
           "changes": {
             "val": -2
           }
@@ -5056,14 +5056,14 @@
       "choices": [
         {
           "text": "站到灯灭",
-          "next": "white_04",
+          "next": "white_03_choice_1_callback",
           "changes": {
             "val": -1
           }
         },
         {
           "text": "往相反方向走",
-          "next": "white_04",
+          "next": "white_03_choice_2_callback",
           "changes": {
             "val": -2
           }
@@ -5091,14 +5091,14 @@
       "choices": [
         {
           "text": "把话说完",
-          "next": "white_05",
+          "next": "white_04_choice_1_callback",
           "changes": {
             "val": -1
           }
         },
         {
           "text": "闭上嘴",
-          "next": "white_05",
+          "next": "white_04_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -5148,14 +5148,14 @@
       "choices": [
         {
           "text": "沿墙根离开",
-          "next": "rash_02",
+          "next": "rash_01_choice_1_callback",
           "changes": {
             "val": -1
           }
         },
         {
           "text": "回头看自己的窗",
-          "next": "rash_02",
+          "next": "rash_01_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -5183,14 +5183,14 @@
       "choices": [
         {
           "text": "继续往外走",
-          "next": "rash_03",
+          "next": "rash_02_choice_1_callback",
           "changes": {
             "val": -1
           }
         },
         {
           "text": "在墙后站一会儿",
-          "next": "rash_03",
+          "next": "rash_02_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -5219,14 +5219,14 @@
       "choices": [
         {
           "text": "装作没看见",
-          "next": "rash_04",
+          "next": "rash_03_choice_1_callback",
           "changes": {
             "val": -2
           }
         },
         {
           "text": "朝红光走几步",
-          "next": "rash_04",
+          "next": "rash_03_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -5254,14 +5254,14 @@
       "choices": [
         {
           "text": "把身份证藏好",
-          "next": "ending_rash_escape",
+          "next": "rash_04_choice_1_callback",
           "changes": {
             "val": -1
           }
         },
         {
           "text": "想起那句早安",
-          "next": "ending_rash_escape",
+          "next": "rash_04_choice_2_callback",
           "changes": {
             "val": 1
           }
@@ -5336,6 +5336,4951 @@
       "description": "你把身份证藏进床板底下，像藏起一件战利品。可是这一天没有因此变成胜利。周小姐后来有没有进你的房间，你不知道；陈一单是不是从你楼下经过，你不知道；工厂起火时谁牵住了谁的手，你也不知道。你只知道自己确实没有被婚办处抓到，也没有在成人日零点被迫说出任何承诺。第二天，宿舍楼里流传着许多版本的故事，有人说湖边有人唱生日歌，有人说周小姐从此不再戴那张 ZHOU 的胸牌。你听着这些话，像听别人讲一部本来可以有你出场的电影。",
       "closing": "逃离有时只是把问题留给另一个房间。",
       "ambient": "static"
+    },
+    "c1_01_choice_1_callback": {
+      "title": "灰色工厂的回声",
+      "chapterTitle": "第一章：灰色工厂",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "night",
+      "ambient": "static",
+      "progress": 3,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在灰色工厂里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "c1_01b"
+    },
+    "c1_01_choice_2_callback": {
+      "title": "灰色工厂的回声",
+      "chapterTitle": "第一章：灰色工厂",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "night",
+      "ambient": "static",
+      "progress": 3,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "灰色工厂里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c1_01b"
+    },
+    "c1_01b_choice_1_callback": {
+      "title": "无名产品的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 4,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在无名产品里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "无名产品里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c1_02"
+    },
+    "c1_01b_choice_2_callback": {
+      "title": "无名产品的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 4,
+      "segments": [
+        {
+          "text": "你选择避开那些表格，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "那些纸面上的名字和年月没有立刻改变，却因为你的动作显出一点松动的边缘。"
+        }
+      ],
+      "next": "c1_02"
+    },
+    "c1_02_rebel_choice_1_callback": {
+      "title": "计划爱情的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 6,
+      "segments": [
+        {
+          "text": "你顺着这个念头想下去，记忆像被指尖拨开的线头，露出后面更细的一层。"
+        },
+        {
+          "text": "计划爱情里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c1_03"
+    },
+    "c1_02_rebel_choice_2_callback": {
+      "title": "计划爱情的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 6,
+      "segments": [
+        {
+          "text": "你让这句话在计划爱情里落地，话音刚停，剩下的部分就交给对方的沉默来回答。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "c1_03"
+    },
+    "c1_02_record_choice_1_callback": {
+      "title": "档案柜的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 6,
+      "segments": [
+        {
+          "text": "你顺着这个念头想下去，记忆像被指尖拨开的线头，露出后面更细的一层。"
+        },
+        {
+          "text": "档案柜里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c1_03"
+    },
+    "c1_02_record_choice_2_callback": {
+      "title": "档案柜的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 6,
+      "segments": [
+        {
+          "text": "你顺着这个念头想下去，记忆像被指尖拨开的线头，露出后面更细的一层。"
+        },
+        {
+          "text": "档案柜里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c1_03"
+    },
+    "c1_03a_choice_1_callback": {
+      "title": "塑封边缘的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 8,
+      "segments": [
+        {
+          "text": "这个动作很小，却落在手指和袖口之间，带出一种比话更诚实的紧张。"
+        },
+        {
+          "text": "塑封边缘里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c1_04"
+    },
+    "c1_03a_choice_2_callback": {
+      "title": "塑封边缘的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 8,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在塑封边缘里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "c1_04"
+    },
+    "c1_03b_choice_1_callback": {
+      "title": "不想的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 8,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "不想里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c1_04"
+    },
+    "c1_03b_choice_2_callback": {
+      "title": "不想的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 8,
+      "segments": [
+        {
+          "text": "你选择起身倒水，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "不想里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c1_04"
+    },
+    "c1_04_laugh_choice_1_callback": {
+      "title": "陈一双的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 10,
+      "segments": [
+        {
+          "text": "你用这个动作把话题暂时按进日常里，可日常越安静，真正的问题越显眼。"
+        },
+        {
+          "text": "陈一双里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c1_05"
+    },
+    "c1_04_laugh_choice_2_callback": {
+      "title": "陈一双的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 10,
+      "segments": [
+        {
+          "text": "你选择听楼上的锅碗声，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "c1_05"
+    },
+    "c1_04_swallow_choice_1_callback": {
+      "title": "咽回去的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 10,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在咽回去里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "咽回去里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c1_05"
+    },
+    "c1_04_swallow_choice_2_callback": {
+      "title": "咽回去的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 10,
+      "segments": [
+        {
+          "text": "这个动作很小，却落在手指和袖口之间，带出一种比话更诚实的紧张。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "c1_05"
+    },
+    "c1_05_choice_1_callback": {
+      "title": "楼上的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_stair",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥楼梯边缘磨得发白，早晨的饭味和灰尘在里面拧成一股。",
+        "arrival": "你沿着楼梯往下，听见上面有人咬着热饼说话。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 11,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "c1_06"
+    },
+    "c1_05_choice_2_callback": {
+      "title": "楼上的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_stair",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥楼梯边缘磨得发白，早晨的饭味和灰尘在里面拧成一股。",
+        "arrival": "你沿着楼梯往下，听见上面有人咬着热饼说话。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 11,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "c1_06"
+    },
+    "c1_06_choice_1_callback": {
+      "title": "热饼的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_stair",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥楼梯边缘磨得发白，早晨的饭味和灰尘在里面拧成一股。",
+        "arrival": "你沿着楼梯往下，听见上面有人咬着热饼说话。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 13,
+      "segments": [
+        {
+          "text": "你把“今天工厂批了我假。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "热饼里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c1_07"
+    },
+    "c1_06_choice_2_callback": {
+      "title": "热饼的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_stair",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥楼梯边缘磨得发白，早晨的饭味和灰尘在里面拧成一股。",
+        "arrival": "你沿着楼梯往下，听见上面有人咬着热饼说话。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 13,
+      "segments": [
+        {
+          "text": "你把“你倒像要去拯救世界。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "热饼里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c1_07"
+    },
+    "c1_07_choice_1_callback": {
+      "title": "百年好合的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_stair",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥楼梯边缘磨得发白，早晨的饭味和灰尘在里面拧成一股。",
+        "arrival": "你沿着楼梯往下，听见上面有人咬着热饼说话。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 15,
+      "segments": [
+        {
+          "text": "你选择照他脑袋敲一下，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "陈一单的影子又从旧厂的黑处挪出来，像一枚还没有冷透的铁钉，扎在这句话后面。"
+        }
+      ],
+      "next": "c1_08"
+    },
+    "c1_07_choice_2_callback": {
+      "title": "百年好合的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_stair",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥楼梯边缘磨得发白，早晨的饭味和灰尘在里面拧成一股。",
+        "arrival": "你沿着楼梯往下，听见上面有人咬着热饼说话。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 15,
+      "segments": [
+        {
+          "text": "你把“少拿她开玩笑。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "c1_08"
+    },
+    "c1_08_choice_1_callback": {
+      "title": "夹着的东西的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_stair",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥楼梯边缘磨得发白，早晨的饭味和灰尘在里面拧成一股。",
+        "arrival": "你沿着楼梯往下，听见上面有人咬着热饼说话。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 17,
+      "segments": [
+        {
+          "text": "你把“你夹着什么？”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "夹着的东西里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c1_09"
+    },
+    "c1_08_choice_2_callback": {
+      "title": "夹着的东西的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_stair",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥楼梯边缘磨得发白，早晨的饭味和灰尘在里面拧成一股。",
+        "arrival": "你沿着楼梯往下，听见上面有人咬着热饼说话。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 17,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在夹着的东西里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "陈一单的影子又从旧厂的黑处挪出来，像一枚还没有冷透的铁钉，扎在这句话后面。"
+        }
+      ],
+      "next": "c1_09"
+    },
+    "c1_09a_choice_1_callback": {
+      "title": "牢底的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 20,
+      "segments": [
+        {
+          "text": "你选择继续把它当成决心，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "牢底里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c1_10"
+    },
+    "c1_09a_choice_2_callback": {
+      "title": "牢底的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 20,
+      "segments": [
+        {
+          "text": "你让这句话在牢底里落地，话音刚停，剩下的部分就交给对方的沉默来回答。"
+        },
+        {
+          "text": "牢底里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c1_10"
+    },
+    "c1_09b_choice_1_callback": {
+      "title": "等她的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 20,
+      "segments": [
+        {
+          "text": "你选择听楼道里的动静，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "c1_10"
+    },
+    "c1_09b_choice_2_callback": {
+      "title": "等她的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 20,
+      "segments": [
+        {
+          "text": "你选择整理茶几上的杯子，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "热气、碗沿和筷子的轻响替你们遮住了一瞬间的尴尬，也把沉默压得更近。"
+        }
+      ],
+      "next": "c1_10"
+    },
+    "c1_10_choice_1_callback": {
+      "title": "敲门前的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 21,
+      "segments": [
+        {
+          "text": "你选择把门闩扣紧，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "c2_01"
+    },
+    "c1_10_choice_2_callback": {
+      "title": "敲门前的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 21,
+      "segments": [
+        {
+          "text": "你选择让门虚掩着，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "c2_01"
+    },
+    "c2_01_choice_1_callback": {
+      "title": "敲门的回声",
+      "chapterTitle": "第二章：周小姐上门",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 23,
+      "segments": [
+        {
+          "text": "你选择立刻开门，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "c2_02"
+    },
+    "c2_01_choice_2_callback": {
+      "title": "敲门的回声",
+      "chapterTitle": "第二章：周小姐上门",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 23,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "敲门里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c2_02"
+    },
+    "c2_02_choice_1_callback": {
+      "title": "早安的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 25,
+      "segments": [
+        {
+          "text": "你把“早安。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "这几个字落下以后，白天的规训和夜里的私心短短重叠了一下。"
+        }
+      ],
+      "next": "c2_03"
+    },
+    "c2_02_choice_2_callback": {
+      "title": "早安的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 25,
+      "segments": [
+        {
+          "text": "你把“我不会接受计划来的爱情。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "计划爱情仍在远处运转，可你忽然感觉它不是一堵墙，而是一串会被人手碰歪的齿轮。"
+        }
+      ],
+      "next": "c2_03"
+    },
+    "c2_03_choice_1_callback": {
+      "title": "逃的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 27,
+      "segments": [
+        {
+          "text": "你把“至少逃到别处，同月同日出生的就不是你。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "逃里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c2_04"
+    },
+    "c2_03_choice_2_callback": {
+      "title": "逃的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 27,
+      "segments": [
+        {
+          "text": "你把“你今天真要在这里看住我？”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "逃里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c2_04"
+    },
+    "c2_04a_choice_1_callback": {
+      "title": "冰茶的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 30,
+      "segments": [
+        {
+          "text": "你把“国家不是媒人。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "冰茶里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c2_05"
+    },
+    "c2_04a_choice_2_callback": {
+      "title": "冰茶的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 30,
+      "segments": [
+        {
+          "text": "这个动作很小，却落在手指和袖口之间，带出一种比话更诚实的紧张。"
+        },
+        {
+          "text": "热气、碗沿和筷子的轻响替你们遮住了一瞬间的尴尬，也把沉默压得更近。"
+        }
+      ],
+      "next": "c2_05"
+    },
+    "c2_04b_choice_1_callback": {
+      "title": "最后一枚指甲的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 30,
+      "segments": [
+        {
+          "text": "你把“涂歪了。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "最后一枚指甲里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c2_05"
+    },
+    "c2_04b_choice_2_callback": {
+      "title": "最后一枚指甲的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 30,
+      "segments": [
+        {
+          "text": "你让这句话在最后一枚指甲里落地，话音刚停，剩下的部分就交给对方的沉默来回答。"
+        },
+        {
+          "text": "最后一枚指甲里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c2_05"
+    },
+    "c2_05_work_choice_1_callback": {
+      "title": "工作的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 32,
+      "segments": [
+        {
+          "text": "你把“那你别记得这么清楚。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "工作里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c2_06"
+    },
+    "c2_05_work_choice_2_callback": {
+      "title": "工作的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 32,
+      "segments": [
+        {
+          "text": "这个动作很小，却落在手指和袖口之间，带出一种比话更诚实的紧张。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "c2_06"
+    },
+    "c2_05_kitchen_choice_1_callback": {
+      "title": "厨房门的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 32,
+      "segments": [
+        {
+          "text": "你选择替她打开抽油烟机，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "火与烟没有因为这个决定变远，反而把周围每一张脸都照得更像临时写成的命运。"
+        }
+      ],
+      "next": "c2_06"
+    },
+    "c2_05_kitchen_choice_2_callback": {
+      "title": "厨房门的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 32,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在厨房门里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "c2_06"
+    },
+    "c2_06a_choice_1_callback": {
+      "title": "青菜的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 34,
+      "segments": [
+        {
+          "text": "你把“还行。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "青菜里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c2_07"
+    },
+    "c2_06a_choice_2_callback": {
+      "title": "青菜的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 34,
+      "segments": [
+        {
+          "text": "你用这个动作把话题暂时按进日常里，可日常越安静，真正的问题越显眼。"
+        },
+        {
+          "text": "青菜里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c2_07"
+    },
+    "c2_06b_choice_1_callback": {
+      "title": "食堂的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 34,
+      "segments": [
+        {
+          "text": "你把“不过比食堂热。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "食堂里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c2_07"
+    },
+    "c2_06b_choice_2_callback": {
+      "title": "食堂的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 34,
+      "segments": [
+        {
+          "text": "你用这个动作把话题暂时按进日常里，可日常越安静，真正的问题越显眼。"
+        },
+        {
+          "text": "热气、碗沿和筷子的轻响替你们遮住了一瞬间的尴尬，也把沉默压得更近。"
+        }
+      ],
+      "next": "c2_07"
+    },
+    "c2_07_door_choice_1_callback": {
+      "title": "门边的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 36,
+      "segments": [
+        {
+          "text": "这个动作很小，却落在手指和袖口之间，带出一种比话更诚实的紧张。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "c2_08"
+    },
+    "c2_07_door_choice_2_callback": {
+      "title": "门边的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 36,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在门边里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "c2_08"
+    },
+    "c2_07_rice_choice_1_callback": {
+      "title": "两口饭的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 36,
+      "segments": [
+        {
+          "text": "这个动作很小，却落在手指和袖口之间，带出一种比话更诚实的紧张。"
+        },
+        {
+          "text": "两口饭里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c2_08"
+    },
+    "c2_07_rice_choice_2_callback": {
+      "title": "两口饭的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 36,
+      "segments": [
+        {
+          "text": "你把“再不吃就凉了。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "两口饭里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c2_08"
+    },
+    "c2_08_plain_choice_1_callback": {
+      "title": "上班的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 38,
+      "segments": [
+        {
+          "text": "你选择继续挡在门口，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "c2_09"
+    },
+    "c2_08_plain_choice_2_callback": {
+      "title": "上班的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 38,
+      "segments": [
+        {
+          "text": "你让这句话在上班里落地，话音刚停，剩下的部分就交给对方的沉默来回答。"
+        },
+        {
+          "text": "陈一单的影子又从旧厂的黑处挪出来，像一枚还没有冷透的铁钉，扎在这句话后面。"
+        }
+      ],
+      "next": "c2_09"
+    },
+    "c2_08_bundle_choice_1_callback": {
+      "title": "夹着东西的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 38,
+      "segments": [
+        {
+          "text": "你把“我没看清。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "夹着东西里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c2_09"
+    },
+    "c2_08_bundle_choice_2_callback": {
+      "title": "夹着东西的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 38,
+      "segments": [
+        {
+          "text": "你把“也许是文件。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "夹着东西里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c2_09"
+    },
+    "c2_09_choice_1_callback": {
+      "title": "炸工厂的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 39,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "c2_10"
+    },
+    "c2_09_choice_2_callback": {
+      "title": "炸工厂的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 39,
+      "segments": [
+        {
+          "text": "你把“他往哪边去了？”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "陈一单的影子又从旧厂的黑处挪出来，像一枚还没有冷透的铁钉，扎在这句话后面。"
+        }
+      ],
+      "next": "c2_10"
+    },
+    "c2_10_choice_1_callback": {
+      "title": "似笑非笑的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 41,
+      "segments": [
+        {
+          "text": "你把“不把对方当死人看，就是温情了。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "似笑非笑里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c2_11"
+    },
+    "c2_10_choice_2_callback": {
+      "title": "似笑非笑的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 41,
+      "segments": [
+        {
+          "text": "你把“至少她还在找他。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "c2_11"
+    },
+    "c2_12_choice_1_callback": {
+      "title": "压下去的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 44,
+      "segments": [
+        {
+          "text": "你把“我想起他小时候。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "陈一单的影子又从旧厂的黑处挪出来，像一枚还没有冷透的铁钉，扎在这句话后面。"
+        }
+      ],
+      "next": "c3_01"
+    },
+    "c2_12_choice_2_callback": {
+      "title": "压下去的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 44,
+      "segments": [
+        {
+          "text": "你把“没什么，吃饭吧。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "热气、碗沿和筷子的轻响替你们遮住了一瞬间的尴尬，也把沉默压得更近。"
+        }
+      ],
+      "next": "c3_01"
+    },
+    "c3_02_choice_1_callback": {
+      "title": "父亲的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 48,
+      "segments": [
+        {
+          "text": "你终于越过那点距离，靠近不再只是念头，而成了可以被呼吸和体温证明的事。"
+        },
+        {
+          "text": "父亲里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c3_03"
+    },
+    "c3_02_choice_2_callback": {
+      "title": "父亲的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 48,
+      "segments": [
+        {
+          "text": "你终于越过那点距离，靠近不再只是念头，而成了可以被呼吸和体温证明的事。"
+        },
+        {
+          "text": "父亲里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c3_03"
+    },
+    "c3_03_factory_choice_1_callback": {
+      "title": "恨工厂的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 51,
+      "segments": [
+        {
+          "text": "你让这句话在恨工厂里落地，话音刚停，剩下的部分就交给对方的沉默来回答。"
+        },
+        {
+          "text": "火与烟没有因为这个决定变远，反而把周围每一张脸都照得更像临时写成的命运。"
+        }
+      ],
+      "next": "c3_04"
+    },
+    "c3_03_factory_choice_2_callback": {
+      "title": "恨工厂的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 51,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在恨工厂里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "火与烟没有因为这个决定变远，反而把周围每一张脸都照得更像临时写成的命运。"
+        }
+      ],
+      "next": "c3_04"
+    },
+    "c3_03_arranged_choice_1_callback": {
+      "title": "怕被安排的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 51,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在怕被安排里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "c3_04"
+    },
+    "c3_03_arranged_choice_2_callback": {
+      "title": "怕被安排的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 51,
+      "segments": [
+        {
+          "text": "这个动作很小，却落在手指和袖口之间，带出一种比话更诚实的紧张。"
+        },
+        {
+          "text": "火与烟没有因为这个决定变远，反而把周围每一张脸都照得更像临时写成的命运。"
+        }
+      ],
+      "next": "c3_04"
+    },
+    "c3_04_choice_1_callback": {
+      "title": "旧火的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 52,
+      "segments": [
+        {
+          "text": "你把“他没有害怕。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "陈一单的影子又从旧厂的黑处挪出来，像一枚还没有冷透的铁钉，扎在这句话后面。"
+        }
+      ],
+      "next": "c3_05"
+    },
+    "c3_04_choice_2_callback": {
+      "title": "旧火的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 52,
+      "segments": [
+        {
+          "text": "你把“我到现在还记得那口牙。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "旧火里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c3_05"
+    },
+    "c3_05_choice_1_callback": {
+      "title": "新厂的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 54,
+      "segments": [
+        {
+          "text": "你把“我没有拒绝他。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "陈一单的影子又从旧厂的黑处挪出来，像一枚还没有冷透的铁钉，扎在这句话后面。"
+        }
+      ],
+      "next": "c3_06"
+    },
+    "c3_05_choice_2_callback": {
+      "title": "新厂的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 54,
+      "segments": [
+        {
+          "text": "你把“也许那时就该拒绝。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "新厂里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c3_06"
+    },
+    "c3_06a_choice_1_callback": {
+      "title": "口红的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 57,
+      "segments": [
+        {
+          "text": "你把“你今天涂得太红了。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "口红里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c3_07"
+    },
+    "c3_06a_choice_2_callback": {
+      "title": "口红的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 57,
+      "segments": [
+        {
+          "text": "你选择把视线移开，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "口红里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c3_07"
+    },
+    "c3_06b_choice_1_callback": {
+      "title": "茶几的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 57,
+      "segments": [
+        {
+          "text": "你选择继续讲下去，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "茶几里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c3_07"
+    },
+    "c3_06b_choice_2_callback": {
+      "title": "茶几的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 57,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "茶几里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c3_07"
+    },
+    "c3_07_choice_1_callback": {
+      "title": "忘了的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 58,
+      "segments": [
+        {
+          "text": "你把“这样的爱情太像机器。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "计划爱情仍在远处运转，可你忽然感觉它不是一堵墙，而是一串会被人手碰歪的齿轮。"
+        }
+      ],
+      "next": "c3_08"
+    },
+    "c3_07_choice_2_callback": {
+      "title": "忘了的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 58,
+      "segments": [
+        {
+          "text": "你把“你真的只是来劝我？”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "忘了里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c3_08"
+    },
+    "c3_08_choice_1_callback": {
+      "title": "稳定的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 60,
+      "segments": [
+        {
+          "text": "你把“旧厂唯一烧掉那次，不也和计划爱情有关？”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "计划爱情仍在远处运转，可你忽然感觉它不是一堵墙，而是一串会被人手碰歪的齿轮。"
+        }
+      ],
+      "next": "c3_09"
+    },
+    "c3_08_choice_2_callback": {
+      "title": "稳定的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 60,
+      "segments": [
+        {
+          "text": "你把“稳定不等于有人愿意。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "稳定里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c3_09"
+    },
+    "c3_09a_choice_1_callback": {
+      "title": "不知道的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 63,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "不知道里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c3_10"
+    },
+    "c3_09a_choice_2_callback": {
+      "title": "不知道的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 63,
+      "segments": [
+        {
+          "text": "你选择补一句你不愿猜，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "不知道里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c3_10"
+    },
+    "c3_09b_choice_1_callback": {
+      "title": "相信的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 63,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在相信里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "c3_10"
+    },
+    "c3_09b_choice_2_callback": {
+      "title": "相信的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 63,
+      "segments": [
+        {
+          "text": "你让这句话在相信里落地，话音刚停，剩下的部分就交给对方的沉默来回答。"
+        },
+        {
+          "text": "陈一单的影子又从旧厂的黑处挪出来，像一枚还没有冷透的铁钉，扎在这句话后面。"
+        }
+      ],
+      "next": "c3_10"
+    },
+    "c3_10_silence_choice_1_callback": {
+      "title": "两句话之间的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 65,
+      "segments": [
+        {
+          "text": "你选择让沉默结束，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "两句话之间里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c3_11"
+    },
+    "c3_10_silence_choice_2_callback": {
+      "title": "两句话之间的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 65,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在两句话之间里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "c3_11"
+    },
+    "c3_10_defend_choice_1_callback": {
+      "title": "辩护的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 65,
+      "segments": [
+        {
+          "text": "你把“反正不是坏人。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "辩护里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c3_11"
+    },
+    "c3_10_defend_choice_2_callback": {
+      "title": "辩护的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 65,
+      "segments": [
+        {
+          "text": "你让这句话在辩护里落地，话音刚停，剩下的部分就交给对方的沉默来回答。"
+        },
+        {
+          "text": "辩护里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "c3_11"
+    },
+    "c3_11_choice_1_callback": {
+      "title": "晚饭的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 66,
+      "segments": [
+        {
+          "text": "这个动作很小，却落在手指和袖口之间，带出一种比话更诚实的紧张。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "d1_01"
+    },
+    "c3_11_choice_2_callback": {
+      "title": "晚饭的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 66,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在晚饭里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "d1_01"
+    },
+    "d1_01b_choice_1_callback": {
+      "title": "炉口的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_canteen",
+        "name": "工厂食堂",
+        "type": "major",
+        "description": "小体育馆改成的食堂在夜里亮着赭色灯，像一只沉默的炉。",
+        "arrival": "你和周小姐走进灯下，柜台后的师傅已经开始数钥匙。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 68,
+      "segments": [
+        {
+          "text": "你把“进去吧。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "炉口里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "d1_02"
+    },
+    "d1_01b_choice_2_callback": {
+      "title": "炉口的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_canteen",
+        "name": "工厂食堂",
+        "type": "major",
+        "description": "小体育馆改成的食堂在夜里亮着赭色灯，像一只沉默的炉。",
+        "arrival": "你和周小姐走进灯下，柜台后的师傅已经开始数钥匙。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 68,
+      "segments": [
+        {
+          "text": "你选择替她掀开门帘，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "d1_02"
+    },
+    "d1_02_hurry_choice_1_callback": {
+      "title": "快吃的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_canteen",
+        "name": "工厂食堂",
+        "type": "major",
+        "description": "小体育馆改成的食堂在夜里亮着赭色灯，像一只沉默的炉。",
+        "arrival": "你和周小姐走进灯下，柜台后的师傅已经开始数钥匙。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 69,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在快吃里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "快吃里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "d1_03"
+    },
+    "d1_02_hurry_choice_2_callback": {
+      "title": "快吃的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_canteen",
+        "name": "工厂食堂",
+        "type": "major",
+        "description": "小体育馆改成的食堂在夜里亮着赭色灯，像一只沉默的炉。",
+        "arrival": "你和周小姐走进灯下，柜台后的师傅已经开始数钥匙。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 69,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在快吃里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "d1_03"
+    },
+    "d1_02_chopsticks_choice_1_callback": {
+      "title": "筷子的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_canteen",
+        "name": "工厂食堂",
+        "type": "major",
+        "description": "小体育馆改成的食堂在夜里亮着赭色灯，像一只沉默的炉。",
+        "arrival": "你和周小姐走进灯下，柜台后的师傅已经开始数钥匙。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 69,
+      "segments": [
+        {
+          "text": "你用这个动作把话题暂时按进日常里，可日常越安静，真正的问题越显眼。"
+        },
+        {
+          "text": "热气、碗沿和筷子的轻响替你们遮住了一瞬间的尴尬，也把沉默压得更近。"
+        }
+      ],
+      "next": "d1_03"
+    },
+    "d1_02_chopsticks_choice_2_callback": {
+      "title": "筷子的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_canteen",
+        "name": "工厂食堂",
+        "type": "major",
+        "description": "小体育馆改成的食堂在夜里亮着赭色灯，像一只沉默的炉。",
+        "arrival": "你和周小姐走进灯下，柜台后的师傅已经开始数钥匙。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 69,
+      "segments": [
+        {
+          "text": "你把“小心烫。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "筷子里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "d1_03"
+    },
+    "d1_03_choice_1_callback": {
+      "title": "熄灯的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 70,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "d1_04"
+    },
+    "d1_03_choice_2_callback": {
+      "title": "熄灯的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 70,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在熄灯里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "火与烟没有因为这个决定变远，反而把周围每一张脸都照得更像临时写成的命运。"
+        }
+      ],
+      "next": "d1_04"
+    },
+    "d1_04_choice_1_callback": {
+      "title": "明天的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 71,
+      "segments": [
+        {
+          "text": "你把“你一样要遇到一个男人。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "明天里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "d1_05"
+    },
+    "d1_04_choice_2_callback": {
+      "title": "明天的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 71,
+      "segments": [
+        {
+          "text": "你把“你在意这个？”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "明天里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "d1_05"
+    },
+    "d1_05_choice_1_callback": {
+      "title": "什么样的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 72,
+      "segments": [
+        {
+          "text": "你把“不知道。你这样的反正不行。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "什么样里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "d1_06"
+    },
+    "d1_05_choice_2_callback": {
+      "title": "什么样的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 72,
+      "segments": [
+        {
+          "text": "你把“会自己说早安的。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "这几个字落下以后，白天的规训和夜里的私心短短重叠了一下。"
+        }
+      ],
+      "next": "d1_06"
+    },
+    "d1_06_choice_1_callback": {
+      "title": "包的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 73,
+      "segments": [
+        {
+          "text": "这个动作很小，却落在手指和袖口之间，带出一种比话更诚实的紧张。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "d1_07"
+    },
+    "d1_06_choice_2_callback": {
+      "title": "包的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 73,
+      "segments": [
+        {
+          "text": "你选择假装躲得很狼狈，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "包里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "d1_07"
+    },
+    "d1_07a_choice_1_callback": {
+      "title": "可以吗的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 74,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "d1_08"
+    },
+    "d1_07a_choice_2_callback": {
+      "title": "可以吗的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 74,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在可以吗里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "那些纸面上的名字和年月没有立刻改变，却因为你的动作显出一点松动的边缘。"
+        }
+      ],
+      "next": "d1_08"
+    },
+    "d1_07b_choice_1_callback": {
+      "title": "诚实的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 74,
+      "segments": [
+        {
+          "text": "你把“我不是那个意思。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "诚实里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "d1_08"
+    },
+    "d1_07b_choice_2_callback": {
+      "title": "诚实的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 74,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "诚实里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "d1_08"
+    },
+    "d1_08_choice_1_callback": {
+      "title": "哼的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 75,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在哼里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "哼里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "d1_09"
+    },
+    "d1_08_choice_2_callback": {
+      "title": "哼的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 75,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在哼里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "d1_09"
+    },
+    "d1_09_choice_1_callback": {
+      "title": "出口的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 76,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "d1_10"
+    },
+    "d1_09_choice_2_callback": {
+      "title": "出口的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 76,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "d1_10"
+    },
+    "d1_10_choice_1_callback": {
+      "title": "黑夜的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 77,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "黑夜里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "d1_11"
+    },
+    "d1_10_choice_2_callback": {
+      "title": "黑夜的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 77,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "d1_11"
+    },
+    "d1_11_chen_choice_1_callback": {
+      "title": "没回家的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 78,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在没回家里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "火与烟没有因为这个决定变远，反而把周围每一张脸都照得更像临时写成的命运。"
+        }
+      ],
+      "next": "d1_12"
+    },
+    "d1_11_chen_choice_2_callback": {
+      "title": "没回家的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 78,
+      "segments": [
+        {
+          "text": "这个动作很小，却落在手指和袖口之间，带出一种比话更诚实的紧张。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "d1_12"
+    },
+    "d1_11_ignore_choice_1_callback": {
+      "title": "别管他的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 78,
+      "segments": [
+        {
+          "text": "你选择加快脚步，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "别管他里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "d1_12"
+    },
+    "d1_11_ignore_choice_2_callback": {
+      "title": "别管他的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 78,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "d1_12"
+    },
+    "d1_12_choice_1_callback": {
+      "title": "零点前的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 79,
+      "segments": [
+        {
+          "text": "你把“去我家洗个澡。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "零点前里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "d1_13"
+    },
+    "d1_12_choice_2_callback": {
+      "title": "零点前的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 79,
+      "segments": [
+        {
+          "text": "你把“你真要给以后的人留好印象？”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "零点前里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "d1_13"
+    },
+    "d1_13_choice_1_callback": {
+      "title": "回去的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 80,
+      "segments": [
+        {
+          "text": "你让这句话在回去里落地，话音刚停，剩下的部分就交给对方的沉默来回答。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "d1_13a"
+    },
+    "d1_13_choice_2_callback": {
+      "title": "回去的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 80,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "d1_13a"
+    },
+    "d1_13a_choice_1_callback": {
+      "title": "楼下的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_stair",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥楼梯边缘磨得发白，早晨的饭味和灰尘在里面拧成一股。",
+        "arrival": "你沿着楼梯往下，听见上面有人咬着热饼说话。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 81,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "e1_01"
+    },
+    "d1_13a_choice_2_callback": {
+      "title": "楼下的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_stair",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥楼梯边缘磨得发白，早晨的饭味和灰尘在里面拧成一股。",
+        "arrival": "你沿着楼梯往下，听见上面有人咬着热饼说话。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 81,
+      "segments": [
+        {
+          "text": "你把“冷不冷？”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "楼下里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "e1_01"
+    },
+    "e1_01_choice_1_callback": {
+      "title": "浴室的回声",
+      "chapterTitle": "第五章：成人日",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 82,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在浴室里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "e1_02"
+    },
+    "e1_01_choice_2_callback": {
+      "title": "浴室的回声",
+      "chapterTitle": "第五章：成人日",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 82,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在浴室里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "浴室里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "e1_02"
+    },
+    "e1_02_choice_1_callback": {
+      "title": "东窗的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 83,
+      "segments": [
+        {
+          "text": "你把“陈一单那厮，真的把工厂给炸了。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "陈一单的影子又从旧厂的黑处挪出来，像一枚还没有冷透的铁钉，扎在这句话后面。"
+        }
+      ],
+      "next": "e1_03"
+    },
+    "e1_02_choice_2_callback": {
+      "title": "东窗的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 83,
+      "segments": [
+        {
+          "text": "你选择把窗帘彻底扯开，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "e1_03"
+    },
+    "e1_03_pull_choice_1_callback": {
+      "title": "先拉住她的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 84,
+      "segments": [
+        {
+          "text": "这个动作很小，却落在手指和袖口之间，带出一种比话更诚实的紧张。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "e1_04"
+    },
+    "e1_03_pull_choice_2_callback": {
+      "title": "先拉住她的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 84,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "e1_04"
+    },
+    "e1_03_id_choice_1_callback": {
+      "title": "身份证的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 84,
+      "segments": [
+        {
+          "text": "你选择把身份证揣进口袋，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "那些纸面上的名字和年月没有立刻改变，却因为你的动作显出一点松动的边缘。"
+        }
+      ],
+      "next": "e1_04"
+    },
+    "e1_03_id_choice_2_callback": {
+      "title": "身份证的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 84,
+      "segments": [
+        {
+          "text": "你选择把身份证留在桌上，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "那些纸面上的名字和年月没有立刻改变，却因为你的动作显出一点松动的边缘。"
+        }
+      ],
+      "next": "e1_04"
+    },
+    "e1_04a_choice_1_callback": {
+      "title": "手臂的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_stair",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥楼梯边缘磨得发白，早晨的饭味和灰尘在里面拧成一股。",
+        "arrival": "你沿着楼梯往下，听见上面有人咬着热饼说话。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 85,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "e1_05"
+    },
+    "e1_04a_choice_2_callback": {
+      "title": "手臂的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_stair",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥楼梯边缘磨得发白，早晨的饭味和灰尘在里面拧成一股。",
+        "arrival": "你沿着楼梯往下，听见上面有人咬着热饼说话。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 85,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "手臂里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "e1_05"
+    },
+    "e1_04b_choice_1_callback": {
+      "title": "名字卡住的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_stair",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥楼梯边缘磨得发白，早晨的饭味和灰尘在里面拧成一股。",
+        "arrival": "你沿着楼梯往下，听见上面有人咬着热饼说话。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 85,
+      "segments": [
+        {
+          "text": "这个动作很小，却落在手指和袖口之间，带出一种比话更诚实的紧张。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "e1_05"
+    },
+    "e1_04b_choice_2_callback": {
+      "title": "名字卡住的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_stair",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥楼梯边缘磨得发白，早晨的饭味和灰尘在里面拧成一股。",
+        "arrival": "你沿着楼梯往下，听见上面有人咬着热饼说话。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 85,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "e1_05"
+    },
+    "e1_05_choice_1_callback": {
+      "title": "十指的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_stair",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥楼梯边缘磨得发白，早晨的饭味和灰尘在里面拧成一股。",
+        "arrival": "你沿着楼梯往下，听见上面有人咬着热饼说话。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 86,
+      "segments": [
+        {
+          "text": "这个动作很小，却落在手指和袖口之间，带出一种比话更诚实的紧张。"
+        },
+        {
+          "text": "十指里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "e1_06"
+    },
+    "e1_05_choice_2_callback": {
+      "title": "十指的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_stair",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥楼梯边缘磨得发白，早晨的饭味和灰尘在里面拧成一股。",
+        "arrival": "你沿着楼梯往下，听见上面有人咬着热饼说话。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 86,
+      "segments": [
+        {
+          "text": "你选择松一点，怕她不自在，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "e1_06"
+    },
+    "e1_06_fire_choice_1_callback": {
+      "title": "火里的人影的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 87,
+      "segments": [
+        {
+          "text": "你让这句话在火里的人影里落地，话音刚停，剩下的部分就交给对方的沉默来回答。"
+        },
+        {
+          "text": "火里的人影里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "e1_07"
+    },
+    "e1_06_fire_choice_2_callback": {
+      "title": "火里的人影的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 87,
+      "segments": [
+        {
+          "text": "你选择把那声咽回去，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "火里的人影里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "e1_07"
+    },
+    "e1_06_steps_choice_1_callback": {
+      "title": "脚步的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 87,
+      "segments": [
+        {
+          "text": "你选择配合她的步子，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "e1_07"
+    },
+    "e1_06_steps_choice_2_callback": {
+      "title": "脚步的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 87,
+      "segments": [
+        {
+          "text": "你选择替她拨开前面的人，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "e1_07"
+    },
+    "e1_07_choice_1_callback": {
+      "title": "走马灯的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 88,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "走马灯里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "e1_08"
+    },
+    "e1_07_choice_2_callback": {
+      "title": "走马灯的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 88,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "e1_08"
+    },
+    "e1_08a_choice_1_callback": {
+      "title": "坐下的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 89,
+      "segments": [
+        {
+          "text": "这个动作很小，却落在手指和袖口之间，带出一种比话更诚实的紧张。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "e1_09"
+    },
+    "e1_08a_choice_2_callback": {
+      "title": "坐下的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 89,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "e1_09"
+    },
+    "e1_08b_choice_1_callback": {
+      "title": "回头的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 89,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在回头里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "e1_09"
+    },
+    "e1_08b_choice_2_callback": {
+      "title": "回头的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 89,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在回头里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "火与烟没有因为这个决定变远，反而把周围每一张脸都照得更像临时写成的命运。"
+        }
+      ],
+      "next": "e1_09"
+    },
+    "e1_10_choice_1_callback": {
+      "title": "周小芳的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 91,
+      "segments": [
+        {
+          "text": "你把“周小芳。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "e1_11"
+    },
+    "e1_10_choice_2_callback": {
+      "title": "周小芳的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 91,
+      "segments": [
+        {
+          "text": "你把“这就是计划爱情的坏处。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "计划爱情仍在远处运转，可你忽然感觉它不是一堵墙，而是一串会被人手碰歪的齿轮。"
+        }
+      ],
+      "next": "e1_11"
+    },
+    "e1_11a_choice_1_callback": {
+      "title": "祝你的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 92,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在祝你里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "e1_12"
+    },
+    "e1_11a_choice_2_callback": {
+      "title": "祝你的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 92,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在祝你里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "祝你里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "e1_12"
+    },
+    "e1_11b_choice_1_callback": {
+      "title": "也祝我的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 92,
+      "segments": [
+        {
+          "text": "你选择把滑稽留在嘴边，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "也祝我里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "e1_12"
+    },
+    "e1_11b_choice_2_callback": {
+      "title": "也祝我的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 92,
+      "segments": [
+        {
+          "text": "你用这个动作把话题暂时按进日常里，可日常越安静，真正的问题越显眼。"
+        },
+        {
+          "text": "也祝我里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "e1_12"
+    },
+    "e1_12_choice_1_callback": {
+      "title": "零点的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 93,
+      "segments": [
+        {
+          "text": "你选择和她一起唱生日歌，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "e1_13"
+    },
+    "e1_12_choice_2_callback": {
+      "title": "零点的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 93,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在零点里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "零点里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "e1_13"
+    },
+    "e1_13_choice_1_callback": {
+      "title": "计划给你的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 94,
+      "segments": [
+        {
+          "text": "你终于越过那点距离，靠近不再只是念头，而成了可以被呼吸和体温证明的事。"
+        },
+        {
+          "text": "计划给你里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "e1_14"
+    },
+    "e1_13_choice_2_callback": {
+      "title": "计划给你的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 94,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在计划给你里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "e1_14"
+    },
+    "e1_13_choice_3_callback": {
+      "title": "计划给你的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 94,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在计划给你里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "火与烟没有因为这个决定变远，反而把周围每一张脸都照得更像临时写成的命运。"
+        }
+      ],
+      "next": "e1_14"
+    },
+    "true_01_choice_1_callback": {
+      "title": "靠近的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "wind",
+      "progress": 96,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "true_02"
+    },
+    "true_01_choice_2_callback": {
+      "title": "靠近的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "wind",
+      "progress": 96,
+      "segments": [
+        {
+          "text": "你终于越过那点距离，靠近不再只是念头，而成了可以被呼吸和体温证明的事。"
+        },
+        {
+          "text": "靠近里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "true_02"
+    },
+    "true_02_choice_1_callback": {
+      "title": "没有作证的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 97,
+      "segments": [
+        {
+          "text": "你选择听她的呼吸，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "true_03"
+    },
+    "true_02_choice_2_callback": {
+      "title": "没有作证的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 97,
+      "segments": [
+        {
+          "text": "这个动作很小，却落在手指和袖口之间，带出一种比话更诚实的紧张。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "true_03"
+    },
+    "true_03_choice_1_callback": {
+      "title": "回程的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 98,
+      "segments": [
+        {
+          "text": "你把“先活到明天。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "回程里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "true_04"
+    },
+    "true_03_choice_2_callback": {
+      "title": "回程的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 98,
+      "segments": [
+        {
+          "text": "这个动作很小，却落在手指和袖口之间，带出一种比话更诚实的紧张。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "true_04"
+    },
+    "true_04_choice_1_callback": {
+      "title": "灰烬边缘的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "灰烬边缘里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "true_05"
+    },
+    "true_04_choice_2_callback": {
+      "title": "灰烬边缘的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你让这句话在灰烬边缘里落地，话音刚停，剩下的部分就交给对方的沉默来回答。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "true_05"
+    },
+    "hidden_01_choice_1_callback": {
+      "title": "不急着吻的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "wind",
+      "progress": 96,
+      "segments": [
+        {
+          "text": "你把“周小芳。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "hidden_02"
+    },
+    "hidden_01_choice_2_callback": {
+      "title": "不急着吻的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "wind",
+      "progress": 96,
+      "segments": [
+        {
+          "text": "你把“我记住了。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "不急着吻里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "hidden_02"
+    },
+    "hidden_02_choice_1_callback": {
+      "title": "名字之外的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 97,
+      "segments": [
+        {
+          "text": "你选择把沉默留给她，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "hidden_03"
+    },
+    "hidden_02_choice_2_callback": {
+      "title": "名字之外的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 97,
+      "segments": [
+        {
+          "text": "你让这句话在名字之外里落地，话音刚停，剩下的部分就交给对方的沉默来回答。"
+        },
+        {
+          "text": "名字之外里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "hidden_03"
+    },
+    "hidden_03_choice_1_callback": {
+      "title": "第一段路的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 98,
+      "segments": [
+        {
+          "text": "这个动作很小，却落在手指和袖口之间，带出一种比话更诚实的紧张。"
+        },
+        {
+          "text": "那些纸面上的名字和年月没有立刻改变，却因为你的动作显出一点松动的边缘。"
+        }
+      ],
+      "next": "hidden_04"
+    },
+    "hidden_03_choice_2_callback": {
+      "title": "第一段路的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 98,
+      "segments": [
+        {
+          "text": "你选择让胸牌留在石头上，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "那些纸面上的名字和年月没有立刻改变，却因为你的动作显出一点松动的边缘。"
+        }
+      ],
+      "next": "hidden_04"
+    },
+    "hidden_04_choice_1_callback": {
+      "title": "未登记的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "未登记里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "hidden_05"
+    },
+    "hidden_04_choice_2_callback": {
+      "title": "未登记的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "未登记里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "hidden_05"
+    },
+    "normal_01_choice_1_callback": {
+      "title": "没有答应的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "wind",
+      "progress": 96,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "normal_02"
+    },
+    "normal_01_choice_2_callback": {
+      "title": "没有答应的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "wind",
+      "progress": 96,
+      "segments": [
+        {
+          "text": "你让这句话在没有答应里落地，话音刚停，剩下的部分就交给对方的沉默来回答。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "normal_02"
+    },
+    "normal_02_choice_1_callback": {
+      "title": "烟灰的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 97,
+      "segments": [
+        {
+          "text": "你选择沿路找回熟悉的路灯，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "normal_03"
+    },
+    "normal_02_choice_2_callback": {
+      "title": "烟灰的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 97,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "烟灰里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "normal_03"
+    },
+    "normal_03_choice_1_callback": {
+      "title": "清点的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 98,
+      "segments": [
+        {
+          "text": "你选择把名字报给她，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "normal_04"
+    },
+    "normal_03_choice_2_callback": {
+      "title": "清点的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 98,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "normal_04"
+    },
+    "normal_04_choice_1_callback": {
+      "title": "合法之前的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在合法之前里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "normal_05"
+    },
+    "normal_04_choice_2_callback": {
+      "title": "合法之前的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你选择把周小芳三个字留在心里，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "normal_05"
+    },
+    "legal_01_choice_1_callback": {
+      "title": "身份证的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 96,
+      "segments": [
+        {
+          "text": "你选择把身份证擦干，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "那些纸面上的名字和年月没有立刻改变，却因为你的动作显出一点松动的边缘。"
+        }
+      ],
+      "next": "legal_02"
+    },
+    "legal_01_choice_2_callback": {
+      "title": "身份证的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 96,
+      "segments": [
+        {
+          "text": "你让这句话在身份证里落地，话音刚停，剩下的部分就交给对方的沉默来回答。"
+        },
+        {
+          "text": "身份证里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "legal_02"
+    },
+    "legal_02_choice_1_callback": {
+      "title": "临时窗口的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 97,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "临时窗口里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "legal_03"
+    },
+    "legal_02_choice_2_callback": {
+      "title": "临时窗口的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 97,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "legal_03"
+    },
+    "legal_03_choice_1_callback": {
+      "title": "出生年月的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 98,
+      "segments": [
+        {
+          "text": "你让这句话在出生年月里落地，话音刚停，剩下的部分就交给对方的沉默来回答。"
+        },
+        {
+          "text": "出生年月里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "legal_04"
+    },
+    "legal_03_choice_2_callback": {
+      "title": "出生年月的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 98,
+      "segments": [
+        {
+          "text": "你让这句话在出生年月里落地，话音刚停，剩下的部分就交给对方的沉默来回答。"
+        },
+        {
+          "text": "出生年月里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "legal_04"
+    },
+    "legal_04_choice_1_callback": {
+      "title": "补签的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你选择交回表格，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "那些纸面上的名字和年月没有立刻改变，却因为你的动作显出一点松动的边缘。"
+        }
+      ],
+      "next": "legal_05"
+    },
+    "legal_04_choice_2_callback": {
+      "title": "补签的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在补签里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "legal_05"
+    },
+    "fire_01_choice_1_callback": {
+      "title": "回头太久的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 96,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "火与烟没有因为这个决定变远，反而把周围每一张脸都照得更像临时写成的命运。"
+        }
+      ],
+      "next": "fire_02"
+    },
+    "fire_01_choice_2_callback": {
+      "title": "回头太久的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 96,
+      "segments": [
+        {
+          "text": "你让这句话在回头太久里落地，话音刚停，剩下的部分就交给对方的沉默来回答。"
+        },
+        {
+          "text": "陈一单的影子又从旧厂的黑处挪出来，像一枚还没有冷透的铁钉，扎在这句话后面。"
+        }
+      ],
+      "next": "fire_02"
+    },
+    "fire_02_choice_1_callback": {
+      "title": "墙和马的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 97,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "墙和马里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "fire_03"
+    },
+    "fire_02_choice_2_callback": {
+      "title": "墙和马的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 97,
+      "segments": [
+        {
+          "text": "你选择穿过逃亡的人群，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "墙和马里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "fire_03"
+    },
+    "fire_03_choice_1_callback": {
+      "title": "陈一单的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 98,
+      "segments": [
+        {
+          "text": "你选择继续追，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "陈一单里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "fire_04"
+    },
+    "fire_03_choice_2_callback": {
+      "title": "陈一单的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 98,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "火与烟没有因为这个决定变远，反而把周围每一张脸都照得更像临时写成的命运。"
+        }
+      ],
+      "next": "fire_04"
+    },
+    "fire_04_choice_1_callback": {
+      "title": "没有回头的人的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "火与烟没有因为这个决定变远，反而把周围每一张脸都照得更像临时写成的命运。"
+        }
+      ],
+      "next": "fire_05"
+    },
+    "fire_04_choice_2_callback": {
+      "title": "没有回头的人的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "没有回头的人里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "fire_05"
+    },
+    "white_01_choice_1_callback": {
+      "title": "话太多的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "wind",
+      "progress": 96,
+      "segments": [
+        {
+          "text": "你让这句话在话太多里落地，话音刚停，剩下的部分就交给对方的沉默来回答。"
+        },
+        {
+          "text": "计划爱情仍在远处运转，可你忽然感觉它不是一堵墙，而是一串会被人手碰歪的齿轮。"
+        }
+      ],
+      "next": "white_02"
+    },
+    "white_01_choice_2_callback": {
+      "title": "话太多的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "black_lake",
+        "name": "湖边",
+        "type": "major",
+        "description": "三面山影围住黑水，远处火光还在跳，水面照不出人的影子。",
+        "arrival": "你停下来，才发现自己已经跑到一个陌生的湖边。"
+      },
+      "theme": "dark",
+      "ambient": "wind",
+      "progress": 96,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "周小芳因此有了一个很细微的反应，那反应不够成为回答，却足够让你知道她听见了。"
+        }
+      ],
+      "next": "white_02"
+    },
+    "white_02_choice_1_callback": {
+      "title": "白色路灯的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 97,
+      "segments": [
+        {
+          "text": "你把“我送你。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "白色路灯里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "white_03"
+    },
+    "white_02_choice_2_callback": {
+      "title": "白色路灯的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 97,
+      "segments": [
+        {
+          "text": "你把“随你。”说出来以后，先听见的是自己的声音；它比你以为的更清楚，也更难收回。"
+        },
+        {
+          "text": "白色路灯里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "white_03"
+    },
+    "white_03_choice_1_callback": {
+      "title": "胸牌先消失的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 98,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "胸牌先消失里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "white_04"
+    },
+    "white_03_choice_2_callback": {
+      "title": "胸牌先消失的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "factory_night_road",
+        "name": "厂区夜路",
+        "type": "major",
+        "description": "暗红的天压在烟囱上，车间大门隔路相对，像一对沉默的住户。",
+        "arrival": "你们从食堂出来，最后一点灯光在背后熄掉。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 98,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "胸牌先消失里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "white_04"
+    },
+    "white_04_choice_1_callback": {
+      "title": "后来的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你让这句话在后来里落地，话音刚停，剩下的部分就交给对方的沉默来回答。"
+        },
+        {
+          "text": "后来里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "white_05"
+    },
+    "white_04_choice_2_callback": {
+      "title": "后来的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你选择闭上嘴，这个决定没有立刻改变方向，却先改变了你进入下一刻的姿势。"
+        },
+        {
+          "text": "后来里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "white_05"
+    },
+    "rash_01_choice_1_callback": {
+      "title": "窗外的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 22,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "窗外里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "rash_02"
+    },
+    "rash_01_choice_2_callback": {
+      "title": "窗外的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 22,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在窗外里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "门窗、楼道和路面把这个选择接住，像把你推向同一条路的不同入口。"
+        }
+      ],
+      "next": "rash_02"
+    },
+    "rash_02_choice_1_callback": {
+      "title": "听见早安的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 30,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "听见早安里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "rash_03"
+    },
+    "rash_02_choice_2_callback": {
+      "title": "听见早安的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 30,
+      "segments": [
+        {
+          "text": "你没有急着把这一刻推过去，于是停顿本身变成了一种回答。"
+        },
+        {
+          "text": "听见早安里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "rash_03"
+    },
+    "rash_03_choice_1_callback": {
+      "title": "别处的红光的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 75,
+      "segments": [
+        {
+          "text": "你照着这个念头去看，视线在别处的红光里停得稍久，原本模糊的东西便有了轮廓。"
+        },
+        {
+          "text": "别处的红光里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "rash_04"
+    },
+    "rash_03_choice_2_callback": {
+      "title": "别处的红光的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "old_factory",
+        "name": "旧工厂",
+        "type": "major",
+        "description": "车间像一排灰色箱子，烟囱在远处竖着，没人知道零件最后会变成什么。",
+        "arrival": "你站在厂区边缘，制服的灰色从人群身上连到墙上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 75,
+      "segments": [
+        {
+          "text": "你迈出去的那一步很实在，鞋底蹭过地面时，身体已经替迟疑做完了决定。"
+        },
+        {
+          "text": "别处的红光里的空气没有大幅改写，却因为这个选择轻轻偏了一下。"
+        }
+      ],
+      "next": "rash_04"
+    },
+    "rash_04_choice_1_callback": {
+      "title": "没有参与的故事的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 95,
+      "segments": [
+        {
+          "text": "这个动作很小，却落在手指和袖口之间，带出一种比话更诚实的紧张。"
+        },
+        {
+          "text": "那些纸面上的名字和年月没有立刻改变，却因为你的动作显出一点松动的边缘。"
+        }
+      ],
+      "next": "ending_rash_escape"
+    },
+    "rash_04_choice_2_callback": {
+      "title": "没有参与的故事的回声",
+      "chapterTitle": "",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "窄床、茶几、甲虫挂饰和一间满是油烟味的厨房，把房间挤得像临时仓库。",
+        "arrival": "你把门关上，楼道里的脚步声还贴在门板上。"
+      },
+      "theme": "dark",
+      "ambient": "static",
+      "progress": 95,
+      "segments": [
+        {
+          "text": "你顺着这个念头想下去，记忆像被指尖拨开的线头，露出后面更细的一层。"
+        },
+        {
+          "text": "这几个字落下以后，白天的规训和夜里的私心短短重叠了一下。"
+        }
+      ],
+      "next": "ending_rash_escape"
     }
   }
 }
