@@ -1,0 +1,5986 @@
+{
+  "meta": {
+    "title": "成人日",
+    "author": "山音",
+    "version": "2.0.0",
+    "description": "根据山音小说《成人日》改编的分支剧情游戏。玩家扮演吴新，在成人日前夜穿过计划爱情、旧工厂火灾、陈一单的失踪与周小姐的真实姓名。",
+    "theme": "summer",
+    "ambient": "heat",
+    "cover": {
+      "label": "成人日",
+      "tagline": "开始就要来临。结局看得见。"
+    },
+    "variableName": "白光",
+    "initialVariable": 50
+  },
+  "startNodeId": "start",
+  "variables": {
+    "defiance": "none",
+    "zhou_distance": "work",
+    "chen_attention": "loose",
+    "fire_pull": "sleeping",
+    "argument_style": "none",
+    "last_route": "none"
+  },
+  "achievements": {
+    "ach_true_sun": {
+      "title": "瞳仁里的太阳",
+      "description": "在湖边迎来属于两个人的成人日。"
+    },
+    "ach_empty_freedom": {
+      "title": "空自由",
+      "description": "逃离原来的婚配，也逃离具体的人。"
+    },
+    "ach_zhou_again": {
+      "title": "ZHOU",
+      "description": "让周小芳重新回到胸牌后面。"
+    },
+    "ach_horse_wall": {
+      "title": "墙也是马",
+      "description": "靠近陈一单式的火。"
+    },
+    "ach_legal_hostess": {
+      "title": "合法女主人",
+      "description": "按部就班地完成成人日。"
+    },
+    "ach_name": {
+      "title": "全名",
+      "description": "问出 ZHOU 背后的名字。"
+    },
+    "ach_hand": {
+      "title": "十指相扣",
+      "description": "在火光里没有松手。"
+    },
+    "ach_old_fire": {
+      "title": "旧火",
+      "description": "相信陈一单曾经点燃旧工厂。"
+    }
+  },
+  "nodes": {
+    "start": {
+      "title": "灰色工厂",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 1,
+      "segments": [
+        {
+          "text": "这个工厂很有一些年岁了。"
+        },
+        {
+          "text": "它没有存在感，来往的人也不知道自己拼装的零件最后会变成什么。"
+        },
+        {
+          "text": "你叫吴新。明天就是你的成人日，分配婚姻会像排班表一样落到你头上。"
+        }
+      ],
+      "chapterTitle": "第一章：灰色工厂",
+      "choices": [
+        {
+          "text": "翻开身份证，看改过的年龄",
+          "next": "ch1_id",
+          "changes": {
+            "val": 2,
+            "addFlag": "checked_id"
+          }
+        },
+        {
+          "text": "把身份证扣在桌上",
+          "next": "ch1_hide_id",
+          "changes": {
+            "val": -2,
+            "addFlag": "avoided_id"
+          }
+        }
+      ],
+      "ambient": "heat"
+    },
+    "ch1_id": {
+      "title": "二十一岁十一个月零二十九天",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 2,
+      "segments": [
+        {
+          "text": "身份证上的年龄比你的真实年龄小两岁。"
+        },
+        {
+          "text": "明天以后，这个漏洞就堵不上了。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "把身份证放回桌上",
+          "next": "ch1_plan_love",
+          "changes": {
+            "val": 1
+          }
+        }
+      ]
+    },
+    "ch1_hide_id": {
+      "title": "扣住日期",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 2,
+      "segments": [
+        {
+          "text": "你把身份证扣住。"
+        },
+        {
+          "text": "塑料片边缘还是露出一点白，像表格角落没盖完的章。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "起身去倒水",
+          "next": "ch1_plan_love",
+          "changes": {
+            "val": -1
+          }
+        }
+      ]
+    },
+    "ch1_plan_love": {
+      "title": "计划爱情",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 4,
+      "segments": [
+        {
+          "text": "这个时代里，年满婚龄的人会被婚办处随机分配一位对象。"
+        },
+        {
+          "text": "必须接受，必须生育，必须让这个缩小的人口数字重新变大。"
+        },
+        {
+          "text": "你反对它，也怕它。怕这件事你通常不说。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "把反对说得像革命",
+          "next": "ch1_empty_half",
+          "changes": {
+            "val": -2,
+            "set": {
+              "defiance": "loud"
+            }
+          }
+        },
+        {
+          "text": "承认自己未必敢违法",
+          "next": "ch1_empty_half",
+          "changes": {
+            "val": 2,
+            "set": {
+              "defiance": "thin"
+            }
+          }
+        }
+      ]
+    },
+    "ch1_empty_half": {
+      "title": "空掉的一半楼",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 5,
+      "segments": [
+        {
+          "text": "宿舍楼空掉的一半属于已经被分配出去的人。"
+        },
+        {
+          "text": "还亮着灯的一半，住着尚未到龄的年轻劳动力。"
+        },
+        {
+          "text": "你明天就该从这一半搬到另一种生活里。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "出门看看楼道",
+          "next": "ch1_chen_before",
+          "changes": {}
+        }
+      ]
+    },
+    "ch1_chen_before": {
+      "title": "楼上有声",
+      "scene": {
+        "id": "dorm_corridor",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥地积着灰，铁栏杆被手摸得发亮，楼下早饭的油气一层层升上来。"
+      },
+      "progress": 6,
+      "segments": [
+        {
+          "text": "楼上传来轻微的脚步声。"
+        },
+        {
+          "text": "陈一单结婚以后已经很少露面，连你也很少见到他。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "等他下来",
+          "next": "ch1_chen_meet",
+          "changes": {
+            "val": 1
+          }
+        },
+        {
+          "text": "先下楼，假装没等",
+          "next": "ch1_chen_meet",
+          "changes": {
+            "val": -1,
+            "addFlag": "pretended_not_wait"
+          }
+        }
+      ]
+    },
+    "ch1_chen_meet": {
+      "title": "面皮饼子",
+      "scene": {
+        "id": "dorm_corridor",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥地积着灰，铁栏杆被手摸得发亮，楼下早饭的油气一层层升上来。"
+      },
+      "progress": 8,
+      "segments": [
+        {
+          "text": "陈一单从楼上下来，手里攥着油纸包的面皮饼子，热气还没落。"
+        },
+        {
+          "text": "他手肘上郑重夹着什么东西，脚步比往常快。"
+        },
+        {
+          "text": "“挺早的，上班去？”",
+          "speaker": "陈一单"
+        }
+      ],
+      "choices": [
+        {
+          "text": "问他手肘夹的是什么",
+          "next": "ch1_chen_package",
+          "changes": {
+            "val": 2,
+            "set": {
+              "chen_attention": "sharp"
+            }
+          }
+        },
+        {
+          "text": "只回答今天请假",
+          "next": "ch1_chen_leave_talk",
+          "changes": {
+            "val": -1,
+            "set": {
+              "chen_attention": "loose"
+            }
+          }
+        }
+      ]
+    },
+    "ch1_chen_package": {
+      "title": "夹着的东西",
+      "scene": {
+        "id": "dorm_corridor",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥地积着灰，铁栏杆被手摸得发亮，楼下早饭的油气一层层升上来。"
+      },
+      "progress": 9,
+      "segments": [
+        {
+          "text": "你指了指他的手肘。"
+        },
+        {
+          "text": "陈一单低头看一眼，像刚发现那里多了东西。"
+        },
+        {
+          "text": "“搬家的破烂。”他说。饼子把后半句糊住。",
+          "speaker": "陈一单"
+        }
+      ],
+      "choices": [
+        {
+          "text": "不再追问",
+          "next": "ch1_chen_leave_talk",
+          "changes": {
+            "addFlag": "noticed_package"
+          }
+        }
+      ]
+    },
+    "ch1_chen_leave_talk": {
+      "title": "陈一双",
+      "scene": {
+        "id": "dorm_corridor",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥地积着灰，铁栏杆被手摸得发亮，楼下早饭的油气一层层升上来。"
+      },
+      "progress": 10,
+      "segments": [
+        {
+          "text": "你说周小姐今天要来做工作，明天你就要结婚了。"
+        },
+        {
+          "text": "“喔，明天我也得搬走了。”陈一单顿了一下。"
+        },
+        {
+          "text": "“祝你和周小姐百年好合。”",
+          "speaker": "陈一单"
+        }
+      ],
+      "choices": [
+        {
+          "text": "照旧打他一个爆栗",
+          "next": "ch1_chen_exit",
+          "changes": {
+            "val": 2,
+            "addFlag": "joked_with_chen"
+          }
+        },
+        {
+          "text": "难得不还嘴",
+          "next": "ch1_chen_exit",
+          "changes": {
+            "val": -1,
+            "addFlag": "let_chen_pass"
+          }
+        }
+      ]
+    },
+    "ch1_chen_exit": {
+      "title": "义无反顾",
+      "scene": {
+        "id": "dorm_corridor",
+        "name": "宿舍楼道",
+        "type": "major",
+        "description": "水泥地积着灰，铁栏杆被手摸得发亮，楼下早饭的油气一层层升上来。"
+      },
+      "progress": 12,
+      "segments": [
+        {
+          "text": "陈一单低头闪躲，哈哈笑着往下走。"
+        },
+        {
+          "text": "笑声在楼道里混响，像有人提前把空房间敲了一遍。"
+        },
+        {
+          "text": "他没有回头。手肘夹着的东西也没有掉下来。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "回房间等周小姐",
+          "next": "ch2_knock",
+          "changes": {
+            "addFlag": "chen_left_morning"
+          }
+        }
+      ]
+    },
+    "ch2_knock": {
+      "title": "敲门声",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 14,
+      "segments": [
+        {
+          "text": "早饭过后一段时间，周小姐来了。"
+        },
+        {
+          "text": "敲门声起初有力短促，几声之后莫名变得轻缓悠长。"
+        },
+        {
+          "text": "你开门。她脸上抹了粉，仍藏不住一点晕红。"
+        }
+      ],
+      "chapterTitle": "第二章：最后一个上午",
+      "choices": [
+        {
+          "text": "先说早安",
+          "next": "ch2_good_morning",
+          "changes": {
+            "val": 3,
+            "set": {
+              "zhou_distance": "near"
+            }
+          }
+        },
+        {
+          "text": "先说不会接受计划爱情",
+          "next": "ch2_resist_first",
+          "changes": {
+            "val": -3,
+            "set": {
+              "zhou_distance": "work"
+            }
+          }
+        }
+      ],
+      "ambient": "heat"
+    },
+    "ch2_good_morning": {
+      "title": "破天荒",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 15,
+      "segments": [
+        {
+          "text": "“早安。”你说。"
+        },
+        {
+          "text": "周小姐像确认门牌一样确认你。"
+        },
+        {
+          "text": "这两个字比任何反抗口号都更不合时宜。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "把话题拉回婚配",
+          "next": "ch2_threshold",
+          "changes": {
+            "val": 1,
+            "addFlag": "said_morning"
+          }
+        }
+      ]
+    },
+    "ch2_resist_first": {
+      "title": "在眼皮底下",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 15,
+      "segments": [
+        {
+          "text": "“到了明天你就找不到我人了，我逃掉也不会结婚。”",
+          "speaker": "吴新"
+        },
+        {
+          "text": "周小姐脸上的红变成愤懑。"
+        },
+        {
+          "text": "“你逃啊，老娘今天就在这不走了。”",
+          "speaker": "周小姐"
+        }
+      ],
+      "choices": [
+        {
+          "text": "让她进来",
+          "next": "ch2_threshold",
+          "changes": {
+            "val": -1,
+            "addFlag": "angered_zhou"
+          }
+        }
+      ]
+    },
+    "ch2_threshold": {
+      "title": "门槛",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 16,
+      "segments": [
+        {
+          "text": "她进门时用松糕底高跟鞋蹬了一下地。"
+        },
+        {
+          "text": "胸牌上只有 ZHOU。它在白衬衣上亮得很刺眼。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "盯着胸牌看",
+          "next": "ch2_tea",
+          "changes": {
+            "val": 1,
+            "addFlag": "noticed_badge"
+          }
+        },
+        {
+          "text": "移开眼，去倒茶",
+          "next": "ch2_tea",
+          "changes": {
+            "val": 2,
+            "addFlag": "made_tea"
+          }
+        }
+      ]
+    },
+    "ch2_tea": {
+      "title": "两碗茶",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 18,
+      "segments": [
+        {
+          "text": "两碗茶从冒着热气到冷成冰水，只用一个上午。"
+        },
+        {
+          "text": "她说国家婚姻率不能再少。"
+        },
+        {
+          "text": "你说爱情是人基本的自由。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续争下去",
+          "next": "ch2_argument_hot",
+          "changes": {
+            "val": -3,
+            "set": {
+              "argument_style": "hard"
+            }
+          }
+        },
+        {
+          "text": "停下来，看她涂指甲",
+          "next": "ch2_nail_pause",
+          "changes": {
+            "val": 3,
+            "set": {
+              "argument_style": "pause"
+            }
+          }
+        }
+      ]
+    },
+    "ch2_argument_hot": {
+      "title": "寥寥几句",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 20,
+      "segments": [
+        {
+          "text": "你们热烈的语言交锋很快缩成寥寥几句。"
+        },
+        {
+          "text": "夏天像在室内产生，提前把午睡时分的倦怠放进脑子里。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "把话咽回去",
+          "next": "ch2_val_gate",
+          "changes": {
+            "val": -1
+          }
+        }
+      ]
+    },
+    "ch2_nail_pause": {
+      "title": "新一款指甲油",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 20,
+      "segments": [
+        {
+          "text": "周小姐低头涂她新一款指甲油。"
+        },
+        {
+          "text": "她涂得很认真，好像那十片颜色比婚配系统更值得校准。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "看向头顶的甲虫",
+          "next": "ch2_val_gate",
+          "changes": {
+            "val": 2
+          }
+        }
+      ]
+    },
+    "ch2_val_gate": {
+      "title": "房间里的白光",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 21,
+      "segments": [
+        {
+          "text": "茶几上的水迹慢慢干掉。"
+        },
+        {
+          "text": "周小姐低头收拾指甲油，胸牌上的白光在杯壁上晃了一下。"
+        }
+      ],
+      "routes": [
+        {
+          "condition": "val >= 55",
+          "next": "ch2_val_warm"
+        },
+        {
+          "condition": "val <= 45",
+          "next": "ch2_val_cold"
+        },
+        {
+          "condition": "default",
+          "next": "ch2_val_neutral"
+        }
+      ]
+    },
+    "ch2_val_warm": {
+      "title": "她没有立刻反驳",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 21,
+      "segments": [
+        {
+          "text": "她没有立刻反驳你。"
+        },
+        {
+          "text": "指甲油瓶盖被她轻轻旋上，没有发出平常那种硬响。"
+        },
+        {
+          "text": "“你今天倒是会倒茶。”她说。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "把这句话放过去",
+          "next": "ch2_beetle",
+          "changes": {
+            "val": 1
+          }
+        }
+      ]
+    },
+    "ch2_val_cold": {
+      "title": "她坐得更直",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 21,
+      "segments": [
+        {
+          "text": "她把指甲油瓶盖拧得很紧。"
+        },
+        {
+          "text": "然后坐直，胸牌重新对准你，像一枚小小的白色印章。"
+        },
+        {
+          "text": "“吴新，我们还是谈工作。”她说。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "点头，继续耗着",
+          "next": "ch2_beetle",
+          "changes": {
+            "val": -1
+          }
+        }
+      ]
+    },
+    "ch2_val_neutral": {
+      "title": "工作和拜访之间",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 21,
+      "segments": [
+        {
+          "text": "她把指甲油收进包里。"
+        },
+        {
+          "text": "动作不快，也不慢，像你们之间暂时还没有决定这是工作还是拜访。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "看向头顶的甲虫",
+          "next": "ch2_beetle",
+          "changes": {}
+        }
+      ]
+    },
+    "ch2_beetle": {
+      "title": "甲虫挂饰",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 22,
+      "segments": [
+        {
+          "text": "你望着房间里头顶那只巨大的甲虫挂饰发呆。"
+        },
+        {
+          "text": "你们之间连无聊都这么默契，像一对老夫老妻。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "立刻否认这个念头",
+          "next": "ch2_window_smoke",
+          "changes": {
+            "val": -2,
+            "addFlag": "denied_old_couple"
+          }
+        },
+        {
+          "text": "任由这个念头停一会儿",
+          "next": "ch2_window_smoke",
+          "changes": {
+            "val": 4,
+            "addFlag": "felt_old_couple"
+          }
+        }
+      ]
+    },
+    "ch2_window_smoke": {
+      "title": "炊烟",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 24,
+      "segments": [
+        {
+          "text": "僵局一直保持到窗外吹来炊烟。"
+        },
+        {
+          "text": "周小姐恰好涂完最后一枚指甲，站起身关窗。"
+        },
+        {
+          "text": "“都已经这么晚了呀，我做饭给你吃。”",
+          "speaker": "周小姐"
+        }
+      ],
+      "choices": [
+        {
+          "text": "说不用麻烦",
+          "next": "ch2_kitchen",
+          "changes": {
+            "val": -1
+          }
+        },
+        {
+          "text": "把围裙递给她",
+          "next": "ch2_kitchen",
+          "changes": {
+            "val": 3,
+            "addFlag": "gave_apron"
+          }
+        }
+      ]
+    },
+    "ch2_kitchen": {
+      "title": "男式围裙",
+      "scene": {
+        "id": "dorm_kitchen",
+        "name": "宿舍厨房",
+        "type": "major",
+        "description": "铝锅贴着油烟墙，窄台面上摆着一把钝刀，男式围裙挂在门后。"
+      },
+      "progress": 26,
+      "segments": [
+        {
+          "text": "她穿上你的男式围裙，熟门熟路走进满是油烟味的厨房。"
+        },
+        {
+          "text": "这个动作不像工作，也不像拜访。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "靠在门口看她忙",
+          "next": "ch2_lunch",
+          "changes": {
+            "val": 2
+          }
+        },
+        {
+          "text": "回到桌边等饭",
+          "next": "ch2_lunch",
+          "changes": {
+            "val": -1
+          }
+        }
+      ]
+    },
+    "ch2_lunch": {
+      "title": "一荤一素",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 28,
+      "segments": [
+        {
+          "text": "一荤一素，两碗白米饭。"
+        },
+        {
+          "text": "手艺并不比工厂食堂高明多少。"
+        },
+        {
+          "text": "可真让你回食堂吃，你恐怕又会不习惯。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "说菜还行",
+          "next": "ch2_footsteps",
+          "changes": {
+            "val": 2
+          }
+        },
+        {
+          "text": "什么也不说，低头吃饭",
+          "next": "ch2_footsteps",
+          "changes": {
+            "val": -1
+          }
+        }
+      ]
+    },
+    "ch2_footsteps": {
+      "title": "楼下脚步",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 30,
+      "segments": [
+        {
+          "text": "楼下传来咚咚咚的脚步声，由远及近。"
+        },
+        {
+          "text": "你们在静默中等待这一种神奇的力量降临。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "放下筷子",
+          "next": "ch3_wife_arrives",
+          "changes": {
+            "addFlag": "heard_heavy_steps"
+          }
+        }
+      ]
+    },
+    "ch3_wife_arrives": {
+      "title": "死鬼陈",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 32,
+      "segments": [
+        {
+          "text": "门被粗暴地捶着。"
+        },
+        {
+          "text": "粗野的女声在门外口齿不清地叫。"
+        },
+        {
+          "text": "“我说吴新，你有没有见到我家那死鬼陈。一早上没见人了！”",
+          "speaker": "陈一单妻子"
+        }
+      ],
+      "chapterTitle": "第三章：午饭与失踪",
+      "choices": [
+        {
+          "text": "说今早见过他",
+          "next": "ch3_tell_wife",
+          "changes": {
+            "val": 1,
+            "addFlag": "told_wife_seen_chen"
+          }
+        },
+        {
+          "text": "先让周小姐躲进内室",
+          "next": "ch3_shield_room",
+          "changes": {
+            "val": 2,
+            "addFlag": "shielded_zhou"
+          }
+        }
+      ],
+      "ambient": "static",
+      "effect": "shake"
+    },
+    "ch3_tell_wife": {
+      "title": "今早见过",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 34,
+      "segments": [
+        {
+          "text": "“今早吃早饭的时候还碰上了呢，他不说去上班了么？”",
+          "speaker": "吴新"
+        },
+        {
+          "text": "“上个鬼！他早就请了假。”",
+          "speaker": "陈一单妻子"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续挡着门",
+          "next": "ch3_wife_anger",
+          "changes": {
+            "val": -1
+          }
+        }
+      ]
+    },
+    "ch3_shield_room": {
+      "title": "躲进内室",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 34,
+      "segments": [
+        {
+          "text": "周小姐从桌边站起来，绕进内室。"
+        },
+        {
+          "text": "你挡在门口，听见她在里面轻轻碰到椅子。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "隔门应付",
+          "next": "ch3_wife_anger",
+          "changes": {
+            "val": 2
+          }
+        }
+      ]
+    },
+    "ch3_wife_anger": {
+      "title": "宁愿去炸工厂",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 36,
+      "segments": [
+        {
+          "text": "“今天搬迁的人都来了，就他死拖。”",
+          "speaker": "陈一单妻子"
+        },
+        {
+          "text": "“之前还讲要他搬家，他宁愿去炸工厂。”"
+        },
+        {
+          "text": "她要撕开门的架势，比门本身更硬。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "替陈一单说两句",
+          "next": "ch3_after_wife",
+          "changes": {
+            "val": -2,
+            "addFlag": "defended_chen"
+          }
+        },
+        {
+          "text": "赔礼道歉，把她挡回去",
+          "next": "ch3_after_wife",
+          "changes": {
+            "val": 1,
+            "addFlag": "calmed_wife"
+          }
+        }
+      ]
+    },
+    "ch3_after_wife": {
+      "title": "温情",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 38,
+      "segments": [
+        {
+          "text": "她下楼的声音跟上楼一样，甚至更大。"
+        },
+        {
+          "text": "周小姐从内室绕出来，看着你，表情似笑非笑。"
+        },
+        {
+          "text": "“蛮好，这一家人挺温情的。”",
+          "speaker": "吴新"
+        }
+      ],
+      "choices": [
+        {
+          "text": "解释什么叫温情",
+          "next": "ch3_warmth",
+          "changes": {
+            "val": 2
+          }
+        },
+        {
+          "text": "说陈一单真干得出来",
+          "next": "ch3_bomb_guess",
+          "changes": {
+            "val": -3,
+            "set": {
+              "fire_pull": "awake"
+            }
+          }
+        }
+      ]
+    },
+    "ch3_warmth": {
+      "title": "不当死人看",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 40,
+      "segments": [
+        {
+          "text": "“现在的夫妻，能够不把对方当死人看，偶尔管管对方，这就是一种温情了。”",
+          "speaker": "吴新"
+        },
+        {
+          "text": "周小姐盯着你，半晌没有说话。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "说起陈一单小时候",
+          "next": "ch4_childhood",
+          "changes": {
+            "val": 1
+          }
+        }
+      ]
+    },
+    "ch3_bomb_guess": {
+      "title": "干得出来",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 40,
+      "segments": [
+        {
+          "text": "你说炸工厂这种事，陈一单应该干得出来。"
+        },
+        {
+          "text": "周小姐的眼神从门口挪回你身上，像你刚把房间里某个暗处打开了。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "讲给她听",
+          "next": "ch4_childhood",
+          "changes": {
+            "val": -1,
+            "addFlag": "said_chen_can_bomb"
+          }
+        }
+      ]
+    },
+    "ch4_childhood": {
+      "title": "工厂子弟小学",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 43,
+      "segments": [
+        {
+          "text": "那应该是陈一单八岁的时候。"
+        },
+        {
+          "text": "那一年，最后一个自由爱情年代出生的人也去世了。"
+        },
+        {
+          "text": "完全的计划时代来临。"
+        }
+      ],
+      "chapterTitle": "第四章：旧火",
+      "choices": [
+        {
+          "text": "先讲他的父母",
+          "next": "ch4_parents",
+          "changes": {
+            "val": 1
+          }
+        },
+        {
+          "text": "先讲旧工厂",
+          "next": "ch4_old_factory",
+          "changes": {
+            "val": -1
+          }
+        }
+      ],
+      "ambient": "static"
+    },
+    "ch4_parents": {
+      "title": "后来才发现",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 45,
+      "segments": [
+        {
+          "text": "“他们不是一开始就相爱的，他是后来才发现他爱她。”",
+          "speaker": "陈一单"
+        },
+        {
+          "text": "很小的陈一单喜欢念这种似是而非的句子。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "讲那个黄昏",
+          "next": "ch4_wall_horse",
+          "changes": {}
+        }
+      ]
+    },
+    "ch4_old_factory": {
+      "title": "不知道用途的零件",
+      "scene": {
+        "id": "factory_yard",
+        "name": "工厂大路",
+        "type": "major",
+        "description": "集装箱一样的车间隔着一条路相对，远处烟囱黑洞洞地昂着，像一门没有发射的巨炮。"
+      },
+      "progress": 45,
+      "segments": [
+        {
+          "text": "旧工厂比现在更大，造的仍是不知道用途的东西。"
+        },
+        {
+          "text": "在陈一单的观念里，美好的感情和这个小工厂一样永恒。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "讲那个黄昏",
+          "next": "ch4_wall_horse",
+          "changes": {}
+        }
+      ]
+    },
+    "ch4_wall_horse": {
+      "title": "墙上的骑士",
+      "scene": {
+        "id": "factory_yard",
+        "name": "工厂大路",
+        "type": "major",
+        "description": "集装箱一样的车间隔着一条路相对，远处烟囱黑洞洞地昂着，像一门没有发射的巨炮。"
+      },
+      "progress": 47,
+      "segments": [
+        {
+          "text": "红色偏黑的黄昏里，陈一单骑在围墙上，像骑一匹烈马。"
+        },
+        {
+          "text": "他拍着厚厚积灰的墙壁，想象自己在夕阳下狂奔。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "让故事继续往下落",
+          "next": "ch4_father_kiss",
+          "changes": {}
+        }
+      ]
+    },
+    "ch4_father_kiss": {
+      "title": "路灯下的吻",
+      "scene": {
+        "id": "factory_yard",
+        "name": "工厂大路",
+        "type": "major",
+        "description": "集装箱一样的车间隔着一条路相对，远处烟囱黑洞洞地昂着，像一门没有发射的巨炮。"
+      },
+      "progress": 49,
+      "segments": [
+        {
+          "text": "他看见父亲搂着一个女人的肩膀，慢慢走到路灯下面。"
+        },
+        {
+          "text": "他们沿长长光路走下去。"
+        },
+        {
+          "text": "末了，他看见父亲吻了那个女人。她不是他的母亲。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "停一下看周小姐反应",
+          "next": "ch4_zhou_listens",
+          "changes": {
+            "val": 3,
+            "addFlag": "paused_story"
+          }
+        },
+        {
+          "text": "继续讲，像怕故事冷掉",
+          "next": "ch4_every_evening",
+          "changes": {
+            "val": -1
+          }
+        }
+      ]
+    },
+    "ch4_zhou_listens": {
+      "title": "听得入迷",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 51,
+      "segments": [
+        {
+          "text": "周小姐听得入迷。"
+        },
+        {
+          "text": "她摸包时拿错了东西，把唇釉当作指甲油，又慌忙擦掉。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "看着那点红色",
+          "next": "ch4_every_evening",
+          "changes": {
+            "val": 2,
+            "addFlag": "saw_lip_red"
+          }
+        }
+      ]
+    },
+    "ch4_every_evening": {
+      "title": "每一个黄昏",
+      "scene": {
+        "id": "factory_yard",
+        "name": "工厂大路",
+        "type": "major",
+        "description": "集装箱一样的车间隔着一条路相对，远处烟囱黑洞洞地昂着，像一门没有发射的巨炮。"
+      },
+      "progress": 53,
+      "segments": [
+        {
+          "text": "陈一单每一个黄昏都坐在矮墙头上。"
+        },
+        {
+          "text": "每晚炊烟时分，他都看见那对酷似情侣的人在暮色光路下走走停停。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "讲到火灾",
+          "next": "ch4_fire_old",
+          "changes": {}
+        }
+      ]
+    },
+    "ch4_fire_old": {
+      "title": "老工厂大火",
+      "scene": {
+        "id": "factory_yard",
+        "name": "工厂大路",
+        "type": "major",
+        "description": "集装箱一样的车间隔着一条路相对，远处烟囱黑洞洞地昂着，像一门没有发射的巨炮。"
+      },
+      "progress": 56,
+      "segments": [
+        {
+          "text": "那年冬天，黄昏时候天已经黑下来了。"
+        },
+        {
+          "text": "突如其来的大火漫遍整个工厂。"
+        },
+        {
+          "text": "陈一单骑在房檐上玩玩偶，露出森白的牙齿咯咯地笑。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "说你相信是他做的",
+          "next": "ch4_believe_fire",
+          "changes": {
+            "val": -4,
+            "set": {
+              "fire_pull": "strong"
+            },
+            "importantFlag": {
+              "flag": "believed_chen_fire",
+              "label": "相信陈一单点燃旧火"
+            },
+            "unlockAchievement": "ach_old_fire"
+          }
+        },
+        {
+          "text": "说你不知道",
+          "next": "ch4_unsure_fire",
+          "changes": {
+            "val": 2,
+            "addFlag": "withheld_fire_judgment"
+          }
+        }
+      ],
+      "effect": "flash"
+    },
+    "ch4_believe_fire": {
+      "title": "相信",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 58,
+      "segments": [
+        {
+          "text": "“我不相信陈一单是坏人，可是我觉得是他做的。”",
+          "speaker": "吴新"
+        },
+        {
+          "text": "周小姐低头看自己的手，绿色指甲油还没干透。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "把话题转回来",
+          "next": "ch4_story_val_gate",
+          "changes": {
+            "val": -1
+          }
+        }
+      ]
+    },
+    "ch4_unsure_fire": {
+      "title": "不知道",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 58,
+      "segments": [
+        {
+          "text": "“我不知道。”你说。"
+        },
+        {
+          "text": "这三个字很轻，却比肯定更重。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "把话题转回来",
+          "next": "ch4_story_val_gate",
+          "changes": {
+            "val": 1
+          }
+        }
+      ]
+    },
+    "ch4_story_val_gate": {
+      "title": "故事讲完以后",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 59,
+      "segments": [
+        {
+          "text": "旧火讲完以后，房间里短暂安静。"
+        },
+        {
+          "text": "窗外的炊烟早散了，留下来的只有一点油烟味。"
+        }
+      ],
+      "routes": [
+        {
+          "condition": "val >= 58",
+          "next": "ch4_story_high_info"
+        },
+        {
+          "condition": "val <= 42",
+          "next": "ch4_story_low_info"
+        },
+        {
+          "condition": "default",
+          "next": "ch4_story_mid_info"
+        }
+      ]
+    },
+    "ch4_story_high_info": {
+      "title": "她多问了一句",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 59,
+      "segments": [
+        {
+          "text": "周小姐没有马上把话题拉回劝婚。"
+        },
+        {
+          "text": "她问陈一单后来有没有再提过那场火。"
+        },
+        {
+          "text": "这个问题不像工作记录，更像她真的想知道。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "回答她",
+          "next": "ch4_machine_love",
+          "changes": {
+            "val": 1,
+            "addFlag": "zhou_asked_more_about_fire"
+          }
+        }
+      ]
+    },
+    "ch4_story_low_info": {
+      "title": "她盖上瓶盖",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 59,
+      "segments": [
+        {
+          "text": "周小姐盖上指甲油瓶盖。"
+        },
+        {
+          "text": "她没有继续追问陈一单，只说这种猜测不能写进任何记录。"
+        },
+        {
+          "text": "她重新像婚办处的人。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "把话题转回制度",
+          "next": "ch4_machine_love",
+          "changes": {
+            "val": -1,
+            "addFlag": "zhou_withheld_fire_question"
+          }
+        }
+      ]
+    },
+    "ch4_story_mid_info": {
+      "title": "她看着绿色",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 59,
+      "segments": [
+        {
+          "text": "周小姐看着自己刚涂好的绿色指甲。"
+        },
+        {
+          "text": "她像是想问什么，最后只把手放回膝盖上。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续说下去",
+          "next": "ch4_machine_love",
+          "changes": {}
+        }
+      ]
+    },
+    "ch4_machine_love": {
+      "title": "组装爱情",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 60,
+      "segments": [
+        {
+          "text": "“这样的爱情就像工厂里生产机器，你给一半，我给一半，组装到一起。”",
+          "speaker": "吴新"
+        },
+        {
+          "text": "周小姐说制度很稳定，按部就班，至少工厂到现在都没有倒闭。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "说唯一烧掉那次也和计划爱情有关",
+          "next": "ch5_canteen_start",
+          "changes": {
+            "val": -2
+          }
+        },
+        {
+          "text": "承认稳定听起来也不是没用",
+          "next": "ch5_canteen_start",
+          "changes": {
+            "val": 2
+          }
+        }
+      ]
+    },
+    "ch5_canteen_start": {
+      "title": "沉默的火炉",
+      "scene": {
+        "id": "factory_canteen",
+        "name": "工厂食堂",
+        "type": "major",
+        "description": "褐色矮楼由小体育馆改造，夜里亮着灯，像一个沉默的火炉。"
+      },
+      "progress": 64,
+      "segments": [
+        {
+          "text": "晚饭在任何语言中都象征着正式宴席。"
+        },
+        {
+          "text": "可是你们这一餐晚饭丝毫不浪漫。"
+        },
+        {
+          "text": "家里的炊具熄了火，你们只能去工厂食堂。"
+        }
+      ],
+      "chapterTitle": "第五章：红色夜路",
+      "choices": [
+        {
+          "text": "走进食堂",
+          "next": "ch5_canteen_food",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "ch5_canteen_food": {
+      "title": "第三次一荤一素",
+      "scene": {
+        "id": "factory_canteen",
+        "name": "工厂食堂",
+        "type": "major",
+        "description": "褐色矮楼由小体育馆改造，夜里亮着灯，像一个沉默的火炉。"
+      },
+      "progress": 66,
+      "segments": [
+        {
+          "text": "一荤一素，两碗白米饭。"
+        },
+        {
+          "text": "食堂师傅打着哈欠，长铁链末端连着赤红色锁栓。"
+        },
+        {
+          "text": "锁链当当响，像催命。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "催周小姐快点走",
+          "next": "ch5_road",
+          "changes": {
+            "val": -1
+          }
+        },
+        {
+          "text": "等她吃完最后一口",
+          "next": "ch5_road",
+          "changes": {
+            "val": 2
+          }
+        }
+      ]
+    },
+    "ch5_road": {
+      "title": "暗红色天空",
+      "scene": {
+        "id": "white_lamp_road",
+        "name": "白色路灯下",
+        "type": "major",
+        "description": "路灯隔几米一盏，连成雪白的光路，光外是看不清的黑。"
+      },
+      "progress": 68,
+      "segments": [
+        {
+          "text": "车间灯一盏接一盏灭掉。"
+        },
+        {
+          "text": "黑夜围上工厂上空，天空不是纯黑，而是泛着微暗的红。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "沿大路往外走",
+          "next": "ch5_question_woman",
+          "changes": {}
+        }
+      ]
+    },
+    "ch5_question_woman": {
+      "title": "什么样的女人",
+      "scene": {
+        "id": "white_lamp_road",
+        "name": "白色路灯下",
+        "type": "major",
+        "description": "路灯隔几米一盏，连成雪白的光路，光外是看不清的黑。"
+      },
+      "progress": 70,
+      "segments": [
+        {
+          "text": "“你明天，家里就要住进来一个女人了呀。”",
+          "speaker": "周小姐"
+        },
+        {
+          "text": "“你一样要遇到一个男人了嘛。”",
+          "speaker": "吴新"
+        },
+        {
+          "text": "“你想要一个什么样的女人呢？”",
+          "speaker": "周小姐"
+        }
+      ],
+      "choices": [
+        {
+          "text": "嘴硬说“你这样的不行”",
+          "next": "ch5_not_you",
+          "changes": {
+            "val": -2,
+            "addFlag": "said_not_you"
+          }
+        },
+        {
+          "text": "说“能吵架的也行”",
+          "next": "ch5_almost_you",
+          "changes": {
+            "val": 5,
+            "addFlag": "almost_said_you"
+          }
+        }
+      ]
+    },
+    "ch5_not_you": {
+      "title": "轻飘飘的包",
+      "scene": {
+        "id": "white_lamp_road",
+        "name": "白色路灯下",
+        "type": "major",
+        "description": "路灯隔几米一盏，连成雪白的光路，光外是看不清的黑。"
+      },
+      "progress": 72,
+      "segments": [
+        {
+          "text": "“你这样的反正不行。”",
+          "speaker": "吴新"
+        },
+        {
+          "text": "周小姐的包马上打过来，轻飘飘的，没有什么力气。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "补一句救场的话",
+          "next": "ch5_random",
+          "changes": {
+            "val": -1
+          }
+        }
+      ]
+    },
+    "ch5_almost_you": {
+      "title": "差一点",
+      "scene": {
+        "id": "white_lamp_road",
+        "name": "白色路灯下",
+        "type": "major",
+        "description": "路灯隔几米一盏，连成雪白的光路，光外是看不清的黑。"
+      },
+      "progress": 72,
+      "segments": [
+        {
+          "text": "“能吵架的也行。”你说。"
+        },
+        {
+          "text": "周小姐低着头，脚步顿了半拍，又像什么都没听见。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "问她能不能自己分配",
+          "next": "ch5_random",
+          "changes": {
+            "val": 2
+          }
+        }
+      ]
+    },
+    "ch5_random": {
+      "title": "电脑随机",
+      "scene": {
+        "id": "white_lamp_road",
+        "name": "白色路灯下",
+        "type": "major",
+        "description": "路灯隔几米一盏，连成雪白的光路，光外是看不清的黑。"
+      },
+      "progress": 74,
+      "segments": [
+        {
+          "text": "“这种东西是电脑随机配对的。我也想自己决定自己的分配啊。”",
+          "speaker": "周小姐"
+        },
+        {
+          "text": "她说得慢，底气不足，更像是在说谎。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "低声说你不是在问工作",
+          "next": "ch5_exit",
+          "changes": {
+            "val": 4,
+            "addFlag": "asked_as_person"
+          },
+          "condition": "val >= 58"
+        },
+        {
+          "text": "把话题扯回陈一单",
+          "next": "ch5_exit",
+          "changes": {
+            "val": -3,
+            "addFlag": "hid_behind_chen"
+          },
+          "condition": "val <= 42"
+        },
+        {
+          "text": "追问她能不能自己分配",
+          "next": "ch5_exit",
+          "changes": {
+            "val": 3,
+            "addFlag": "asked_self_allocate"
+          }
+        },
+        {
+          "text": "放过这个问题",
+          "next": "ch5_exit",
+          "changes": {
+            "val": -1,
+            "addFlag": "let_self_allocate_pass"
+          }
+        }
+      ]
+    },
+    "ch5_exit": {
+      "title": "这里是不是出口",
+      "scene": {
+        "id": "white_lamp_road",
+        "name": "白色路灯下",
+        "type": "major",
+        "description": "路灯隔几米一盏，连成雪白的光路，光外是看不清的黑。"
+      },
+      "progress": 76,
+      "segments": [
+        {
+          "text": "“你看，这里是不是出口。”",
+          "speaker": "周小姐"
+        },
+        {
+          "text": "那一晚上弯弯绕绕。走出工厂时，没有手表，大概已经十点以后。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "再陪她走一段",
+          "next": "ch5_after_eleven",
+          "changes": {
+            "val": 4,
+            "importantFlag": {
+              "flag": "walked_long_road",
+              "label": "陪她继续走夜路"
+            }
+          }
+        },
+        {
+          "text": "说该回宿舍了",
+          "next": "ch5_after_eleven",
+          "changes": {
+            "val": -1,
+            "addFlag": "returned_early"
+          }
+        }
+      ]
+    },
+    "ch5_after_eleven": {
+      "title": "只剩一个多小时",
+      "scene": {
+        "id": "white_lamp_road",
+        "name": "白色路灯下",
+        "type": "major",
+        "description": "路灯隔几米一盏，连成雪白的光路，光外是看不清的黑。"
+      },
+      "progress": 78,
+      "segments": [
+        {
+          "text": "恍惚间，有阵阵有节奏的巨响在夜空里回荡。"
+        },
+        {
+          "text": "周小姐不停低头看表。"
+        },
+        {
+          "text": "“只有一个多小时就要过零点了。走吧，我去你家洗个澡。”",
+          "speaker": "周小姐"
+        }
+      ],
+      "choices": [
+        {
+          "text": "带她回去",
+          "next": "ch6_bath",
+          "changes": {
+            "val": 2
+          }
+        }
+      ]
+    },
+    "ch6_bath": {
+      "title": "花玻璃门",
+      "scene": {
+        "id": "bathroom_door",
+        "name": "浴室门外",
+        "type": "major",
+        "description": "花玻璃门朦朦胧胧，水声贴着门缝落下，洗发水的味道慢慢进到房间里。"
+      },
+      "progress": 82,
+      "segments": [
+        {
+          "text": "周小姐把包甩开，问你要了一条男式牛仔裤，径直走进淋浴室。"
+        },
+        {
+          "text": "花玻璃门后水声不断，你只敢用余光看。"
+        }
+      ],
+      "chapterTitle": "第六章：火与湖",
+      "choices": [
+        {
+          "text": "等水声停下",
+          "next": "ch6_after_bath",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "ch6_after_bath": {
+      "title": "白色浴袍",
+      "scene": {
+        "id": "bathroom_door",
+        "name": "浴室门外",
+        "type": "major",
+        "description": "花玻璃门朦朦胧胧，水声贴着门缝落下，洗发水的味道慢慢进到房间里。"
+      },
+      "progress": 84,
+      "segments": [
+        {
+          "text": "半个小时后，她从浴室出来。"
+        },
+        {
+          "text": "头发滴水，洗发水味道还没有散。"
+        },
+        {
+          "text": "你慌着扯开一小块窗帘，假装去看外面。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "看见窗外",
+          "next": "ch6_blast",
+          "changes": {
+            "addFlag": "looked_window"
+          }
+        }
+      ]
+    },
+    "ch6_blast": {
+      "title": "真的炸了",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 86,
+      "segments": [
+        {
+          "text": "窗外毕毕剥剥有零星响动。"
+        },
+        {
+          "text": "几千米外的工厂里，冒出足够遮天的狂暴火舌。"
+        },
+        {
+          "text": "“陈一单那厮，真的把工厂给炸了。”",
+          "speaker": "吴新"
+        }
+      ],
+      "choices": [
+        {
+          "text": "立刻拉着周小姐跑",
+          "next": "ch6_escape_start",
+          "changes": {
+            "val": 4,
+            "importantFlag": {
+              "flag": "saved_zhou_first",
+              "label": "先拉住周小姐"
+            }
+          }
+        },
+        {
+          "text": "先找能带走的东西",
+          "next": "ch6_take_things",
+          "changes": {
+            "val": -3,
+            "addFlag": "looked_for_things"
+          }
+        }
+      ],
+      "effect": "flash"
+    },
+    "ch6_take_things": {
+      "title": "不像出逃",
+      "scene": {
+        "id": "dorm_room",
+        "name": "吴新的宿舍",
+        "type": "major",
+        "description": "房间窄而热，茶几上有两只粗瓷杯，墙上挂着一只巨大的甲虫装饰。窗外的宿舍楼一半空着，一半还住着尚未到龄的人。",
+        "arrival": "你在成人日前一天醒来，所有东西都像在等一张分配表。"
+      },
+      "progress": 87,
+      "segments": [
+        {
+          "text": "邻近夫妻抱着各自最值钱的东西逃。"
+        },
+        {
+          "text": "你手里空空，突然觉得不像出逃。"
+        },
+        {
+          "text": "桌上只有身份证、茶杯、还有那只甲虫挂饰投下的影。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "扔下身份证，去抓她",
+          "next": "ch6_escape_start",
+          "changes": {
+            "val": 5,
+            "importantFlag": {
+              "flag": "dropped_id_for_zhou",
+              "label": "扔下身份证"
+            }
+          }
+        },
+        {
+          "text": "把身份证塞进口袋",
+          "next": "ch6_escape_start",
+          "changes": {
+            "val": -2,
+            "addFlag": "kept_id"
+          }
+        }
+      ]
+    },
+    "ch6_escape_start": {
+      "title": "手臂",
+      "scene": {
+        "id": "burning_street",
+        "name": "火光里的街道",
+        "type": "major",
+        "description": "商品房和土胚房在奔跑中向后流动，霓虹半明半灭，工厂火光把云烧成红色。"
+      },
+      "progress": 89,
+      "segments": [
+        {
+          "text": "你们冲出宿舍。"
+        },
+        {
+          "text": "周围男男女女抱着东西飞一样逃。"
+        },
+        {
+          "text": "你伸手抓住周小姐裸露在空气中的那段手臂。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "让手滑到十指相扣",
+          "next": "ch6_hand",
+          "changes": {
+            "val": 5,
+            "importantFlag": {
+              "flag": "held_hand",
+              "label": "在火光中牵住她"
+            },
+            "unlockAchievement": "ach_hand"
+          }
+        },
+        {
+          "text": "只抓住袖口，不再往下",
+          "next": "ch6_sleeve",
+          "changes": {
+            "val": -2,
+            "addFlag": "held_sleeve"
+          }
+        }
+      ]
+    },
+    "ch6_hand": {
+      "title": "十指相扣",
+      "scene": {
+        "id": "burning_street",
+        "name": "火光里的街道",
+        "type": "major",
+        "description": "商品房和土胚房在奔跑中向后流动，霓虹半明半灭，工厂火光把云烧成红色。"
+      },
+      "progress": 91,
+      "segments": [
+        {
+          "text": "奔跑中，手从手臂上滑下。"
+        },
+        {
+          "text": "玉臂，皓腕，然后是十指相扣。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续跑",
+          "next": "ch6_city_lantern",
+          "changes": {
+            "val": 3
+          }
+        }
+      ]
+    },
+    "ch6_sleeve": {
+      "title": "袖口",
+      "scene": {
+        "id": "burning_street",
+        "name": "火光里的街道",
+        "type": "major",
+        "description": "商品房和土胚房在奔跑中向后流动，霓虹半明半灭，工厂火光把云烧成红色。"
+      },
+      "progress": 91,
+      "segments": [
+        {
+          "text": "你只抓住她的袖口。"
+        },
+        {
+          "text": "布料被汗和水气黏住，她回头看了一眼，没有抽走。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续跑",
+          "next": "ch6_city_lantern",
+          "changes": {
+            "val": -1
+          }
+        }
+      ]
+    },
+    "ch6_city_lantern": {
+      "title": "走马灯",
+      "scene": {
+        "id": "burning_street",
+        "name": "火光里的街道",
+        "type": "major",
+        "description": "商品房和土胚房在奔跑中向后流动，霓虹半明半灭，工厂火光把云烧成红色。"
+      },
+      "progress": 93,
+      "segments": [
+        {
+          "text": "高低参差的商品房和土胚房疯一样朝身后流动。"
+        },
+        {
+          "text": "霓虹半明半灭，旧城区和新城区的影像层层叠在一起。"
+        },
+        {
+          "text": "一切亮起来的都像走马灯。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "带她往开阔的黑色跑",
+          "next": "ch6_lake_arrive",
+          "changes": {
+            "val": 4,
+            "set": {
+              "last_route": "lake"
+            }
+          }
+        },
+        {
+          "text": "回头朝工厂火光看",
+          "next": "fire_01",
+          "changes": {
+            "val": -4,
+            "importantFlag": {
+              "flag": "turned_to_fire",
+              "label": "回头朝火光走"
+            }
+          }
+        },
+        {
+          "text": "寻找离城的路",
+          "next": "escape_01",
+          "changes": {
+            "val": -3,
+            "importantFlag": {
+              "flag": "chose_leave_city",
+              "label": "趁乱离城"
+            }
+          }
+        }
+      ]
+    },
+    "ch6_lake_arrive": {
+      "title": "墨水一样的湖",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 95,
+      "segments": [
+        {
+          "text": "眼前开阔的三面是浓淡不均的墨色。"
+        },
+        {
+          "text": "大概是一个群山围绕着的湖泊或者水库。"
+        },
+        {
+          "text": "周小姐累到接近虚脱，闭上眼倒在你怀里。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "先扶稳她，再问她全名",
+          "next": "ch6_name",
+          "changes": {
+            "val": 7,
+            "importantFlag": {
+              "flag": "asked_full_name",
+              "label": "问出她的全名"
+            },
+            "unlockAchievement": "ach_name"
+          },
+          "condition": "val >= 60"
+        },
+        {
+          "text": "催她报全名，像核验身份",
+          "next": "miss_01",
+          "changes": {
+            "val": -6,
+            "importantFlag": {
+              "flag": "kept_zhou_as_title",
+              "label": "仍叫她周小姐"
+            }
+          },
+          "condition": "val <= 40"
+        },
+        {
+          "text": "问她全名",
+          "next": "ch6_name",
+          "changes": {
+            "val": 6,
+            "importantFlag": {
+              "flag": "asked_full_name",
+              "label": "问出她的全名"
+            },
+            "unlockAchievement": "ach_name"
+          }
+        },
+        {
+          "text": "仍叫她周小姐",
+          "next": "miss_01",
+          "changes": {
+            "val": -5,
+            "importantFlag": {
+              "flag": "kept_zhou_as_title",
+              "label": "仍叫她周小姐"
+            }
+          }
+        }
+      ]
+    },
+    "ch6_name": {
+      "title": "周小芳",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 96,
+      "segments": [
+        {
+          "text": "你看见她凌乱衣服上写着 ZHOU 的名片。"
+        },
+        {
+          "text": "“你的名片上为什么只写 ZHOU？你叫什么名字？我说全名。”",
+          "speaker": "吴新"
+        },
+        {
+          "text": "“周小芳。”她说。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "叫她周小芳",
+          "next": "ch6_birthday",
+          "changes": {
+            "val": 5,
+            "addFlag": "called_xiaofang"
+          }
+        },
+        {
+          "text": "立刻批判计划爱情",
+          "next": "miss_01",
+          "changes": {
+            "val": -4,
+            "addFlag": "preached_after_name"
+          }
+        }
+      ]
+    },
+    "ch6_birthday": {
+      "title": "祝我生日快乐吧",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 97,
+      "segments": [
+        {
+          "text": "静默保持了很久。"
+        },
+        {
+          "text": "周小芳才悠悠地开口。"
+        },
+        {
+          "text": "“祝我生日快乐吧。”",
+          "speaker": "周小芳"
+        }
+      ],
+      "routes": [
+        {
+          "condition": {
+            "all": [
+              {
+                "flag": "held_hand"
+              },
+              {
+                "flag": "asked_full_name"
+              }
+            ]
+          },
+          "next": "true_01"
+        },
+        {
+          "condition": {
+            "flag": "kept_zhou_as_title"
+          },
+          "next": "miss_01"
+        },
+        {
+          "condition": {
+            "flag": "turned_to_fire"
+          },
+          "next": "fire_01"
+        },
+        {
+          "condition": {
+            "flag": "chose_leave_city"
+          },
+          "next": "escape_01"
+        },
+        {
+          "condition": "default",
+          "next": "obedient_01"
+        }
+      ]
+    },
+    "true_01": {
+      "title": "生日歌",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 98,
+      "segments": [
+        {
+          "text": "你仰起头看深黑如墨的夜空。"
+        },
+        {
+          "text": "“祝你生日快乐，祝我生日快乐。”"
+        },
+        {
+          "text": "歌声不高，却把湖边的静默划出一道口子。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_02",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_02": {
+      "title": "她动了一下",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "周小芳在你怀里稍微动了动。"
+        },
+        {
+          "text": "她睁开一半眉眼，用长睫遮住另一半。"
+        },
+        {
+          "text": "远处的工厂还在冒烟，像替你们守着不该亮的灯。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_03",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_03": {
+      "title": "自己的计划",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "“我把我自己计划给你，好不好？”她说。"
+        },
+        {
+          "text": "她轻轻抬头，把嘴唇往上凑了凑，又停在那里。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_04",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_04": {
+      "title": "不确定",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你没有马上低头。"
+        },
+        {
+          "text": "你怕唐突，也怕这个吻会被明天的任何一张表格回收。"
+        },
+        {
+          "text": "周小芳没有催你。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_05",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_05": {
+      "title": "吻上去",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你低下头吻她。"
+        },
+        {
+          "text": "她没有躲。水气、冷风和火光一齐靠近，像成人日真正落在你们身上。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_06",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_06": {
+      "title": "火后的安静",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "吻结束以后，她靠回你怀里。"
+        },
+        {
+          "text": "你们听见远处警笛，却没有立刻起身。"
+        },
+        {
+          "text": "谁都知道天亮以后会有人找你们。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_07",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_07": {
+      "title": "名片",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "周小芳把胸前的名片摘下来。"
+        },
+        {
+          "text": "她把 ZHOU 揉皱，又摊平。"
+        },
+        {
+          "text": "“这个还能报销车费。”她说。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_08",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_08": {
+      "title": "泵房",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你们沿湖边走到一处废弃泵房。"
+        },
+        {
+          "text": "门上还残着旧工厂编号，像制度追到这里后累得停下。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_09",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_09": {
+      "title": "旧编号",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "周小芳用指尖摸了摸门上的编号。"
+        },
+        {
+          "text": "她说婚办处的档案里也有这样的数字，比名字好用。"
+        },
+        {
+          "text": "你说可数字不会过生日。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_10",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_10": {
+      "title": "湿掉的袖子",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "她低头拧自己的袖口。"
+        },
+        {
+          "text": "白色浴袍早被烟和水弄得灰暗。"
+        },
+        {
+          "text": "你把外套递过去，她看了一眼，没有立刻接。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_11",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_11": {
+      "title": "黑色外套",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "她终于接过外套披上。"
+        },
+        {
+          "text": "那一瞬间，你想起开头那几句诗。"
+        },
+        {
+          "text": "房间的白色没有聚拢过来，湖边的黑倒先聚拢了。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_12",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_12": {
+      "title": "第一顿饭",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "天色变浅，她说饿了。"
+        },
+        {
+          "text": "你说成人日第一顿饭总不能还是一荤一素。"
+        },
+        {
+          "text": "她说也不一定，一荤一素挺稳定。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_13",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_13": {
+      "title": "找吃的",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "泵房后面有一间废弃值班室。"
+        },
+        {
+          "text": "抽屉里只剩半包潮掉的饼干。"
+        },
+        {
+          "text": "她说这比食堂浪漫一点，至少不是分配的。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_14",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_14": {
+      "title": "值班记录",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "桌上有一本旧值班记录。"
+        },
+        {
+          "text": "最后一页停在旧工厂火灾那年。"
+        },
+        {
+          "text": "字迹被潮气泡开，只剩日期还清楚。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_15",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_15": {
+      "title": "同一天",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "周小芳看着那个日期。"
+        },
+        {
+          "text": "她说原来火也会有生日。"
+        },
+        {
+          "text": "你说别这么说，听着像陈一单会喜欢。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_16",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_16": {
+      "title": "陈一单的名字",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你终于说起陈一单。"
+        },
+        {
+          "text": "周小芳没有接着骂他，只问他会不会也跑到这种地方。"
+        },
+        {
+          "text": "你说他大概会嫌这里没有墙可以骑。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_17",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_17": {
+      "title": "不替火辩护",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "她说别替火说话。"
+        },
+        {
+          "text": "你说没有。"
+        },
+        {
+          "text": "你只是忽然觉得活下来的人不该马上替谁总结。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_18",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_18": {
+      "title": "不回去",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你们决定暂时不回宿舍。"
+        },
+        {
+          "text": "不是永远逃走，只是不把这一个早晨立刻交还给婚办处。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_19",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_19": {
+      "title": "临时决定",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你们把这个决定说得很小。"
+        },
+        {
+          "text": "先不回去，先找水，先等天亮。"
+        },
+        {
+          "text": "小到谁也不能给它盖章。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_20",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_20": {
+      "title": "周小芳",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你试着叫她的名字。"
+        },
+        {
+          "text": "周小芳。"
+        },
+        {
+          "text": "她嗯了一声，像在检查这三个字从你嘴里出来有没有变形。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_21",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_21": {
+      "title": "吴新",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "她也叫你的名字。"
+        },
+        {
+          "text": "吴新。"
+        },
+        {
+          "text": "没有同志，没有先生，没有身份核验。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_22",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_22": {
+      "title": "生日以后",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "她问生日以后怎么办。"
+        },
+        {
+          "text": "你说不知道。"
+        },
+        {
+          "text": "她说不知道也比被安排好强一点。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_23",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_23": {
+      "title": "不保证",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你说你不能保证以后不会害怕。"
+        },
+        {
+          "text": "她说那就到时候再害怕。"
+        },
+        {
+          "text": "她把这句话说得像把饭票收进衣袋。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_24",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_24": {
+      "title": "没有表格",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "泵房里没有表格。"
+        },
+        {
+          "text": "没有人要求你们填关系。"
+        },
+        {
+          "text": "因此你们一时也不知道该怎么称呼这段关系。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_25",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_25": {
+      "title": "白光",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "太阳还没有完全升起，湖水已经不再像墨。"
+        },
+        {
+          "text": "她的眼睛里有一小块亮色，慢慢铺开。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "true_26",
+          "changes": {
+            "val": 1
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "true_26": {
+      "title": "开始",
+      "scene": {
+        "id": "mountain_lake",
+        "name": "群山间的湖边",
+        "type": "major",
+        "description": "三面是浓淡不均的墨色，湖水像一团照不出人影的墨，远处火光只剩微漠一线。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你看着她完全睁开眼。"
+        },
+        {
+          "text": "在她眼睛的瞳仁里，一个太阳正在升起。"
+        },
+        {
+          "text": "开始就要来临。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "ending_true",
+          "changes": {
+            "val": 1,
+            "unlockAchievement": "ach_true_sun"
+          }
+        }
+      ],
+      "ambient": "sea"
+    },
+    "escape_01": {
+      "title": "离开湖边",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 85,
+      "segments": [
+        {
+          "text": "你没有在湖边停下。"
+        },
+        {
+          "text": "你说趁乱走，现在没人顾得上登记。"
+        },
+        {
+          "text": "周小芳跟着你，手里攥着那张湿掉的胸牌。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_02",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_02": {
+      "title": "公路",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 86,
+      "segments": [
+        {
+          "text": "你们沿着没有路灯的公路走。"
+        },
+        {
+          "text": "偶尔有逃出来的人从身边经过，每个人都抱着一点东西。"
+        },
+        {
+          "text": "你们两手空空。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_03",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_03": {
+      "title": "第一辆货车",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 87,
+      "segments": [
+        {
+          "text": "一辆货车在路边停下，司机问你们去哪。"
+        },
+        {
+          "text": "你说去最近的车站。"
+        },
+        {
+          "text": "周小芳没有纠正，也没有点头。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_04",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_04": {
+      "title": "车斗",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 88,
+      "segments": [
+        {
+          "text": "你们坐在车斗里。"
+        },
+        {
+          "text": "风把烟味从身后吹过来，周小芳把胸牌攥在手心。"
+        },
+        {
+          "text": "它硌得她掌心发白。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_05",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_05": {
+      "title": "车站玻璃",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 89,
+      "segments": [
+        {
+          "text": "天快亮时，城外车站开了门。"
+        },
+        {
+          "text": "玻璃上贴着旧工厂招工广告，照片里的工人笑得很标准。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_06",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_06": {
+      "title": "两张票",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 90,
+      "segments": [
+        {
+          "text": "售票窗口打开一条缝。"
+        },
+        {
+          "text": "你买了两张短途票，递给周小芳一张。"
+        },
+        {
+          "text": "她没有接稳，票角被风折了一下。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_07",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_07": {
+      "title": "别的 ZHOU",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 91,
+      "segments": [
+        {
+          "text": "“逃到别的地方，婚办处还是会有别的 ZHOU。”她说。"
+        },
+        {
+          "text": "你说那就再逃。"
+        },
+        {
+          "text": "她看着你，像看一个一直把门当出口的人。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_08",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_08": {
+      "title": "候车厅",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 92,
+      "segments": [
+        {
+          "text": "你们坐在长椅两端。"
+        },
+        {
+          "text": "中间隔着一只没人认领的编织袋。"
+        },
+        {
+          "text": "它明明有主人，却先假装自己谁都不要。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_09",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_09": {
+      "title": "她的名字",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 93,
+      "segments": [
+        {
+          "text": "你想叫她周小芳。"
+        },
+        {
+          "text": "话到嘴边又停住，怕这个名字跟着你一起上车，会变成另一种分配。"
+        },
+        {
+          "text": "她听见你的停顿，却没有替你说完。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_10",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_10": {
+      "title": "硬座票",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 94,
+      "segments": [
+        {
+          "text": "票面上没有姓名。"
+        },
+        {
+          "text": "只有车次、座位、日期。"
+        },
+        {
+          "text": "你忽然松了一口气，又立刻觉得这口气不体面。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_11",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_11": {
+      "title": "她看出来了",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 95,
+      "segments": [
+        {
+          "text": "周小芳说你看见无名的东西就安心。"
+        },
+        {
+          "text": "你说没有。"
+        },
+        {
+          "text": "她笑了一下，说你否认得太快了。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_12",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_12": {
+      "title": "候车广播",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 96,
+      "segments": [
+        {
+          "text": "广播念出站名，声音平得像机器读表。"
+        },
+        {
+          "text": "每个地名都像一个能重新开始的地方。"
+        },
+        {
+          "text": "也像一个能重新躲起来的地方。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_13",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_13": {
+      "title": "反抗完整一点",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 97,
+      "segments": [
+        {
+          "text": "检票口亮了。"
+        },
+        {
+          "text": "周小芳把票还给你。"
+        },
+        {
+          "text": "“你走吧。你要反抗，就反抗完整一点。”"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_14",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_14": {
+      "title": "解释",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 98,
+      "segments": [
+        {
+          "text": "你说这只是暂时的。"
+        },
+        {
+          "text": "她点头，说你连逃跑都像请假，先写理由，再等批准。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_15",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_15": {
+      "title": "车门",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "车门合上以前，你追过去。"
+        },
+        {
+          "text": "她站在站台上，胸牌重新别好。"
+        },
+        {
+          "text": "ZHOU 在晨光里白得刺眼。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_16",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_16": {
+      "title": "没说再见",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你没有说再见。"
+        },
+        {
+          "text": "她也没有。"
+        },
+        {
+          "text": "再见听起来太像一种约定，你们谁都没有资格替以后盖章。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_17",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_17": {
+      "title": "站台后退",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "车开了。"
+        },
+        {
+          "text": "站台慢慢向后退，她也慢慢退成一个白色小点。"
+        },
+        {
+          "text": "你没有挥手。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_18",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_18": {
+      "title": "另一座城市",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "几小时后，你到另一座工业城市。"
+        },
+        {
+          "text": "新的工厂更小，宿舍更窄，婚办处的门牌更干净。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_19",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_19": {
+      "title": "临时工",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你做临时工，不交完整档案。"
+        },
+        {
+          "text": "你拼装另一种不知道用途的零件。"
+        },
+        {
+          "text": "没人问你来自哪里。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_20",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_20": {
+      "title": "新同事",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "新同事问你为什么不结婚。"
+        },
+        {
+          "text": "你说还没到年龄。"
+        },
+        {
+          "text": "这句旧谎话在新城市里还能勉强使用。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_21",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_21": {
+      "title": "没有围裙",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "新宿舍没有厨房。"
+        },
+        {
+          "text": "只有公共热水和一排铁柜。"
+        },
+        {
+          "text": "你再也不用递给谁男式围裙。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_22",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_22": {
+      "title": "公共食堂",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "公共食堂也卖一荤一素。"
+        },
+        {
+          "text": "你端着盘子找座位，忽然不知道该坐哪边。"
+        },
+        {
+          "text": "以前桌子不大，反而不用选。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_23",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_23": {
+      "title": "写信",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你买过信纸。"
+        },
+        {
+          "text": "开头写了周小芳三个字，又撕掉。"
+        },
+        {
+          "text": "第二张写 ZHOU，也撕掉。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_24",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_24": {
+      "title": "第七天",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "第七天傍晚，有人来登记流动人口。"
+        },
+        {
+          "text": "敲门声短促几下。"
+        },
+        {
+          "text": "你却听见它莫名变得轻缓悠长。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_25",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_25": {
+      "title": "空车票",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你翻出那张被剪过的票根。"
+        },
+        {
+          "text": "缺口很整齐，像自由也被人规划过边缘。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_26",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_26": {
+      "title": "空自由",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你没有被原来的系统分配。"
+        },
+        {
+          "text": "也没有被周小芳抓住。"
+        },
+        {
+          "text": "你拥有一间没有人来做饭的房间。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "escape_27",
+          "changes": {}
+        }
+      ],
+      "ambient": "wind"
+    },
+    "escape_27": {
+      "title": "第十天夜里",
+      "scene": {
+        "id": "outer_station",
+        "name": "城外车站",
+        "type": "major",
+        "description": "候车厅玻璃贴着旧工厂招工广告，长椅上有没人认领的编织袋，最早一班车还没进站。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "第十天夜里你做了个梦。"
+        },
+        {
+          "text": "梦里有人敲门，说早安。"
+        },
+        {
+          "text": "你醒来时，公共走廊只有一只坏灯在闪。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "ending_escape",
+          "changes": {
+            "unlockAchievement": "ach_empty_freedom"
+          }
+        }
+      ],
+      "ambient": "wind"
+    },
+    "miss_01": {
+      "title": "周小姐",
+      "scene": {
+        "id": "temporary_registry",
+        "name": "临时登记棚",
+        "type": "major",
+        "description": "蓝白塑料布搭起的棚子里排着湿漉漉的人，表格被透明文件套压得发硬。"
+      },
+      "progress": 89,
+      "segments": [
+        {
+          "text": "你没有叫她周小芳。"
+        },
+        {
+          "text": "你说：“周小姐，现在怎么办？”"
+        },
+        {
+          "text": "她慢慢把眼睛闭回去，像把刚才那个名字收起来。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "miss_02",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "miss_02": {
+      "title": "救援车",
+      "scene": {
+        "id": "temporary_registry",
+        "name": "临时登记棚",
+        "type": "major",
+        "description": "蓝白塑料布搭起的棚子里排着湿漉漉的人，表格被透明文件套压得发硬。"
+      },
+      "progress": 90,
+      "segments": [
+        {
+          "text": "天亮后，救援车把你们带回工厂外围。"
+        },
+        {
+          "text": "她一路没有再说私人的话。"
+        },
+        {
+          "text": "你们之间只剩广播、名单和车轮声。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "miss_03",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "miss_03": {
+      "title": "车窗",
+      "scene": {
+        "id": "temporary_registry",
+        "name": "临时登记棚",
+        "type": "major",
+        "description": "蓝白塑料布搭起的棚子里排着湿漉漉的人，表格被透明文件套压得发硬。"
+      },
+      "progress": 91,
+      "segments": [
+        {
+          "text": "车窗玻璃蒙着灰。"
+        },
+        {
+          "text": "你在玻璃上看见她的侧脸，和胸牌反出的白光叠在一起。"
+        },
+        {
+          "text": "你分不清哪个更像她。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "miss_04",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "miss_04": {
+      "title": "没有座位",
+      "scene": {
+        "id": "temporary_registry",
+        "name": "临时登记棚",
+        "type": "major",
+        "description": "蓝白塑料布搭起的棚子里排着湿漉漉的人，表格被透明文件套压得发硬。"
+      },
+      "progress": 92,
+      "segments": [
+        {
+          "text": "救援车上没有空座。"
+        },
+        {
+          "text": "你们站得很近，却没有碰到。"
+        },
+        {
+          "text": "昨夜火光里那段距离像被谁补回来了。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "miss_05",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "miss_05": {
+      "title": "她先下车",
+      "scene": {
+        "id": "temporary_registry",
+        "name": "临时登记棚",
+        "type": "major",
+        "description": "蓝白塑料布搭起的棚子里排着湿漉漉的人，表格被透明文件套压得发硬。"
+      },
+      "progress": 93,
+      "segments": [
+        {
+          "text": "到登记棚时她先下车。"
+        },
+        {
+          "text": "有人递给她一叠表，她自然地接过去。"
+        },
+        {
+          "text": "自然得像昨夜没有倒在你怀里。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "miss_06",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "miss_06": {
+      "title": "登记棚",
+      "scene": {
+        "id": "temporary_registry",
+        "name": "临时登记棚",
+        "type": "major",
+        "description": "蓝白塑料布搭起的棚子里排着湿漉漉的人，表格被透明文件套压得发硬。"
+      },
+      "progress": 94,
+      "segments": [
+        {
+          "text": "婚办处临时搭了棚。"
+        },
+        {
+          "text": "工作人员用扩音器叫到龄人员登记。"
+        },
+        {
+          "text": "她被叫去帮忙，动作很快。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "miss_07",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "miss_07": {
+      "title": "胸牌归位",
+      "scene": {
+        "id": "temporary_registry",
+        "name": "临时登记棚",
+        "type": "major",
+        "description": "蓝白塑料布搭起的棚子里排着湿漉漉的人，表格被透明文件套压得发硬。"
+      },
+      "progress": 95,
+      "segments": [
+        {
+          "text": "周小芳换回湿得发皱的白衬衣。"
+        },
+        {
+          "text": "她把 ZHOU 的胸牌别正。"
+        },
+        {
+          "text": "那块白光重新盖住她。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "miss_08",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "miss_08": {
+      "title": "身份核验",
+      "scene": {
+        "id": "temporary_registry",
+        "name": "临时登记棚",
+        "type": "major",
+        "description": "蓝白塑料布搭起的棚子里排着湿漉漉的人，表格被透明文件套压得发硬。"
+      },
+      "progress": 96,
+      "segments": [
+        {
+          "text": "“吴新，身份核验。”她说。"
+        },
+        {
+          "text": "这句话没有怒气，也没有温度。"
+        },
+        {
+          "text": "你从里面听不出昨夜湖边的风。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "miss_09",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "miss_09": {
+      "title": "签名栏",
+      "scene": {
+        "id": "temporary_registry",
+        "name": "临时登记棚",
+        "type": "major",
+        "description": "蓝白塑料布搭起的棚子里排着湿漉漉的人，表格被透明文件套压得发硬。"
+      },
+      "progress": 97,
+      "segments": [
+        {
+          "text": "签名栏空着。"
+        },
+        {
+          "text": "你看着她的手，那点口红残色已经洗干净。"
+        },
+        {
+          "text": "你突然想问她全名，后面的人开始催。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "miss_10",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "miss_10": {
+      "title": "迟到的一秒",
+      "scene": {
+        "id": "temporary_registry",
+        "name": "临时登记棚",
+        "type": "major",
+        "description": "蓝白塑料布搭起的棚子里排着湿漉漉的人，表格被透明文件套压得发硬。"
+      },
+      "progress": 98,
+      "segments": [
+        {
+          "text": "你张了张口。"
+        },
+        {
+          "text": "只差一秒。"
+        },
+        {
+          "text": "她已经把下一张表格抽到面前。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "miss_11",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "miss_11": {
+      "title": "排队",
+      "scene": {
+        "id": "temporary_registry",
+        "name": "临时登记棚",
+        "type": "major",
+        "description": "蓝白塑料布搭起的棚子里排着湿漉漉的人，表格被透明文件套压得发硬。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "她抬头说请按秩序排队。"
+        },
+        {
+          "text": "声音恢复成职业腔。"
+        },
+        {
+          "text": "你从那声音里听出一扇门关上了。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "miss_12",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "miss_12": {
+      "title": "盖章",
+      "scene": {
+        "id": "temporary_registry",
+        "name": "临时登记棚",
+        "type": "major",
+        "description": "蓝白塑料布搭起的棚子里排着湿漉漉的人，表格被透明文件套压得发硬。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "章面落下去，声音清脆。"
+        },
+        {
+          "text": "像食堂锁栓敲在铁门上。"
+        },
+        {
+          "text": "她把表格抽走，递给下一位。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "miss_13",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "miss_13": {
+      "title": "物资处",
+      "scene": {
+        "id": "temporary_registry",
+        "name": "临时登记棚",
+        "type": "major",
+        "description": "蓝白塑料布搭起的棚子里排着湿漉漉的人，表格被透明文件套压得发硬。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "午后你在物资发放处又见到她。"
+        },
+        {
+          "text": "她递给你毛巾、饭票和临时床位卡。"
+        },
+        {
+          "text": "你说谢谢周小姐。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "miss_14",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "miss_14": {
+      "title": "饭票",
+      "scene": {
+        "id": "temporary_registry",
+        "name": "临时登记棚",
+        "type": "major",
+        "description": "蓝白塑料布搭起的棚子里排着湿漉漉的人，表格被透明文件套压得发硬。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "饭票上印着一荤一素。"
+        },
+        {
+          "text": "你把它折起来，又展开。"
+        },
+        {
+          "text": "上面的油墨味让你想起昨晚食堂的锁链。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "miss_15",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "miss_15": {
+      "title": "窗口后面",
+      "scene": {
+        "id": "temporary_registry",
+        "name": "临时登记棚",
+        "type": "major",
+        "description": "蓝白塑料布搭起的棚子里排着湿漉漉的人，表格被透明文件套压得发硬。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "她坐在窗口后面喝水。"
+        },
+        {
+          "text": "杯子不是你的粗瓷杯。"
+        },
+        {
+          "text": "她喝完以后，把杯口转向里面。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "miss_16",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "miss_16": {
+      "title": "你没有问",
+      "scene": {
+        "id": "temporary_registry",
+        "name": "临时登记棚",
+        "type": "major",
+        "description": "蓝白塑料布搭起的棚子里排着湿漉漉的人，表格被透明文件套压得发硬。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你没有问她昨晚有没有冷。"
+        },
+        {
+          "text": "没有问她后来有没有怕。"
+        },
+        {
+          "text": "你问下一步去哪领床位卡。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "miss_17",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "miss_17": {
+      "title": "没有错话",
+      "scene": {
+        "id": "temporary_registry",
+        "name": "临时登记棚",
+        "type": "major",
+        "description": "蓝白塑料布搭起的棚子里排着湿漉漉的人，表格被透明文件套压得发硬。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "她说不客气吴新。"
+        },
+        {
+          "text": "你们的对白没有一句错话。"
+        },
+        {
+          "text": "每一句都合适、礼貌、准确。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "miss_18",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "miss_18": {
+      "title": "适合得过分",
+      "scene": {
+        "id": "temporary_registry",
+        "name": "临时登记棚",
+        "type": "major",
+        "description": "蓝白塑料布搭起的棚子里排着湿漉漉的人，表格被透明文件套压得发硬。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "适合得过分的东西通常很可怕。"
+        },
+        {
+          "text": "制服适合工厂，表格适合婚办处。"
+        },
+        {
+          "text": "周小姐适合坐在那里。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "miss_19",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "miss_19": {
+      "title": "下一份档案",
+      "scene": {
+        "id": "temporary_registry",
+        "name": "临时登记棚",
+        "type": "major",
+        "description": "蓝白塑料布搭起的棚子里排着湿漉漉的人，表格被透明文件套压得发硬。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你走出棚子，回头看。"
+        },
+        {
+          "text": "她低头整理下一份档案。"
+        },
+        {
+          "text": "那里没有周小芳，只有 ZHOU。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "ending_miss",
+          "changes": {
+            "unlockAchievement": "ach_zhou_again"
+          }
+        }
+      ],
+      "ambient": "none"
+    },
+    "fire_01": {
+      "title": "回头",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 85,
+      "segments": [
+        {
+          "text": "你没有继续往湖边跑。"
+        },
+        {
+          "text": "你回头朝火光走。"
+        },
+        {
+          "text": "周小芳在后面叫你一声，你说陈一单可能还在那里。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_02",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_02": {
+      "title": "厂门",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 86,
+      "segments": [
+        {
+          "text": "厂门已经变形。"
+        },
+        {
+          "text": "红制服消防兵在水雾里奔跑。"
+        },
+        {
+          "text": "你从侧边翻进去，鞋底踩到碎玻璃。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_03",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_03": {
+      "title": "热浪",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 87,
+      "segments": [
+        {
+          "text": "热浪从厂房里扑出来。"
+        },
+        {
+          "text": "你闻到橡胶、油漆和某种烧焦的甜味。"
+        },
+        {
+          "text": "周小芳用袖口捂住口鼻。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_04",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_04": {
+      "title": "水管",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 88,
+      "segments": [
+        {
+          "text": "一根消防水管在地上抽动。"
+        },
+        {
+          "text": "你跨过去，裤脚被水打湿。"
+        },
+        {
+          "text": "水没有让火变小，只让脚下更滑。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_05",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_05": {
+      "title": "喊话",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 89,
+      "segments": [
+        {
+          "text": "有人拿扩音器喊不要靠近。"
+        },
+        {
+          "text": "声音被火吞掉一半。"
+        },
+        {
+          "text": "剩下那一半听起来像婚办处的通知。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_06",
+          "changes": {}
+        }
+      ],
+      "ambient": "static",
+      "effect": "heat"
+    },
+    "fire_06": {
+      "title": "油纸包",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 90,
+      "segments": [
+        {
+          "text": "墙边有一只油纸包。"
+        },
+        {
+          "text": "早饭的油气早冷了。"
+        },
+        {
+          "text": "旁边有一截烧焦的引线，像从陈一单手肘下滑出来。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_07",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_07": {
+      "title": "不是他",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 91,
+      "segments": [
+        {
+          "text": "周小芳抓住你的袖口。"
+        },
+        {
+          "text": "“你不是他。别把自己也计划给火。”"
+        },
+        {
+          "text": "她说得急，第一次不像婚办处的人。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_08",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_08": {
+      "title": "房檐",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 92,
+      "segments": [
+        {
+          "text": "你抬头，看见厂房残脊上坐着一个人影。"
+        },
+        {
+          "text": "那人影咯咯笑起来，牙齿在火光里白得吓人。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_09",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_09": {
+      "title": "爬墙",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 93,
+      "segments": [
+        {
+          "text": "你踩着裂开的砖往上爬。"
+        },
+        {
+          "text": "周小芳在下面骂你名字。"
+        },
+        {
+          "text": "她骂得很完整，没有省掉任何一个字。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_10",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_10": {
+      "title": "墙面发烫",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 94,
+      "segments": [
+        {
+          "text": "墙面发烫。"
+        },
+        {
+          "text": "你的掌心贴上去，立刻缩回来。"
+        },
+        {
+          "text": "陈一单在上面笑，说这马脾气不好。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_11",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_11": {
+      "title": "旧玩偶",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 95,
+      "segments": [
+        {
+          "text": "他脚边有一只烧黑的塑料玩偶。"
+        },
+        {
+          "text": "你不知道它从哪里来。"
+        },
+        {
+          "text": "它的脸已经看不出表情。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_12",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_12": {
+      "title": "搬家",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 96,
+      "segments": [
+        {
+          "text": "陈一单看见你，挥了一下手。"
+        },
+        {
+          "text": "“你也来搬家啊？”他说。"
+        },
+        {
+          "text": "他身后是一整片烧穿的夜。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_13",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_13": {
+      "title": "火不听分配",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 97,
+      "segments": [
+        {
+          "text": "他说婚姻可以分配，宿舍可以分配，连搬走的日子都能分配。"
+        },
+        {
+          "text": "可是火不听分配。"
+        },
+        {
+          "text": "火只往有东西的地方去。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_14",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_14": {
+      "title": "第二包",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 98,
+      "segments": [
+        {
+          "text": "陈一单从怀里摸出另一包东西。"
+        },
+        {
+          "text": "他说第一下只是让工厂知道痛。"
+        },
+        {
+          "text": "第二下才让它记住。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_15",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_15": {
+      "title": "你问为什么",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你问他为什么非要第二下。"
+        },
+        {
+          "text": "他看着你，像你问了世界上最不懂事的问题。"
+        },
+        {
+          "text": "“第一下他们会说事故。”他说。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_16",
+          "changes": {}
+        }
+      ],
+      "ambient": "static",
+      "effect": "blood"
+    },
+    "fire_16": {
+      "title": "事故",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "事故可以统计，可以报销，可以重建。"
+        },
+        {
+          "text": "陈一单说他讨厌这个词。"
+        },
+        {
+          "text": "它会把人的一生也说成流程异常。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_17",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_17": {
+      "title": "不像英雄",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "火光照着他的脸。"
+        },
+        {
+          "text": "他不像电影里的英雄，嘴唇发白，眼睛里全是烟。"
+        },
+        {
+          "text": "连笑都像咳出来的。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_18",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_18": {
+      "title": "周小芳爬上来",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "周小芳也爬上残墙。"
+        },
+        {
+          "text": "白浴袍外套着捡来的工作服。"
+        },
+        {
+          "text": "她喘着气骂你们两个都疯了。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_19",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_19": {
+      "title": "现场配对",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "她说你们谁再往前一步，她就把婚办处所有人叫来现场配对。"
+        },
+        {
+          "text": "这话太荒唐。"
+        },
+        {
+          "text": "陈一单也愣了一下。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_20",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_20": {
+      "title": "荒唐的空隙",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "火场里忽然多出一个很小的空隙。"
+        },
+        {
+          "text": "荒唐救了你们一秒。"
+        },
+        {
+          "text": "一秒已经够消防兵靠近。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_21",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_21": {
+      "title": "手在抖",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "就在这一愣里，你看见陈一单的手在抖。"
+        },
+        {
+          "text": "他并不比你勇敢。"
+        },
+        {
+          "text": "他只是更早把退路烧了。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_22",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_22": {
+      "title": "他的妻子",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "远处传来女人嘶哑的叫声。"
+        },
+        {
+          "text": "陈一单的妻子被人拦在警戒线外，仍旧一声声骂他死鬼。"
+        },
+        {
+          "text": "骂声里全是活人的力气。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_23",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_23": {
+      "title": "墙也是马",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "陈一单说随便一堵墙都会是马。"
+        },
+        {
+          "text": "可以带人去没有灾祸的地方。"
+        },
+        {
+          "text": "周小芳说马也会摔死。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_24",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_24": {
+      "title": "消防兵",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "消防兵逼近。"
+        },
+        {
+          "text": "周小芳把你的手从陈一单肩上拉开。"
+        },
+        {
+          "text": "你没有立刻跟她走。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_25",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_25": {
+      "title": "火的成人日",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "你看着陈一单。"
+        },
+        {
+          "text": "他像另一个把害怕烧成火的自己。"
+        },
+        {
+          "text": "火不能证明爱情，也不能证明自由。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "fire_26",
+          "changes": {}
+        }
+      ],
+      "ambient": "static"
+    },
+    "fire_26": {
+      "title": "第二声",
+      "scene": {
+        "id": "factory_ruins",
+        "name": "燃烧的工厂边缘",
+        "type": "major",
+        "description": "消防水汽和黑烟混在一起，厂房骨架通红，烟囱像一根烧坏的炮管。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "第二包东西从他手里滑了一下。"
+        },
+        {
+          "text": "你伸手去接，周小芳也伸手。"
+        },
+        {
+          "text": "三个人的影子在火光里重叠得很难看。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "ending_fire",
+          "changes": {
+            "unlockAchievement": "ach_horse_wall"
+          }
+        }
+      ],
+      "ambient": "static"
+    },
+    "obedient_01": {
+      "title": "回到秩序",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 89,
+      "segments": [
+        {
+          "text": "你没有逃远，也没有朝火走。"
+        },
+        {
+          "text": "天亮以后，你们被带回临时登记棚。"
+        },
+        {
+          "text": "工作人员说爆炸不会影响婚配系统。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "obedient_02",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "obedient_02": {
+      "title": "流程照常",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 90,
+      "segments": [
+        {
+          "text": "所有到龄人员上午身份确认，下午领取新宿舍。"
+        },
+        {
+          "text": "塑料棚外还有烟。"
+        },
+        {
+          "text": "塑料棚内有表格。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "obedient_03",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "obedient_03": {
+      "title": "烟和表格",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 91,
+      "segments": [
+        {
+          "text": "烟会散，表格不会。"
+        },
+        {
+          "text": "工作人员用镇定的声音重复这句话的前半句。"
+        },
+        {
+          "text": "没人说后半句。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "obedient_04",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "obedient_04": {
+      "title": "临时编号",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 92,
+      "segments": [
+        {
+          "text": "每个人先领一个临时编号。"
+        },
+        {
+          "text": "你的号码贴在胸前，白底黑字。"
+        },
+        {
+          "text": "它比你的名字更容易被喊到。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "obedient_05",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "obedient_05": {
+      "title": "她的桌面",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 93,
+      "segments": [
+        {
+          "text": "周小芳的桌面很快堆起表格。"
+        },
+        {
+          "text": "她把湿发别到耳后，手指敲键盘。"
+        },
+        {
+          "text": "声音比昨夜的敲门声更短。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "obedient_06",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "obedient_06": {
+      "title": "她坐到桌后",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 94,
+      "segments": [
+        {
+          "text": "周小芳被叫去帮忙。"
+        },
+        {
+          "text": "她头发还没完全干，胸牌重新别在白衬衣上。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "obedient_07",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "obedient_07": {
+      "title": "随机结果",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 95,
+      "segments": [
+        {
+          "text": "电脑吐出你的配对结果。"
+        },
+        {
+          "text": "名字不是周小芳。"
+        },
+        {
+          "text": "她的手指在键盘上停了一下，又继续录入。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "obedient_08",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "obedient_08": {
+      "title": "是否异议",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 96,
+      "segments": [
+        {
+          "text": "工作人员问你是否有异议。"
+        },
+        {
+          "text": "你看见周小芳低头整理表格。"
+        },
+        {
+          "text": "你说没有。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "obedient_09",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "obedient_09": {
+      "title": "异议栏",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 97,
+      "segments": [
+        {
+          "text": "异议栏空着。"
+        },
+        {
+          "text": "空得很整齐。"
+        },
+        {
+          "text": "像你从来没有在火光里抓住过谁的手。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "obedient_10",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "obedient_10": {
+      "title": "旁边的人",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 98,
+      "segments": [
+        {
+          "text": "旁边有人大声说自己对象失踪。"
+        },
+        {
+          "text": "工作人员让他先登记，再等待通知。"
+        },
+        {
+          "text": "秩序总是先把话接过去。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "obedient_11",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "obedient_11": {
+      "title": "你排到了",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "终于排到你的名字。"
+        },
+        {
+          "text": "周小芳没有抬头。"
+        },
+        {
+          "text": "她念出的每个字都准确。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "obedient_12",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "obedient_12": {
+      "title": "新宿舍",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "下午，你被带到新的宿舍楼。"
+        },
+        {
+          "text": "房间里两张床，一个新水壶，墙上贴着生育指标说明。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "obedient_13",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "obedient_13": {
+      "title": "合法女主人",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "被分配来的女人礼貌地点头。"
+        },
+        {
+          "text": "她没有错，也不吵。"
+        },
+        {
+          "text": "你忽然想起昨夜厨房里的男式围裙。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "obedient_14",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "obedient_14": {
+      "title": "自我介绍",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "她说自己的名字，声音平稳。"
+        },
+        {
+          "text": "你也说吴新。"
+        },
+        {
+          "text": "你们像在车间交接工具，谁也没有做错。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "obedient_15",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "obedient_15": {
+      "title": "她的行李",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "她的行李很少。"
+        },
+        {
+          "text": "两件衣服，一个搪瓷杯，一本婚育手册。"
+        },
+        {
+          "text": "她把东西摆得很齐。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "obedient_16",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "obedient_16": {
+      "title": "第一顿饭",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "晚饭仍是一荤一素，两碗白米饭。"
+        },
+        {
+          "text": "她问你喜欢吃什么。"
+        },
+        {
+          "text": "你说都行。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "obedient_17",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "obedient_17": {
+      "title": "都行",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "这个答案准确、方便、没有一点用。"
+        },
+        {
+          "text": "她点头，把筷子摆正。"
+        },
+        {
+          "text": "你看见她手指上没有指甲油。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "obedient_18",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "obedient_18": {
+      "title": "夜里施工",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "夜里，新工厂方向传来施工声。"
+        },
+        {
+          "text": "它会被重建。"
+        },
+        {
+          "text": "计划也会被重建。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "obedient_19",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "obedient_19": {
+      "title": "隔壁笑声",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "隔壁新婚夫妻在低声说话。"
+        },
+        {
+          "text": "偶尔笑一下。"
+        },
+        {
+          "text": "那笑声并不幸福，也并不痛苦，只是很合时宜。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "obedient_20",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "obedient_20": {
+      "title": "协办人签名",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "第二天清晨，有人送来新的排班表。"
+        },
+        {
+          "text": "你在角落看见婚办处协办人的签名：ZHOU。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "obedient_21",
+          "changes": {}
+        }
+      ],
+      "ambient": "none"
+    },
+    "obedient_21": {
+      "title": "白纸黑字",
+      "scene": {
+        "id": "new_dorm",
+        "name": "新宿舍",
+        "type": "major",
+        "description": "房间比旧宿舍干净，墙上贴着生育指标说明，两张床之间摆着一个新水壶。"
+      },
+      "progress": 99,
+      "segments": [
+        {
+          "text": "那几个字很小。"
+        },
+        {
+          "text": "你却看了很久。"
+        },
+        {
+          "text": "合法女主人在身后问你今天几点上班。"
+        }
+      ],
+      "choices": [
+        {
+          "text": "继续",
+          "next": "ending_obedient",
+          "changes": {
+            "unlockAchievement": "ach_legal_hostess"
+          }
+        }
+      ],
+      "ambient": "none"
+    },
+    "ending_true": {
+      "isEnding": true,
+      "title": "太阳在瞳仁里升起",
+      "type": "TRUE ENDING",
+      "progress": 100,
+      "ambient": "sea",
+      "effect": "breath",
+      "achievement": "ach_true_sun",
+      "description": "你们没有把成人日交还给婚办处，也没有把它交给火。周小芳的名字第一次完整地属于她，你的名字也在歌声里被她听见。工厂仍在远处冒烟，计划时代不会因为一个吻结束，可你们至少从表格里走出来一次，用自己的声音确认了彼此。",
+      "closing": "开始就要来临。结局看得见。"
+    },
+    "ending_escape": {
+      "isEnding": true,
+      "title": "空自由",
+      "type": "BRANCH ENDING",
+      "progress": 100,
+      "ambient": "wind",
+      "effect": "silence",
+      "achievement": "ach_empty_freedom",
+      "description": "你离开了那座工厂，也离开了成人日前夜的一切。新城市没有人知道你改过年龄，没有人知道周小芳的胸牌只写 ZHOU。你没有被原来的系统分配，可你也没有真正选择谁。自由像一张剪过的车票，被打开以后只剩整齐的缺口。",
+      "closing": "后来你仍会听见敲门声。短促几下之后，声音仿佛要变得轻缓悠长。"
+    },
+    "ending_miss": {
+      "isEnding": true,
+      "title": "重新变回 ZHOU",
+      "type": "NORMAL ENDING",
+      "progress": 100,
+      "ambient": "none",
+      "effect": "cold",
+      "achievement": "ach_zhou_again",
+      "description": "你们一起经过火，也一起回到登记棚。可是你始终没有越过那张胸牌。她重新坐回桌后，重新使用公事公办的语气，重新把姓名、年龄、婚配状态填进格子。昨夜那个名字没有消失，只是被你亲手放回抽屉里。",
+      "closing": "白墙很安静。印章落下去的时候，声音也很安静。"
+    },
+    "ending_fire": {
+      "isEnding": true,
+      "title": "墙也是马",
+      "type": "BRANCH ENDING",
+      "progress": 100,
+      "ambient": "static",
+      "effect": "blood",
+      "achievement": "ach_horse_wall",
+      "description": "你终于明白陈一单不是从来不怕，他只是把害怕烧成了火。你留在厂房残脊上，看着周小芳被消防兵拉下去，看着她在水雾里喊你的名字。火不能证明爱情，不能证明自由，也不能替任何人长大。它只把能烧的东西烧掉。",
+      "closing": "在那一刻，随便一堵墙都像马。可马奔跑的方向，仍然是火里。"
+    },
+    "ending_obedient": {
+      "isEnding": true,
+      "title": "合法女主人",
+      "type": "NORMAL ENDING",
+      "progress": 100,
+      "ambient": "none",
+      "effect": "cold",
+      "achievement": "ach_legal_hostess",
+      "description": "你没有违法，也没有逃走。成人日照常完成，系统照常配对，新的宿舍照常分配。被安排进你生活的人没有错，她甚至温和得让人无法责怪。你们按部就班地吃饭、登记、领取物资，像两个被正确组装到一起的零件。",
+      "closing": "计划可以安排一张桌子两碗饭，却不能安排那一夜是谁在火光里牵住了你的手。"
+    }
+  }
+}
