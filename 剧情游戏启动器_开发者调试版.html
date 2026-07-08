@@ -3684,7 +3684,7 @@
         <div class="brand">
           <h1 id="launcherTitle">分支剧情启动器</h1>
           <p id="launcherCopy">插入 JSON 剧本，或从本地目录继续。这里保留作品、记录与可继续阅读的进度。</p>
-          <div class="maker-credit">Vibe Coding Hackathon Edition · 林雨优化版</div>
+          <div class="maker-credit">Tully Optimized Edition · 快速模式优化版</div>
         </div>
 
         <input class="file-input" id="fileInput" type="file" accept=".json,application/json">
@@ -3708,7 +3708,7 @@
         <div class="tape-library developer-panel developer-library-panel is-hidden" id="launcherDeveloperPanel">
           <div class="tape-library-title">项目说明</div>
           <div class="developer-profile">
-            <p><span class="developer-name">Story-to-Game 参赛优化版</span>基于 MIT 开源项目二次开发，参赛改进重点是把短素材改写流程压缩为「快速模式」：减少冗长确认步骤，直接生成可导入的分支剧情 JSON，同时保留选项回响、callback、closure、多结局和校验规则。原始开源框架与版权声明见仓库 LICENSE；本版本由林雨面向 Vibe Coding 黑客松完成效率优化、示例整理与线上体验部署。</p>
+            <p><span class="developer-name">Story-to-Game 优化版</span>基于 MIT 开源项目二次开发，改进重点是把短素材改写流程压缩为「快速模式」：减少冗长确认步骤，直接生成可导入的分支剧情 JSON，同时保留选项回响、callback、closure、多结局和校验规则。原始开源框架与版权声明见仓库 LICENSE；本版本由 Tully 完成效率优化、示例整理与线上体验部署。</p>
           </div>
         </div>
 
@@ -4228,7 +4228,7 @@
       const cover = meta.cover || {};
       const author = meta.author || "佚名";
       el.loadedTitle.textContent = meta.title;
-      el.loadedMeta.innerHTML = `${escapeHtml(author)} · Vibe Coding Hackathon Edition · v${escapeHtml(meta.version || "1")} · ${Object.keys(state.story.nodes).length} 个节点`;
+      el.loadedMeta.innerHTML = `${escapeHtml(author)} · Tully Optimized Edition · v${escapeHtml(meta.version || "1")} · ${Object.keys(state.story.nodes).length} 个节点`;
       el.loadedCard.classList.add("is-visible");
       el.coverLabel.textContent = cover.label || "STORY VOLUME";
       el.coverTitle.textContent = meta.title;
@@ -5244,7 +5244,7 @@
         el.recordList.classList.add("wide");
         const item = document.createElement("div");
         item.className = "developer-profile developer-panel";
-        item.innerHTML = `<p><span class="developer-name">Story-to-Game 参赛优化版</span>基于 MIT 开源项目二次开发，参赛改进重点是把短素材改写流程压缩为「快速模式」：减少冗长确认步骤，直接生成可导入的分支剧情 JSON，同时保留选项回响、callback、closure、多结局和校验规则。原始开源框架与版权声明见仓库 LICENSE；本版本由林雨面向 Vibe Coding 黑客松完成效率优化、示例整理与线上体验部署。</p>`;
+        item.innerHTML = `<p><span class="developer-name">Story-to-Game 优化版</span>基于 MIT 开源项目二次开发，改进重点是把短素材改写流程压缩为「快速模式」：减少冗长确认步骤，直接生成可导入的分支剧情 JSON，同时保留选项回响、callback、closure、多结局和校验规则。原始开源框架与版权声明见仓库 LICENSE；本版本由 Tully 完成效率优化、示例整理与线上体验部署。</p>`;
         el.recordList.appendChild(item);
         return;
       }
