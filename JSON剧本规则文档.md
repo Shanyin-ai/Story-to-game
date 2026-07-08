@@ -28,7 +28,7 @@
 {
   "meta": {
     "title": "雨夜来信",
-    "author": "山音",
+    "author": "示例作者",
     "version": "1.0.0",
     "description": "一封没有署名的信，一场从门缝里涨起的雨。",
     "ambient": "rain",

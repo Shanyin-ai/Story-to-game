@@ -3684,7 +3684,7 @@
         <div class="brand">
           <h1 id="launcherTitle">分支剧情启动器</h1>
           <p id="launcherCopy">插入 JSON 剧本，或从本地目录继续。这里保留作品、记录与可继续阅读的进度。</p>
-          <div class="maker-credit">Powered By: @山音</div>
+          <div class="maker-credit">Vibe Coding Hackathon Edition · 林雨优化版</div>
         </div>
 
         <input class="file-input" id="fileInput" type="file" accept=".json,application/json">
@@ -3692,7 +3692,7 @@
           <button class="text-btn primary" id="importBtn">插入 JSON</button>
           <button class="text-btn" id="libraryBtn">选择本地资料库</button>
           <button class="text-btn" id="sampleBtn">示例作品</button>
-          <button class="text-btn" id="launcherDeveloperBtn">开发者介绍</button>
+          <button class="text-btn" id="launcherDeveloperBtn">项目说明</button>
           <div class="mode-switch" data-color-switch aria-label="明暗模式">
             <button type="button" data-color-mode-choice="light">浅</button>
             <button type="button" data-color-mode-choice="dark">深</button>
@@ -3706,9 +3706,9 @@
         </div>
 
         <div class="tape-library developer-panel developer-library-panel is-hidden" id="launcherDeveloperPanel">
-          <div class="tape-library-title">开发者介绍</div>
+          <div class="tape-library-title">项目说明</div>
           <div class="developer-profile">
-            <p><span class="developer-name">山音</span>山之音工作室创始人，作家；导演、编剧；AI开源产品作者。2025年初心榜十大年度AIGC人物、VACAT中国AI视觉创意头部作者、非凡大赏年度AI CREATOR 100创作者。深圳AIGC超创实验室首批入选者、首都视听协会特邀讲师。导演或编剧作品获得2025 InspiringAsia最佳AI影片、2025 HiShorts最佳AI短片、新片场AI大赛金奖、2025年VACAT瓦卡奖银奖、北京大学生电影节最佳跨界舞蹈影像、Chroma Awards最佳喜剧片、AI Internal Film Festival最佳实验电影、海南岛国际电影节音乐之选等影节荣誉，并入围北影节、FIRST在内的数十个电影节展。GitHub开源作品“山音超级编剧大师”“山音超级导演大师”“互动文游生成工具”广泛改变创作工作流，其中导演大师在 oosmetrics 排名中进入 Agent 类 TOP3。<span class="developer-contact">联系方式：li-yinqian@outlook.com / 小红书 @山音 / 商务微信：Janelyin_k</span></p>
+            <p><span class="developer-name">Story-to-Game 参赛优化版</span>基于 MIT 开源项目二次开发，参赛改进重点是把短素材改写流程压缩为「快速模式」：减少冗长确认步骤，直接生成可导入的分支剧情 JSON，同时保留选项回响、callback、closure、多结局和校验规则。原始开源框架与版权声明见仓库 LICENSE；本版本由林雨面向 Vibe Coding 黑客松完成效率优化、示例整理与线上体验部署。</p>
           </div>
         </div>
 
@@ -3741,7 +3741,7 @@
               <button class="text-btn" id="homeChaptersBtn">选择章节</button>
               <button class="text-btn" id="homeSavesBtn">存档槽</button>
               <button class="text-btn" id="homeStatsBtn">游玩统计</button>
-              <button class="text-btn" id="homeDeveloperBtn">开发者介绍</button>
+              <button class="text-btn" id="homeDeveloperBtn">项目说明</button>
               <button class="text-btn" id="homeSettingsBtn">设置</button>
               <button class="text-btn" id="ejectBtn">返回目录</button>
               <button class="text-btn danger" id="clearHomeBtn">清除记录</button>
@@ -4228,7 +4228,7 @@
       const cover = meta.cover || {};
       const author = meta.author || "佚名";
       el.loadedTitle.textContent = meta.title;
-      el.loadedMeta.innerHTML = `${escapeHtml(author)} <span class="powered-inline">Powered By: @山音</span> · v${escapeHtml(meta.version || "1")} · ${Object.keys(state.story.nodes).length} 个节点`;
+      el.loadedMeta.innerHTML = `${escapeHtml(author)} · Vibe Coding Hackathon Edition · v${escapeHtml(meta.version || "1")} · ${Object.keys(state.story.nodes).length} 个节点`;
       el.loadedCard.classList.add("is-visible");
       el.coverLabel.textContent = cover.label || "STORY VOLUME";
       el.coverTitle.textContent = meta.title;
@@ -5240,11 +5240,11 @@
       }
 
       if (kind === "developer") {
-        el.recordTitle.textContent = "开发者介绍";
+        el.recordTitle.textContent = "项目说明";
         el.recordList.classList.add("wide");
         const item = document.createElement("div");
         item.className = "developer-profile developer-panel";
-        item.innerHTML = `<p><span class="developer-name">山音</span>山之音工作室创始人，作家；导演、编剧；AI开源产品作者。2025年初心榜十大年度AIGC人物、VACAT中国AI视觉创意头部作者、非凡大赏年度AI CREATOR 100创作者。深圳AIGC超创实验室首批入选者、首都视听协会特邀讲师。导演或编剧作品获得2025 InspiringAsia最佳AI影片、2025 HiShorts最佳AI短片、新片场AI大赛金奖、2025年VACAT瓦卡奖银奖、北京大学生电影节最佳跨界舞蹈影像、Chroma Awards最佳喜剧片、AI Internal Film Festival最佳实验电影、海南岛国际电影节音乐之选等影节荣誉，并入围北影节、FIRST在内的数十个电影节展。GitHub开源作品“山音超级编剧大师”“山音超级导演大师”“互动文游生成工具”广泛改变创作工作流，其中导演大师在 oosmetrics 排名中进入 Agent 类 TOP3。<span class="developer-contact">联系方式：li-yinqian@outlook.com / 小红书 @山音 / 商务微信：Janelyin_k</span></p>`;
+        item.innerHTML = `<p><span class="developer-name">Story-to-Game 参赛优化版</span>基于 MIT 开源项目二次开发，参赛改进重点是把短素材改写流程压缩为「快速模式」：减少冗长确认步骤，直接生成可导入的分支剧情 JSON，同时保留选项回响、callback、closure、多结局和校验规则。原始开源框架与版权声明见仓库 LICENSE；本版本由林雨面向 Vibe Coding 黑客松完成效率优化、示例整理与线上体验部署。</p>`;
         el.recordList.appendChild(item);
         return;
       }
