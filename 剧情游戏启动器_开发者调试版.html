@@ -457,12 +457,16 @@
     .reader {
       position: relative;
       z-index: 3;
-      display: grid;
-      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: safe center;
       width: min(100%, calc(var(--reading-width) + 112px));
       min-height: 0;
       margin: 0 auto;
       padding: clamp(18px, 4vw, 56px);
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--line) transparent;
     }
 
     .page {
@@ -470,7 +474,6 @@
       gap: 28px;
       width: 100%;
       max-width: var(--reading-width);
-      max-height: min(72svh, 760px);
       margin: 0 auto;
     }
 
@@ -547,6 +550,10 @@
     .choices {
       display: grid;
       gap: 12px;
+      max-height: 44vh;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--line) transparent;
       opacity: 0;
       transform: translateY(6px);
       pointer-events: none;
@@ -1627,7 +1634,6 @@
       }
 
       .page {
-        max-height: 74svh;
         gap: 20px;
       }
 
@@ -2177,7 +2183,6 @@
     .page {
       max-width: var(--reading-width);
       gap: 26px;
-      max-height: min(72svh, 760px);
     }
 
     .text-card {
@@ -2697,7 +2702,7 @@
     }
 
     body.ending-reading .reader {
-      align-items: center;
+      justify-content: center;
       padding: clamp(28px, 6vw, 76px);
     }
 
