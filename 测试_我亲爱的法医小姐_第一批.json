@@ -1,0 +1,1956 @@
+{
+  "meta": {
+    "title": "我亲爱的法医小姐",
+    "author": "原作：酒暖春深｜互动改编：Codex（制作中）",
+    "version": "0.1.0",
+    "description": "警察程序、法医学与旧案记忆交织的分支叙事。第一批对应原作第1章《故梦》。",
+    "theme": "noir",
+    "ambient": "rain",
+    "cover": {
+      "label": "故梦",
+      "tagline": "尸体留下时间，活人承担余温。"
+    },
+    "variableName": "余温",
+    "initialVariable": 36
+  },
+  "startNodeId": "start",
+  "variables": {
+    "dream_response": "unset",
+    "investigation_method": "unset",
+    "bond_state": "guarded",
+    "old_case_path": "unset",
+    "cover_state": "unset",
+    "evidence_state": "partial",
+    "final_priority": "unset",
+    "ending_route": "unset",
+    "court_entry": "unset"
+  },
+  "achievements": {
+    "first_appearance": {
+      "title": "艳是艳了，冷也是冷的",
+      "description": "完成林厌的首次角色建制。"
+    },
+    "first_report": {
+      "title": "第一份鉴定",
+      "description": "完成丁雪尸检。"
+    },
+    "body_does_not_lie": {
+      "title": "尸体不会说谎",
+      "description": "复核并修正初步死因。"
+    },
+    "rain_joint_testimony": {
+      "title": "雨夜共同证词",
+      "description": "在雨夜交出真实判断依据。"
+    },
+    "mountain_coordinates": {
+      "title": "山雾坐标",
+      "description": "合法固定山村路线证据。"
+    },
+    "mutual_support": {
+      "title": "互为支点",
+      "description": "报告伤势，并返回救援。"
+    },
+    "second_skin": {
+      "title": "第二层皮肤",
+      "description": "完成异常死亡关系图。"
+    },
+    "protect_the_living": {
+      "title": "不用活人作物证",
+      "description": "保护关键证人。"
+    },
+    "white_whale": {
+      "title": "白鲸浮出水面",
+      "description": "完成白鲸案。"
+    },
+    "four_minutes": {
+      "title": "四分钟",
+      "description": "成功救下现场受害者。"
+    },
+    "unlit_lamp": {
+      "title": "不熄的灯",
+      "description": "保住关键物证链。"
+    },
+    "first_crane": {
+      "title": "第一只纸鹤",
+      "description": "发现第一只纸鹤。"
+    },
+    "paper_folder": {
+      "title": "折纸的人",
+      "description": "收齐四只纸鹤。"
+    },
+    "home_not_safe": {
+      "title": "家不是安全区",
+      "description": "向家人告知真实风险。"
+    },
+    "love_not_bait": {
+      "title": "不把爱当筹码",
+      "description": "拒绝家庭诱饵方案。"
+    },
+    "fourteen_years": {
+      "title": "十四年后",
+      "description": "让旧案重新进入正式调查。"
+    },
+    "snowy_handover": {
+      "title": "雪夜交卷",
+      "description": "共享完整行动计划。"
+    },
+    "verified_signal": {
+      "title": "可验证的信号",
+      "description": "卧底中留下合法信号。"
+    },
+    "still_myself": {
+      "title": "仍是自己",
+      "description": "在边界内完成卧底。"
+    },
+    "nail_testimony": {
+      "title": "钉住证词",
+      "description": "补齐证据闭环。"
+    },
+    "give_knife_back": {
+      "title": "把刀背交出去",
+      "description": "托付最后证据。"
+    },
+    "rescue_first": {
+      "title": "先救活人",
+      "description": "终局优先救援。"
+    },
+    "chunan_letter": {
+      "title": "初南来信",
+      "description": "开启隐藏记忆线。"
+    },
+    "last_forensics_lesson": {
+      "title": "最后的法医课",
+      "description": "开启传承线。"
+    },
+    "for_the_living": {
+      "title": "为生者权",
+      "description": "解锁全部正式结局。"
+    }
+  },
+  "nodes": {
+    "start": {
+      "scene": {
+        "id": "rain_dream",
+        "name": "校门外的雨",
+        "type": "major",
+        "description": "校门外的人潮在雨雾里移动，伞沿彼此碰撞，湿透的香樟叶贴在路边。",
+        "arrival": "你站在雨里，校服袖口已经洇深。三五步外，一个撑伞的女孩停下来等你。"
+      },
+      "segments": [
+        {
+          "text": "十四年前。",
+          "speaker": "系统"
+        },
+        {
+          "text": "你叫林厌。女孩穿着洁白校服，身量比你略高，伞柄握在修长的手指间。"
+        },
+        {
+          "text": "她是陈初南。你已经很久没有这样清楚地看见她。"
+        }
+      ],
+      "chapterTitle": "序章：故梦",
+      "progress": 1,
+      "ambient": "rain",
+      "choices": [
+        {
+          "text": "走近陈初南",
+          "next": "ch00_rain_02"
+        }
+      ]
+    },
+    "ch00_rain_02": {
+      "scene": {
+        "id": "rain_dream",
+        "name": "校门外的雨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "鞋底踏进积水，雨声立刻近了一层。"
+        },
+        {
+          "text": "林厌，愣着干什么？快跟上，去我家吃饭。",
+          "speaker": "陈初南"
+        },
+        {
+          "text": "人潮从身后挤来，她朝你伸出手。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "握住她的手",
+          "next": "ch00_rain_touch_cb"
+        },
+        {
+          "text": "“初南。”",
+          "next": "ch00_rain_call_cb"
+        }
+      ]
+    },
+    "ch00_rain_touch_cb": {
+      "scene": {
+        "id": "rain_dream",
+        "name": "校门外的雨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "你先碰到她的指尖。那只手温暖、干燥，像雨从来没有落到她身上。"
+        },
+        {
+          "text": "陈初南反手扣住你的手腕，把你拉向伞下。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "跟上她",
+          "next": "ch00_rain_04"
+        }
+      ]
+    },
+    "ch00_rain_call_cb": {
+      "scene": {
+        "id": "rain_dream",
+        "name": "校门外的雨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "名字出口时很轻，几乎被雨声盖住。"
+        },
+        {
+          "text": "陈初南还是听见了。她回头看你，伸出的手没有收回。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "把手递给她",
+          "next": "ch00_rain_04"
+        }
+      ]
+    },
+    "ch00_rain_04": {
+      "scene": {
+        "id": "rain_dream",
+        "name": "校门外的雨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "她一用力，你跌进伞下，肩膀撞到她的手臂。"
+        },
+        {
+          "text": "陈初南替你拢好滑落的书包带，伞面向你这边偏了偏。"
+        },
+        {
+          "text": "雨水沿着她另一侧肩线流下去。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "替她把伞推正",
+          "next": "ch00_rain_05"
+        }
+      ]
+    },
+    "ch00_rain_05": {
+      "scene": {
+        "id": "rain_dream",
+        "name": "校门外的雨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "伞柄回到两人中间，她的肩膀仍旧湿了一小块。"
+        },
+        {
+          "text": "说过多少次，下雨记得带伞。马上期中考，感冒了怎么办？",
+          "speaker": "陈初南"
+        },
+        {
+          "text": "她絮絮地数落着，手却一直没有松开。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "看向她握住你的手",
+          "next": "ch00_rain_06"
+        }
+      ]
+    },
+    "ch00_rain_06": {
+      "scene": {
+        "id": "rain_dream",
+        "name": "校门外的雨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "她腕间的脉搏隔着薄薄皮肤跳动。"
+        },
+        {
+          "text": "你收紧五指，那点温度便更清楚地贴上来。"
+        },
+        {
+          "text": "陈初南停住话头，侧脸看你。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "“你回来了？”",
+          "next": "ch00_rain_07",
+          "changes": {
+            "val": 2
+          }
+        }
+      ]
+    },
+    "ch00_rain_07": {
+      "scene": {
+        "id": "rain_dream",
+        "name": "校门外的雨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "她被你拉得微微俯身。"
+        },
+        {
+          "text": "回哪里？我不是一直在这儿吗？",
+          "speaker": "陈初南"
+        },
+        {
+          "text": "她笑了一下，熟悉的眉眼在伞影下渐渐清晰。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "抬头看清她",
+          "next": "ch00_rain_08"
+        }
+      ]
+    },
+    "ch00_rain_08": {
+      "scene": {
+        "id": "rain_dream",
+        "name": "校门外的雨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "那双本该映着天光的眼睛里没有瞳孔，只剩两个黑洞。",
+          "effect": "blur"
+        },
+        {
+          "text": "血从眼下缓慢淌过苍白脸颊，她的笑容仍停在原处。"
+        },
+        {
+          "text": "陈初南握着你的手，指尖一点点变冷。"
+        }
+      ],
+      "progress": 1,
+      "effect": "cold",
+      "choices": [
+        {
+          "text": "碰一下她眼下的血",
+          "next": "ch00_rain_blood_cb"
+        },
+        {
+          "text": "扯开被她握住的手腕",
+          "next": "ch00_rain_break_cb"
+        }
+      ]
+    },
+    "ch00_rain_blood_cb": {
+      "scene": {
+        "id": "rain_dream",
+        "name": "校门外的雨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "指腹擦过那道血，触感黏冷。"
+        },
+        {
+          "text": "你闻见极淡的腐败气味，和解剖台上没有完全散尽的味道相同。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "检查她的手",
+          "next": "ch00_rain_10"
+        }
+      ]
+    },
+    "ch00_rain_break_cb": {
+      "scene": {
+        "id": "rain_dream",
+        "name": "校门外的雨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "你猛地向后挣，陈初南的指甲从腕骨上滑过去。"
+        },
+        {
+          "text": "那层皮肤冰凉而滑腻，摩擦间像要从骨头上脱落。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "看向她的手",
+          "next": "ch00_rain_10"
+        }
+      ]
+    },
+    "ch00_rain_10": {
+      "scene": {
+        "id": "rain_dream",
+        "name": "校门外的雨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "青色血管从她手背浮出来，尸斑沿腕口向上蔓延。"
+        },
+        {
+          "text": "伞外的人群仍在走，没有一个人回头。"
+        },
+        {
+          "text": "初南！",
+          "speaker": "林厌",
+          "effect": "shake"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "挣开眼睛",
+          "next": "ch00_night_01",
+          "effect": "blackout"
+        }
+      ]
+    },
+    "ch00_night_01": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major",
+        "description": "空调把宽阔卧室吹得发冷，翻页钟在黑暗里泛着绿光，厚地毯吞掉了所有脚步声。",
+        "arrival": "你从床上翻身坐起，喉咙里还压着刚才那声喊。"
+      },
+      "segments": [
+        {
+          "text": "十四年后，凌晨四点。",
+          "speaker": "系统"
+        },
+        {
+          "text": "汗水沿后颈滑进吊带背心，你的手仍保持着向前抓握的姿势。"
+        },
+        {
+          "text": "床边没有伞，也没有陈初南。"
+        }
+      ],
+      "progress": 1,
+      "ambient": "static",
+      "choices": [
+        {
+          "text": "看一眼翻页钟",
+          "next": "ch00_night_02"
+        }
+      ]
+    },
+    "ch00_night_02": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "时针刚越过四点，秒页机械地翻下一格。"
+        },
+        {
+          "text": "床头放着半杯水。抽屉没有关严，里面露出一只没有标签的白色药瓶。"
+        },
+        {
+          "text": "空调风吹过杯口，水面轻轻颤了一下。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "先喝一口水",
+          "next": "ch00_night_water_cb"
+        },
+        {
+          "text": "按亮床头灯",
+          "next": "ch00_night_light_cb"
+        }
+      ]
+    },
+    "ch00_night_water_cb": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "杯沿磕到牙齿，凉水灌进喉咙。"
+        },
+        {
+          "text": "你喝得太急，手肘撞上抽屉，里面的东西散落到地毯上。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "弯腰去捡",
+          "next": "ch00_night_04"
+        }
+      ]
+    },
+    "ch00_night_light_cb": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "灯光骤亮，你眯起眼。镜子里只有一个脸色苍白、满头冷汗的女人。"
+        },
+        {
+          "text": "你拉抽屉时用力过猛，药瓶和几件小物滚落到地毯上。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "捡起白色药瓶",
+          "next": "ch00_night_04"
+        }
+      ]
+    },
+    "ch00_night_04": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "白色药瓶滚到床脚才停下。你把它捡起来，瓶里的药片撞出细碎声响。"
+        },
+        {
+          "text": "翻页钟又落下一格，声音在空房里格外清楚。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "倒出两粒药",
+          "next": "ch00_night_05"
+        }
+      ]
+    },
+    "ch00_night_05": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "两粒药停在掌心。你仰头把它们咽下，剩下的凉水顺着唇角流到颈侧。"
+        },
+        {
+          "text": "你刚抬手，另一方白手帕先贴了上来。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "抓住拿手帕的手",
+          "next": "ch00_night_06"
+        }
+      ]
+    },
+    "ch00_night_06": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "那只手没有躲。手帕柔软，掌心有稳定的温度。"
+        },
+        {
+          "text": "拿这个擦。",
+          "speaker": "陈初南"
+        },
+        {
+          "text": "声音贴着床沿响起，近得不需要回头确认。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "“初南。”",
+          "next": "ch00_night_07"
+        }
+      ]
+    },
+    "ch00_night_07": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "初南……",
+          "speaker": "林厌"
+        },
+        {
+          "text": "陈初南坐在床边，仍穿着那件洁白校服。她的脸完整、干净，眼睛里映着床头灯。"
+        },
+        {
+          "text": "又做噩梦了？",
+          "speaker": "陈初南"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "勾住她的小指",
+          "next": "ch00_night_hook_cb",
+          "changes": {
+            "val": 4,
+            "addFlag": "reached_for_warmth",
+            "set": {
+              "dream_response": "touch"
+            }
+          }
+        },
+        {
+          "text": "把手抽回来",
+          "next": "ch00_night_withdraw_cb",
+          "changes": {
+            "val": -3,
+            "addFlag": "refused_dream_warmth",
+            "set": {
+              "dream_response": "withdraw"
+            }
+          }
+        }
+      ]
+    },
+    "ch00_night_hook_cb": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "你的小指扣住她。温润的皮肤没有穿透，也没有剥落。"
+        },
+        {
+          "text": "陈初南把手翻过来，让你握得更稳。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "确认她的脉搏",
+          "next": "ch00_night_09"
+        }
+      ]
+    },
+    "ch00_night_withdraw_cb": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "你把手藏进被角，白手帕落在膝上。"
+        },
+        {
+          "text": "陈初南没有追过来，只把掌心摊在你看得见的地方。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "看着她的掌心",
+          "next": "ch00_night_09"
+        }
+      ]
+    },
+    "ch00_night_09": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "她腕间有脉搏，皮肤也带着活人的温度。"
+        },
+        {
+          "text": "好啦，我回来了。",
+          "speaker": "陈初南"
+        },
+        {
+          "text": "床头灯落在她睫毛上，连影子都和从前一样。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "抱紧她",
+          "next": "ch00_night_embrace_cb",
+          "changes": {
+            "val": 3
+          }
+        },
+        {
+          "text": "只握住她的手",
+          "next": "ch00_night_hold_cb",
+          "changes": {
+            "val": 1
+          }
+        }
+      ]
+    },
+    "ch00_night_embrace_cb": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "你把她整个人箍进怀里，手臂收得发疼。"
+        },
+        {
+          "text": "太好了。初南，我很想你。",
+          "speaker": "林厌"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "“这些年，你去了哪里？”",
+          "next": "ch00_night_11"
+        }
+      ]
+    },
+    "ch00_night_hold_cb": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "你没有再靠近，只用两只手握住她。"
+        },
+        {
+          "text": "这些年，你去了哪里？",
+          "speaker": "林厌"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "等她回答",
+          "next": "ch00_night_11"
+        }
+      ]
+    },
+    "ch00_night_11": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "陈初南张了张嘴，校服领口忽然洇开一圈水痕。"
+        },
+        {
+          "text": "水沿她的发梢滴到床单上，空气里重新响起细密雨声。"
+        },
+        {
+          "text": "她皱紧眉，肩膀开始发抖。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "扶住她的肩膀",
+          "next": "ch00_night_12"
+        }
+      ]
+    },
+    "ch00_night_12": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "掌下的布料越来越湿，寒意透进指缝。"
+        },
+        {
+          "text": "我不知道……我好疼。林厌，救救我。",
+          "speaker": "陈初南"
+        },
+        {
+          "text": "她的声音被雨声切得断断续续。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "检查她颈侧",
+          "next": "ch00_night_13"
+        }
+      ]
+    },
+    "ch00_night_13": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "你拨开她湿透的衣领，颈侧没有新鲜伤口，只有一片正在扩散的暗紫色。"
+        },
+        {
+          "text": "那不是活人的淤青。"
+        },
+        {
+          "text": "陈初南抬起脸，等着你开口。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "“谁害了你？”",
+          "next": "ch00_night_killer_cb",
+          "changes": {
+            "val": -2,
+            "addFlag": "asked_for_killer"
+          }
+        },
+        {
+          "text": "“我带你离开这里。”",
+          "next": "ch00_night_rescue_cb",
+          "changes": {
+            "val": 3,
+            "addFlag": "promised_rescue"
+          }
+        }
+      ]
+    },
+    "ch00_night_killer_cb": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "你的手指扣进她肩头，问题一遍比一遍更重。"
+        },
+        {
+          "text": "是谁？告诉我。",
+          "speaker": "林厌"
+        },
+        {
+          "text": "陈初南的嘴唇颤动，最先挤出来的却是一声笑。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "听清她的回答",
+          "next": "ch00_night_15"
+        }
+      ]
+    },
+    "ch00_night_rescue_cb": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "你掀开被子想下床，陈初南却抓住你的手腕。"
+        },
+        {
+          "text": "离开？",
+          "speaker": "陈初南"
+        },
+        {
+          "text": "她的笑声从喉咙深处漏出来，像坏掉的电台忽然接通。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "停下来听她说",
+          "next": "ch00_night_15"
+        }
+      ]
+    },
+    "ch00_night_15": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "她的声音被拉长、割裂，末尾混进尖锐电流。",
+          "effect": "noise"
+        },
+        {
+          "text": "窗帘被狂风掀起，床头灯闪了两下。"
+        },
+        {
+          "text": "陈初南的脸离你越来越近。"
+        }
+      ],
+      "progress": 1,
+      "effect": "noise",
+      "choices": [
+        {
+          "text": "看着她",
+          "next": "ch00_night_16"
+        }
+      ]
+    },
+    "ch00_night_16": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "是你。",
+          "speaker": "陈初南"
+        },
+        {
+          "text": "她又重复一遍，两个字从笑声里掉出来。"
+        },
+        {
+          "text": "是你。",
+          "speaker": "陈初南"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "“不。”",
+          "next": "ch00_night_17"
+        }
+      ]
+    },
+    "ch00_night_17": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "暗紫尸斑爬满她的手臂，青色血管从领口一直浮到脸侧。"
+        },
+        {
+          "text": "床头灯应声熄灭。黑暗里，一只眼珠落在床单上，发出很轻的一声。",
+          "effect": "blackout"
+        },
+        {
+          "text": "腐臭压进鼻腔，你的呼吸被她的手卡断。"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "扯开她的手",
+          "next": "ch00_night_18",
+          "effect": "shake"
+        }
+      ]
+    },
+    "ch00_night_18": {
+      "scene": {
+        "id": "lin_bedroom_night",
+        "name": "林家卧室·凌晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "你用尽力气向外一扯，手臂从她胸口穿过去。"
+        },
+        {
+          "text": "校服、皮肉和雨水一起塌在床单上，血沿床沿滴向地毯。"
+        },
+        {
+          "text": "闹钟在耳边炸响。",
+          "effect": "shake"
+        }
+      ],
+      "progress": 1,
+      "choices": [
+        {
+          "text": "按掉闹钟",
+          "next": "ch00_morning_01"
+        }
+      ]
+    },
+    "ch00_morning_01": {
+      "scene": {
+        "id": "lin_home_morning",
+        "name": "林家别墅·清晨",
+        "type": "major",
+        "description": "晨光穿过高窗，别墅大厅铺着浅色石材，餐厅里传来烤面包和咖啡的香气。",
+        "arrival": "你满头是汗地再次坐起。窗纱被晨风吹动，床上只有揉皱的被子。"
+      },
+      "segments": [
+        {
+          "text": "天已经亮了。翻页钟安静走着，楼下有人摆放餐具。"
+        },
+        {
+          "text": "你按掉闹钟，腐臭和雨声随之消失。"
+        },
+        {
+          "text": "这是一个普通工作日的早晨。"
+        }
+      ],
+      "progress": 2,
+      "ambient": "none",
+      "choices": [
+        {
+          "text": "下床",
+          "next": "ch00_morning_02"
+        }
+      ]
+    },
+    "ch00_morning_02": {
+      "scene": {
+        "id": "lin_home_morning",
+        "name": "林家别墅·清晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "赤脚踩进厚地毯时，脚下有一小块微微发硬。"
+        },
+        {
+          "text": "暗红痕迹凝在织纹深处，颜色和梦里淌下床沿的血相似。"
+        },
+        {
+          "text": "你闭上眼，数到第三次呼吸。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "穿上拖鞋",
+          "next": "ch00_morning_03"
+        }
+      ]
+    },
+    "ch00_morning_03": {
+      "scene": {
+        "id": "lin_home_morning",
+        "name": "林家别墅·清晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "拖鞋遮住那块暗红。门外随即响起三下克制的敲门声。"
+        },
+        {
+          "text": "小姐，早餐好了。司机也在门外等着。",
+          "speaker": "管家"
+        },
+        {
+          "text": "隔着门，老管家的声音恭敬而平稳。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "去洗漱",
+          "next": "ch00_morning_04"
+        }
+      ]
+    },
+    "ch00_morning_04": {
+      "scene": {
+        "id": "lin_home_morning",
+        "name": "林家别墅·清晨",
+        "type": "major",
+        "arrival": "洗漱后，你裹着睡袍下楼。昨夜的汗和惊叫都被关在卧室门后。"
+      },
+      "segments": [
+        {
+          "text": "大厅沙发旁站着一个年轻人，衬衫被文件夹压出褶皱，额角带着赶路的汗。"
+        },
+        {
+          "text": "他抱着一大摞装订材料，看见你便立刻站直。"
+        },
+        {
+          "text": "林法医，今天出庭用的死亡鉴定书和检验材料都在这里。",
+          "speaker": "年轻助理"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "“坐吧，早餐后再核。”",
+          "next": "ch00_morning_seat_cb",
+          "changes": {
+            "val": 3,
+            "addFlag": "treated_assistant_kindly"
+          }
+        },
+        {
+          "text": "伸手接过最上面的鉴定书",
+          "next": "ch00_morning_file_cb",
+          "changes": {
+            "val": -1
+          }
+        }
+      ]
+    },
+    "ch00_morning_seat_cb": {
+      "scene": {
+        "id": "lin_home_morning",
+        "name": "林家别墅·清晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "年轻助理怔了一下，抱着材料在餐厅最外侧坐下。"
+        },
+        {
+          "text": "谢谢林法医。我把争议页都贴了标签。",
+          "speaker": "年轻助理"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "“给他添一副餐具。”",
+          "next": "ch00_morning_06"
+        }
+      ]
+    },
+    "ch00_morning_file_cb": {
+      "scene": {
+        "id": "lin_home_morning",
+        "name": "林家别墅·清晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "你抽走鉴定书，纸页边缘从他手套过的指节上刮过。"
+        },
+        {
+          "text": "年轻助理仍站在原处，怀里的其余材料向下沉了沉。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "走进餐厅",
+          "next": "ch00_morning_06"
+        }
+      ]
+    },
+    "ch00_morning_06": {
+      "scene": {
+        "id": "lin_home_morning",
+        "name": "林家别墅·清晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "长桌上同时摆着粥点、煎蛋和烤面包，银质餐具在晨光里发白。"
+        },
+        {
+          "text": "你翻过鉴定书首页，死者照片被一张遮挡纸压在下面。"
+        },
+        {
+          "text": "管家把咖啡放在你右手边，没有碰那叠材料。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "吃完盘里的煎蛋",
+          "next": "ch00_morning_eat_cb",
+          "changes": {
+            "val": 1
+          }
+        },
+        {
+          "text": "放下只动了两口的餐具",
+          "next": "ch00_morning_leave_cb",
+          "changes": {
+            "val": -1
+          }
+        }
+      ]
+    },
+    "ch00_morning_eat_cb": {
+      "scene": {
+        "id": "lin_home_morning",
+        "name": "林家别墅·清晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "你把最后一口咽下，咖啡的苦味盖过药片留在舌根的味道。"
+        },
+        {
+          "text": "管家收走空盘时，目光在你脸上停了半秒。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "起身去衣帽间",
+          "next": "ch00_morning_08"
+        }
+      ]
+    },
+    "ch00_morning_leave_cb": {
+      "scene": {
+        "id": "lin_home_morning",
+        "name": "林家别墅·清晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "勺子落回碟中，碰出一声脆响。"
+        },
+        {
+          "text": "没有人劝你再吃。管家立刻收走餐具，桌面重新变得整齐。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "起身去衣帽间",
+          "next": "ch00_morning_08"
+        }
+      ]
+    },
+    "ch00_morning_08": {
+      "scene": {
+        "id": "lin_home_morning",
+        "name": "林家别墅·清晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "经过楼梯时，你停住脚步。二楼卧室门仍旧关着。"
+        },
+        {
+          "text": "对了。",
+          "speaker": "林厌"
+        },
+        {
+          "text": "管家随即走近一步，等你吩咐。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "“我房间的地毯有一块污迹。”",
+          "next": "ch00_morning_09"
+        }
+      ]
+    },
+    "ch00_morning_09": {
+      "scene": {
+        "id": "lin_home_morning",
+        "name": "林家别墅·清晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "我房间的地毯有一块污迹。",
+          "speaker": "林厌"
+        },
+        {
+          "text": "那块地毯上周才从伦敦送来，暗红织纹占了大半房间。"
+        },
+        {
+          "text": "管家没有追问污迹来源，只问你要怎么处理。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "“剪下污迹，密封保存。”",
+          "next": "ch00_morning_keep_cb",
+          "changes": {
+            "val": -1,
+            "addFlag": "kept_stained_carpet"
+          }
+        },
+        {
+          "text": "“整块扔掉。”",
+          "next": "ch00_morning_discard_cb",
+          "changes": {
+            "val": -2,
+            "addFlag": "discarded_stained_carpet"
+          }
+        }
+      ]
+    },
+    "ch00_morning_keep_cb": {
+      "scene": {
+        "id": "lin_home_morning",
+        "name": "林家别墅·清晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "管家抬眼看你，又很快垂下目光。"
+        },
+        {
+          "text": "我会让人戴手套处理，密封袋送到您的私人储物柜。",
+          "speaker": "管家"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "走进衣帽间",
+          "next": "ch00_morning_11"
+        }
+      ]
+    },
+    "ch00_morning_discard_cb": {
+      "scene": {
+        "id": "lin_home_morning",
+        "name": "林家别墅·清晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "上百万的旧织物在你一句话里失去用途。"
+        },
+        {
+          "text": "好的，小姐。需要换一块新的吗？",
+          "speaker": "管家"
+        },
+        {
+          "text": "不用。",
+          "speaker": "林厌"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "走进衣帽间",
+          "next": "ch00_morning_11"
+        }
+      ]
+    },
+    "ch00_morning_11": {
+      "scene": {
+        "id": "lin_home_morning",
+        "name": "林家别墅·清晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "衣帽间和卧室一样宽，玻璃橱窗里排列着来自不同城市的衣服、鞋和饰物。"
+        },
+        {
+          "text": "镜中女人身量颀长，长期不见日光的肤色被晨光照得更白。"
+        },
+        {
+          "text": "你从橱窗里取出一件衬衣，一颗颗扣好，只空着最上面两颗。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "旋开口红",
+          "next": "ch00_morning_12"
+        }
+      ]
+    },
+    "ch00_morning_12": {
+      "scene": {
+        "id": "lin_home_morning",
+        "name": "林家别墅·清晨",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "红色压住苍白，尾指擦掉唇角多余的一点颜色。"
+        },
+        {
+          "text": "上挑的眉峰、狭长眼尾和笔直鼻梁在镜中拼出成年后的林厌。"
+        },
+        {
+          "text": "艳是艳了，冷也是冷的。你拿起西装外套，转身出门。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "坐进车里",
+          "next": "ch00_car_01",
+          "changes": {
+            "unlockAchievement": "first_appearance"
+          }
+        }
+      ]
+    },
+    "ch00_car_01": {
+      "scene": {
+        "id": "car_to_court",
+        "name": "前往高院的车内",
+        "type": "major",
+        "description": "黑色商务车沿林荫路行驶，真皮座椅隔开前后两排，车内只剩空调和纸页摩擦声。",
+        "arrival": "司机替你拉开车门。年轻助理抱着材料跟进来，文件夹几乎挡住他的视线。"
+      },
+      "segments": [
+        {
+          "text": "车门关上，别墅外墙从深色车窗后退去。"
+        },
+        {
+          "text": "林法医，辩方会围绕死亡时间和损伤形成机制提问。",
+          "speaker": "年轻助理"
+        },
+        {
+          "text": "他把材料放在你们之间的座位上。"
+        }
+      ],
+      "progress": 2,
+      "ambient": "static",
+      "choices": [
+        {
+          "text": "翻开标注页",
+          "next": "ch00_car_02"
+        }
+      ]
+    },
+    "ch00_car_02": {
+      "scene": {
+        "id": "car_to_court",
+        "name": "前往高院的车内",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "纸上密密贴着标签，几处重新检验的数值被红笔圈起。"
+        },
+        {
+          "text": "封闭车厢里混进年轻人赶路后的汗味。你的鼻子对微弱气味一向敏感。"
+        },
+        {
+          "text": "他察觉你的目光，把膝盖往车门方向收了收。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "看向他怀里的其余材料",
+          "next": "ch00_car_03"
+        }
+      ]
+    },
+    "ch00_car_03": {
+      "scene": {
+        "id": "car_to_court",
+        "name": "前往高院的车内",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "年轻助理抱紧剩余卷宗，等你安排座位。"
+        },
+        {
+          "text": "前排还有空位，后排也能放下全部证物复制件。"
+        },
+        {
+          "text": "车子在路口停住，转向灯一下一下响着。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "“坐这里，把争议页摊开。”",
+          "next": "ch00_car_front_cb",
+          "changes": {
+            "val": 2,
+            "addFlag": "assistant_front_seat"
+          }
+        },
+        {
+          "text": "“去后排，别压坏材料。”",
+          "next": "ch00_car_back_cb",
+          "changes": {
+            "val": -3,
+            "addFlag": "assistant_back_seat"
+          }
+        }
+      ]
+    },
+    "ch00_car_front_cb": {
+      "scene": {
+        "id": "car_to_court",
+        "name": "前往高院的车内",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "他把材料按编号排在中间座位，先用纸巾擦了擦额角。"
+        },
+        {
+          "text": "我昨晚核了三遍，第二处皮下出血和原鉴定对不上。",
+          "speaker": "年轻助理"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "指向红笔圈出的数值",
+          "next": "ch00_car_05"
+        }
+      ]
+    },
+    "ch00_car_back_cb": {
+      "scene": {
+        "id": "car_to_court",
+        "name": "前往高院的车内",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "年轻助理抱着材料退到后排，裤腿擦过座椅边缘。"
+        },
+        {
+          "text": "他没有再解释，只把争议页从座椅缝隙递到你手边。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "接过争议页",
+          "next": "ch00_car_05"
+        }
+      ]
+    },
+    "ch00_car_05": {
+      "scene": {
+        "id": "car_to_court",
+        "name": "前往高院的车内",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "红圈标着尸斑固定程度、胃内容物和两处损伤的形成顺序。"
+        },
+        {
+          "text": "这些差异足以改变死亡时间，也会动摇一审中最关键的时间线。"
+        },
+        {
+          "text": "今天你将以法庭科学鉴定人的身份，向二审法庭说明重新检验结果。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "合上鉴定书",
+          "next": "ch00_car_06"
+        }
+      ]
+    },
+    "ch00_car_06": {
+      "scene": {
+        "id": "car_to_court",
+        "name": "前往高院的车内",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "文件夹扣合，司机从后视镜看了你一眼。"
+        },
+        {
+          "text": "小姐，要听新闻吗？",
+          "speaker": "司机"
+        },
+        {
+          "text": "年轻助理手里正好还压着一页案件摘要。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "“开新闻。”",
+          "next": "ch00_car_radio_cb",
+          "changes": {
+            "addFlag": "heard_radio_profile"
+          }
+        },
+        {
+          "text": "“先把案子说清楚。”",
+          "next": "ch00_car_brief_cb",
+          "changes": {
+            "addFlag": "heard_case_briefing"
+          }
+        }
+      ]
+    },
+    "ch00_car_radio_cb": {
+      "scene": {
+        "id": "car_to_court",
+        "name": "前往高院的车内",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "司机按下电台，女主播的声音盖过空调。"
+        },
+        {
+          "text": "二审被告靳某被控在 KTV 杀害员工李某并抛尸，一审判处死刑缓期执行。被告上诉，今天公开审理。",
+          "speaker": "电台女主播"
+        },
+        {
+          "text": "辩方鉴定人林厌将提交新的死亡时间和损伤机制意见。",
+          "speaker": "电台女主播"
+        },
+        {
+          "text": "年轻助理低头核对摘要，确认公开报道没有漏掉你们要面对的争点。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "继续听",
+          "next": "ch00_court_01"
+        }
+      ]
+    },
+    "ch00_car_brief_cb": {
+      "scene": {
+        "id": "car_to_court",
+        "name": "前往高院的车内",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "司机没有开电台。年轻助理翻到案件摘要，声音比在别墅时稳定了一些。"
+        },
+        {
+          "text": "被告靳某被控在 KTV 杀害员工李某并抛尸，一审判处死刑缓期执行。被告上诉，今天公开审理。",
+          "speaker": "年轻助理"
+        },
+        {
+          "text": "辩方申请重新鉴定，我们需要说明原死亡时间和损伤机制为什么不能排除另一种可能。",
+          "speaker": "年轻助理"
+        },
+        {
+          "text": "他说完，把摘要和原鉴定并排放好。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "收起两份材料",
+          "next": "ch00_court_01"
+        }
+      ]
+    },
+    "ch00_court_01": {
+      "scene": {
+        "id": "car_to_court",
+        "name": "前往高院的车内",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "车窗外的高楼逐渐退到林荫后，法院广场已经能从前方看见。"
+        },
+        {
+          "text": "管家的手机亮起一则新闻推送。标题越过案情，谈起你的履历、身价和一张模糊的街拍。"
+        },
+        {
+          "text": "他从副驾驶回头，把屏幕转向你，等你决定是否处理那则花边。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "“记下电视台，案后发函。”",
+          "next": "ch00_court_media_cb",
+          "changes": {
+            "val": -1,
+            "addFlag": "challenged_media"
+          }
+        },
+        {
+          "text": "“让他们继续猜。”",
+          "next": "ch00_court_ignore_cb",
+          "changes": {
+            "val": 1,
+            "addFlag": "ignored_media"
+          }
+        }
+      ]
+    },
+    "ch00_court_media_cb": {
+      "scene": {
+        "id": "car_to_court",
+        "name": "前往高院的车内",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "管家在记事本上写下电视台名称，没有追问街拍里的人是谁。"
+        },
+        {
+          "text": "车窗上的闪光越来越密，第一排记者已经认出车牌。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "看向法院台阶",
+          "next": "ch00_court_02"
+        }
+      ]
+    },
+    "ch00_court_ignore_cb": {
+      "scene": {
+        "id": "car_to_court",
+        "name": "前往高院的车内",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "你把那张街拍留在电波里，没有给它第二个名字。"
+        },
+        {
+          "text": "车窗上的闪光越来越密，第一排记者已经认出车牌。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "看向法院台阶",
+          "next": "ch00_court_02"
+        }
+      ]
+    },
+    "ch00_court_02": {
+      "scene": {
+        "id": "high_court_square",
+        "name": "滨海省高级人民法院外",
+        "type": "major",
+        "description": "灰白法院立在广场尽头，石阶下挤着媒体、旁听者和举着横幅的人，安检门在玻璃幕墙后泛着冷光。",
+        "arrival": "车速慢下来，闪光灯沿车窗一路追到法院台阶前。"
+      },
+      "segments": [
+        {
+          "text": "抗议人群看见车牌后站起来，横幅上的字被风吹得忽隐忽现。"
+        },
+        {
+          "text": "记者越过警戒线向停车位移动，话筒和镜头挤成一片。"
+        },
+        {
+          "text": "司机把车停稳，却没有立刻解锁车门。"
+        }
+      ],
+      "progress": 2,
+      "ambient": "wind",
+      "choices": [
+        {
+          "text": "整理西装袖口",
+          "next": "ch00_court_03"
+        }
+      ]
+    },
+    "ch00_court_03": {
+      "scene": {
+        "id": "high_court_square",
+        "name": "滨海省高级人民法院外",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "年轻助理把鉴定材料抱紧，封条全部朝里。"
+        },
+        {
+          "text": "小姐，后门的通道已经清出来了。要不要从那边进去？",
+          "speaker": "管家"
+        },
+        {
+          "text": "正门离安检更近，后门则能避开镜头，也能减少材料被碰撞的风险。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "推开正门一侧的车门",
+          "next": "ch00_court_front_cb",
+          "changes": {
+            "addFlag": "entered_front_gate",
+            "set": {
+              "court_entry": "front"
+            }
+          }
+        },
+        {
+          "text": "“绕后门，先护住材料。”",
+          "next": "ch00_court_back_cb",
+          "changes": {
+            "val": -1,
+            "addFlag": "entered_back_gate",
+            "set": {
+              "court_entry": "back"
+            }
+          }
+        }
+      ]
+    },
+    "ch00_court_front_cb": {
+      "scene": {
+        "id": "high_court_square",
+        "name": "滨海省高级人民法院外",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "车门刚开，风和快门声一起灌进来。"
+        },
+        {
+          "text": "你踩上广场石面，镜头立刻转向你的脸。"
+        },
+        {
+          "text": "我又不是凶手，凭什么遮遮掩掩？",
+          "speaker": "林厌"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "穿过记者之间的通道",
+          "next": "ch00_court_exit"
+        }
+      ]
+    },
+    "ch00_court_back_cb": {
+      "scene": {
+        "id": "high_court_square",
+        "name": "滨海省高级人民法院外",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "司机重新起步，车沿法院侧墙缓慢绕行。"
+        },
+        {
+          "text": "你接过年轻助理怀里最上面的卷宗，让封条始终保持朝上。"
+        },
+        {
+          "text": "后门没有记者，只有两名法警在等你们核验材料。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "把卷宗交给法警核验",
+          "next": "ch00_court_exit"
+        }
+      ]
+    },
+    "ch00_court_exit": {
+      "scene": {
+        "id": "high_court_square",
+        "name": "滨海省高级人民法院外",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "法警逐一核对封条、页码和鉴定人证件。"
+        },
+        {
+          "text": "无论从哪一道门进入，安检机后的走廊都通向同一间法庭。"
+        },
+        {
+          "text": "年轻助理抱回材料，等你先走。"
+        }
+      ],
+      "progress": 2,
+      "choices": [
+        {
+          "text": "走向二审法庭",
+          "next": "ch00_batch_closure"
+        }
+      ]
+    },
+    "ch00_batch_closure": {
+      "scene": {
+        "id": "high_court_square",
+        "name": "滨海省高级人民法院外",
+        "type": "major"
+      },
+      "segments": [
+        {
+          "text": "高跟鞋踏上走廊地砖，回声一节一节向前。"
+        },
+        {
+          "text": "门牌上的红灯还没有亮。门内有人翻动卷宗，第一页纸擦过第二页。"
+        },
+        {
+          "text": "你在门前停下，手里仍握着那份足以改变判决的鉴定意见。"
+        }
+      ],
+      "progress": 2,
+      "next": "ending_batch_001"
+    },
+    "ending_batch_001": {
+      "isEnding": true,
+      "title": "制作断点·门内",
+      "type": "SPECIAL ENDING",
+      "progress": 100,
+      "ambient": "static",
+      "description": "法庭尚未开门。雨中的旧梦已经退到身后，而一具尸体留下的时间，正等你在活人面前重新说一次。",
+      "closing": "第一批内容止于原作第1章边界；下一批将从二审出庭继续。"
+    }
+  }
+}
